@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* COMMONS */
+.wrapper-berita h1 {
+    color: white;
+}
+
+.card-custom {
+    box-shadow: 0 0 1.5em rgb(123, 224, 191, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #a695ef;
+}
+
+#image,
+#judul,
+#description {
+    margin-bottom: 15px;
+}
+
+/* IMAGE */
+input[type="file"] {
+    display: none;
+}
+
+#label-span {
+    padding: 0 2vh;
+}
+
+.wrapper-berita label {
+    cursor: pointer;
+    background: rgb(152, 244, 195);
+    background: linear-gradient(6deg,
+            rgba(152, 244, 195, 1) 0%,
+            rgba(84, 227, 79, 1) 31%,
+            rgba(4, 198, 69, 1) 72%,
+            rgba(41, 209, 145, 1) 100%);
+    height: 35px;
+    display: flex;
+    color: white;
+    width: 25%;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE */
+#title,
+textarea {
+    border-radius: .3rem;
+    padding: 1vh;
+    border: 2px #a695ef solid;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+/* Button SUBMIT */
+.wrapper-berita button[type="submit"] {
+    width: 7rem;
+}
