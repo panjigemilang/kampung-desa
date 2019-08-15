@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'lato', sans-serif;
+    /*    font-family: 'open sans', sans-serif;*/
+    color: #505962;
+    background: transparent;
+
+
+}
+
+#tentangkami {
+    /*    background-color: black;*/
+    background: url('img/home.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #000;
+}
+
+#tentangkami-sosbud {
+    /*    background-color: black;*/
+    background: url('img/sosbud.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.home-wrap {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-inner {
+    /*    background: url(img/home.jpg);*/
+}
+
+#utama {
+    transform: translateY(-10rem);
+}
+
+#mymodal {
+    /*    transform: translateY(10rem);*/
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: inherit;
+    /*    position: absolute;*/
+    /*
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+*/
+}
+
+/*nav*/
+.navbar {
+    text-transform: uppercase;
+    /*    font-weight: 700;*/
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    background: rgba(0, 0, 0, 0.7) !important;
+
+}
+
+.navbar-brand img {
+    height: 2rem;
+}
+
+.navbar-nav li {
+    padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: .8rem;
+
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fefefe;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #4492FC;
+}
+
+/*
+
+.home-inner {
+        background-image: url(img/homee.jpg);
+}
+*/
+
+/*
+.caption {
+    width: 100%;
+    
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+    max-width: 100%;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    color: white;
+        text-transform: uppercase;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-shadow: .1rem .1rem .8rem black;
+        padding-bottom:
+}
+
+.caption h3 {
+    font-size: 2rem;
+        font-weight: 700;
+    letter-spacing: .2rem;
+}
+
+.caption h5 {
+    font-size: 1.2rem;
+        font-weight: 700;
+    letter-spacing: .2rem;
+}
+
+.caption p {
+    font-size: 0.7rem;
+}
+*/
+/**/
+#iteme {
+    /*
+    margin-top: 200px;
+    margin-bottom: 100px;
+*/
+    width: 100%;
+    /*    max-width: 100%;*/
+    position: absolute;
+    top: 55%;
+    z-index: 1;
+    padding-top: 1rem;
+    background-color: white;
+    font-size: 16px;
+    /*    padding-left: 5rem;*/
+    margin-left: 5rem;
+    margin-right: 1000px;
+
+}
+
+#iteme p {
+    padding: 0.1rem;
+}
+
+#judul {
+    color: #102645;
+    text-transform: uppercase;
+    padding-top: 1.2rem;
+}
+
+.fa-3x {
+    color: #4492FC;
+}
+
+.konten {
+    color: #ffffff;
+    filter: drop-shadow(0 0 5px #000000);
+}
+
+.fa {
+    text-shadow: 1px 1px #f00000;
+}
+
+#more {
+    color: #4492FC;
+}
+
+/*
+.row {
+    margin-top: 50px;
+}
+*/
+
+.style1 {
+    width: 20rem;
+    float: left;
+    border-top: 3px solid #4492FC;
+}
+
+#text-caption {
+    padding-top: 7rem;
+    width: 100%;
+    padding-bottom: 7rem;
+    /*
+    margin-top: 200px;
+    margin-bottom: 100px;
+*/
+    /*    max-width: 100%;*/
+    top: 30%;
+    color: white;
+    /*    text-transform: uppercase;*/
+    text-shadow: .1rem .1rem .8rem black;
+    font-size: 0.7rem;
+}
+
+#text-caption-sosbud {
+    padding-top: 7rem;
+    width: 100%;
+    padding-bottom: 7rem;
+    top: 30%;
+    color: white;
+    text-shadow: .1rem .1rem .8rem black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#text-caption-sosbud h2 {
+    font-size: 3rem;
+}
+
+#semi-landing {
+    background: #ffffff;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    padding-top: 1.5rem;
+    font-size: 0.7rem;
+
+}
+
+#ttgkm {
+    color: white;
+    text-decoration: none;
+}
+
+.card {
+    border: 0;
+    box-shadow: .2rem .2rem .4rem #acacac;
+}
+
+.ovl {
+    opacity: 1;
+    transition: 0.5s;
+    text-shadow: .1rem .1rem 0.2rem black;
+    color: #4492FC;
+}
+
+.ovl:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+}
+
+#berita-header {
+    position: absolute;
+    padding-top: 45%;
+    padding-left: 7%;
+    color: #ffff;
+    /*    background: rgba(0, 0, 0, 0.5);*/
+}
+
+.card-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0.5rem;
+}
+
+.berita {
+    color: inherit;
+}
+
+#footer {
+    background: #0E1D28;
+}
+
+.ftr {
+    /*        border: 1px solid;*/
+    text-align: left;
+}
+
+.card-text {
+    font-family: inherit;
+    font-size: 0.7rem;
+}
+
+.card-img-top {
+    width: 320px;
+    height: 200px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.linkfooter {
+    color: #ffffff;
+    text-align: center;
+}
+
+.linkfooter:hover {
+    color: #868686;
+    text-decoration: none;
+}
+
+.headerfooter {
+    color: #ffffff
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #4492FC;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 0.6s;
+    /*    margin-right: 10px;*/
+}
+
+#myBtn:hover {
+    background-color: #2b5793;
+}
+
+}
+
+.card {
+    list-style: none;
+    /*    position: relative;*/
+}
+
+.card:before {
+    content: '';
+    display: block;
+    /*  padding-bottom: 150%;*/
+    width: 100%;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    trsnsform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+    cursor: context-menu;
+
+}
+
+.card:hover {
+    transform: scale(1.10) translateZ(0);
+}
+
+/*    transition: 20.5s;*/
+.kampung {
+    /*        background: #ffffff;*/
+    box-shadow: .2rem .2rem .4rem #acacac;
+    border-radius: 0.5rem;
+}
+
+.kampungan {
+    /*        background: #ffffff;*/
+    box-shadow: .2rem .2rem .4rem #333333;
+    border-radius: 0.5rem;
+}
+
+#beritasect {
+    /*
+    
+    background: url(img/bb.jpg) no-repeat center center fixed;
+*/
+}
+
+#judul-home {
+    color: #102645;
+    /*    text-transform: uppercase;*/
+    padding-top: 1.2rem;
+    text-align: center;
+}
+
+#semi-landing-home {
+    background: #ffffff;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    padding-top: 1.5rem;
+    font-size: 0.7rem;
+    position: absolute;
+    z-index: 1;
+    /*    padding-top: 10%;*/
+
+}
+
+.style1-home {
+    width: 20rem;
+    /*    float: left;*/
+    border-top: 3px solid #4492FC;
+}
+
+.bgg {
+    background: url(img/aa.jpg) center;
+    background-size: 900px;
+    width: 500px;
+    height: 480px;
+}
+
+.bgg-sosbud {
+    background: url(img/peta-sb.jpg) center;
+    background-size: 900px;
+    width: 500px;
+    height: 480px;
+}
+
+.bgg2 {
+    background: url(img/bb2.jpg) center;
+    background-size: 1200px;
+    width: 500px;
+    height: 480px;
+}
+
+/*
+
+.bgg3 {
+    background: url(img/peta-utama.JPG) center;
+    background-size: 900px;
+    width: 500px;
+    height: 480px;
+    border-radius: 0.5rem;
+}
+*/
+
+.bgg4 {
+    /*    background: url(img/peta-utama.JPG) center;*/
+    /*    background-size: 900px;*/
+    border-radius: 0.5rem;
+    width: 100%;
+    /*    height: 500px;*/
+}
+
+.tgh {
+    /*    text-align: center;*/
+}
+
+#kami {
+    background: white;
+}
+
+.home {
+    height: 30rem;
+}
+
+
+/*============= COURSE SECTION =============*/
+/*
+
+.narrow {
+    width: 75%;
+    margin: 1.5rem auto;
+    padding-top: 2rem;
+}
+
+.narrow h1 {
+    font-size: 2.4rem;
+}
+
+.btn-secondary {
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    border-color: #1EBBA3;
+    background-color: #1EBBA3;
+    color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    border-color: #189582;
+    background-color: #189582;
+    color: white;
+}
+
+.landing {
+        height: 10px;
+}
+*/
+.img-ttgkm {
+    max-width: 100%;
+    height: auto;
+    padding-top: 2%;
+}
+
+#berita {
+    padding-top: 2rem;
+}
+
+.peta-utama {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    color: #ffffff;
+    /*    background: red;*/
+}
+
+.close:hover {
+    color: #ffffff;
+    /*    background: red;*/
+}
+
+.modal {
+    /*    color: #102645;*/
+    color: #ffffff;
+    background: rgba(0.2, 0.2, 0.2, 0.8);
+}
+
+.modal-body {
+    /*    background-color: #ffffff;*/
+}
+
+.modal-content {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background-color: transparent;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+}
+
+.modal-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    /*    background-color: #ffffff;*/
+
+
+}
+
+.linkpeta {
+    color: #585754;
+    margin: 10px;
+}
+
+.linkpeta:hover {
+    color: #868686;
+    text-decoration: none;
+}
+
+.tujuan-left:hover {
+    color: #4492FC;
+}
+
+.tujuan-right:hover {
+    color: #4492FC;
+}
+
+@media (max-width: 600px) {
+    #tentangkami {
+        /*    background-color: black;*/
+        background: url('img/home.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: #000;
+    }
+
+    #utama {
+        transform: translateY(0.1rem);
+    }
+
+    #judul {
+        color: #102645;
+        /*
+        padding-top: 1.2rem;
+        padding-bottom: 1rem;
+*/
+        font-size: 1rem;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 180px;
+
+    }
+
+    .ovl {
+        opacity: 1;
+        transition: 0.5s;
+        font-size: 0.5rem;
+        text-shadow: .1rem .1rem 0.2rem black;
+        color: #4492FC;
+    }
+
+    .ovl:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 0.5rem;
+    }
+
+    /*
+    .ovl {
+        opacity: 0;
+        transition: 0.5s;
+        font-size: 0.5rem;
+        text-shadow: .1rem .1rem .8rem black;
+    }
+
+    .ovl:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 0.5rem;
+        width: 270px;
+        height: 180px;
+    }
+*/
+
+    .card-title {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .style1 {
+        width: 10rem;
+        float: left;
+        border-top: 3px solid #4492FC;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bgg {
+        background: url(img/aa.jpg) center;
+        background-size: 900px;
+        width: 100%;
+        height: 280px;
+    }
+
+    .bgg-sosbud {
+        background: url(img/peta-sb.jpg) center;
+        background-size: 300px;
+        width: 100%;
+        height: 280px;
+    }
+
+    .bgg2 {
+        background: url(img/bb2.jpg) center;
+        background-size: 1200px;
+        width: 100%;
+        height: 280px;
+    }
+
+    .tujuan-left {
+        text-align: left;
+    }
+
+    .tujuan-right {
+        text-align: right;
+    }
+
+}
+
+.link-pt-utm {
+    color: #000000;
+}
+
+.pt-utm {
+    color: #000000;
+    /*    text-decoration: none;*/
+}
+
+#berita-header {
+    position: absolute;
+    padding-top: 40%;
+    padding-left: 7%;
+    color: #ffff;
+    /*    background: rgba(0, 0, 0, 0.5);*/
+}
+
+@media (min-width: 600px) {
+    p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .card-img {
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .ovl {
+        opacity: 1;
+        transition: 0.5s;
+        font-size: 0.5rem;
+        color: #ffffff
+    }
+
+    .ovl:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 250px;
+    }
+
+    .bgg {
+        background: url(img/aa.jpg) center;
+        background-size: 900px;
+        width: 100%;
+        height: 280px;
+    }
+
+    .bgg2 {
+        background: url(img/bb2.jpg) center;
+        background-size: 1200px;
+        width: 100%;
+        height: 280px;
+    }
+
+    .tujuan-left {
+        text-align: left;
+    }
+
+    .tujuan-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bgg {
+        background: url(img/aa.jpg) center;
+        background-size: 900px;
+        width: 100%;
+        height: 480px;
+    }
+
+    .bgg2 {
+        background: url(img/bb2.jpg) center;
+        background-size: 1200px;
+        width: 100%;
+        height: 480px;
+    }
+
+    .tujuan-left {
+        text-align: left;
+    }
+
+    .tujuan-right {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bgg {
+        background: url(img/aa.jpg) center;
+        background-size: 900px;
+        width: 100%;
+        height: 480px;
+    }
+
+    .bgg2 {
+        background: url(img/bb2.jpg) center;
+        background-size: 1200px;
+        width: 100%;
+        height: 480px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .bgg {
+        background: url(img/aa.jpg) center;
+        background-size: 900px;
+        width: 100%;
+        height: 480px;
+    }
+
+    .bgg2 {
+        background: url(img/bb2.jpg) center;
+        background-size: 1200px;
+        width: 100%;
+        height: 480px;
+    }
+
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
