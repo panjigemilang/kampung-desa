@@ -37,21 +37,6 @@
                 </ul>
             </div>
         </nav>
-        <!--end nav-->
-        <!--awal landing page section-->
-        <!--
-        <div class="landing">
-            <div class="home-wrap">
-                <div class="home-inner">
-                </div>
-            </div>
-        </div>
-        <div class="caption text-left">
-            <h3> Selamat Datang di</h3>
-            <h5> Kampung Cerdas Bersahaja</h5>
-            <p>Kerjasama Tim Pengabdian Jurusan PWK FT-UB dengan Tim Pemetaan Masyarakat RW 01 kelurahan Rampal Celaket Kota Malang</p>
-        </div>
--->
         <section class="home" id="header1-1">
             <div class="layer">
 
@@ -65,11 +50,169 @@
 
     <div class="container" id="utama">
         <div id="kami" class="container pb-2 kampungan">
-            <!--
             <div class="container">
-                <h4 id="judul-home">Latar Belakang</h4>
-            </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+
+                        <!--
+                        <div class="bgg-sosbud card">
+                        </div>
 -->
+
+                        <img class="img-ttgkm" src="img/peta-sb.jpg" id="peta-sb">
+                        <!--                        <hr>-->
+                        <div class="button"><a class="btn btn-md btn-info display-4" href="#peta-sb" onclick="document.getElementById('peta-sb').src='img/peta-sb.jpg'">Peta Sosial Budaya</a></div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan.</p>
+                        <!--                        <hr>-->
+                        <h4 style="text-align: left">Keterangan</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Tingkat Kepuasan Fasilitas Kesehatan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-puas.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: rgb(111, 255, 99);"></p>
+                                            </span>Puas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-tidakpuas.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: red;"></p>
+                                            </span>Tidak Puas
+                                        </a></li>
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-nodata.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #d3d3d3;"></p>
+                                            </span>No Data
+                                        </a></li>
+                                </ul>
+                                <h6>Perairan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-nodata.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #0014ff;"></span>Drainase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Jaringan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-nodata.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #000000;"></span>Jalan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-rel.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Rel Kereta Api
+                                        </a></li>
+
+                                </ul>
+                                <h6>Administrasi</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Batas RT
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!--                <hr>-->
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h4 style="text-align: center">Tingkat Kepuasan Fasilitas Kesehatan</h4>
+                        <hr>
+                        <canvas id="chartsosbud"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12" id="alasan">
+                        <h4>
+                            Mengapa?
+                        </h4>
+                        <hr />
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="row justify-content-center">
+                                    <div class="box-item col-md-12 tujuan-left">
+                                        <h6>Puas</h6>
+                                        <!--                                        <hr>-->
+                                        <ul style="list-style-type:circle;">
+                                            <li>Pelayanannya baik dan ramah
+                                            </li>
+                                            <li>Harganya terjangkau
+                                            </li>
+                                            <li>memiliki BPJS / tunjangan lainnya
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="box-item col-lg-12 col-md-4 tujuan-right">
+                                        <h6>Tidak Puas</h6>
+                                        <!--                                        <hr>-->
+                                        <ul style="list-style-type:circle;">
+                                            <li>Pelayanannya baik dan ramah
+                                            </li>
+                                            <li>Harganya terjangkau
+                                            </li>
+                                            <li>memiliki BPJS / tunjangan lainnya
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="card text-white puas" style="background :#a3ffa3;">
+                            <div class="card-body">
+                                <h6>Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="card text-white tidakpuas" style="background : rgb(255, 99, 99);">
+                            <div class="card-body">
+                                <h6>Tidak Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="kami" class="container pb-2 kampung">
+            <h4 id="judul-home">Keikutsertaan dalam BPJS</h4>
             <!--            <br style="clear:both" />-->
             <div class="container">
                 <div class="row">
@@ -80,146 +223,351 @@
                         </div>
 -->
 
-                        <img class="img-ttgkm" src="img/peta-sb.jpg">
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <p>Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan..</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <p>Untuk mencapai tujuan tersebut, maka diperlukan sebuah data base potensi lingkungan kampung yang kuat. Unit informasi terkecil yang diharapkan adalah satuan Kepala Keluarga (KK). Hal ini bertujuan agar setiap potensi pengembangan dapat diketahui hing ga unit terkecil wilayah, sehingga permasalahan dan program pengembangan yang akan direncanakan bersama dapat terjangkau oleh semua warga. Pemetaan potensi kampung ini berbasis partisipasi masyarakat. Karena itu, setiap proses pendataan hingga perumusan permasalahan dan program pengembangan dilakukan oleh masyarakat Kampung BERSAHAJA RW O1, yang didampingi oleh kalangan akademinisi Jurusan PWK Fakultas Teknik Universitas Brawijaya. Pada akhirnya, penyusunan data base kampung secara partisipatif ini diharapkan dapat menjadi bagian dalam mewujudkan peningkatan kualitas hidup-penghidupan seluruh warga kampung secara mandiri.</p>
+                        <img class="img-ttgkm" src="img/peta-sb-bpjs.jpg" id="peta-sb-bpjs">
+                        <!--                        <hr>-->
+                        <div class="button"><a class="btn btn-md btn-info display-4" href="#peta-sb-bpjs" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">Peta BPJS</a></div>
+
+
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
 
-                        <div class="bgg2">
+                        <!--                        <hr>-->
+                        <h5 style="text-align: left">Keterangan Tingkat Keikutsertaan Program BPJS</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Tingkat Kepuasan Fasilitas Kesehatan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #E4E4AE;"></p>
+                                            </span>Nol
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #BD5E55;"></p>
+                                            </span>Mengikuti
+                                        </a></li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #a0e6b8;"></p>
+                                            </span>Tidak Mengikuti
+                                        </a></li>
+                                </ul>
+                                <h6>Perairan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #0014ff;"></span>Drainase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Jaringan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #000000;"></span>Jalan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Rel Kereta Api
+                                        </a></li>
+
+                                </ul>
+                                <h6>Administrasi</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Batas RT
+                                        </a></li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <!--                        <img class="img-ttgkm" src="img/aa.jpg">-->
-                        <!--                        <img src="img/aa.jpg" style="width: 100%;height: 500px;">-->
                     </div>
+
+
                 </div>
-            </div>
-        </div>
-        <br />
-        <div id="kami" class="container pb-2 kampung">
-            <div class="container">
-                <h4 id="judul-home">Kampung Bersahaja dan Permasalahannya</h4>
-            </div>
-            <!--            <br style="clear:both" />-->
-            <div class="container">
+                <hr>
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="bgg">
-                        </div>
+                        <h4 style="text-align: center">Grafik Keikutsertaan dalam BPJS</h4>
+                        <canvas id="chartsosbud-bpjs"></canvas>
+                        <hr>
+                        <h4 style="text-align: center">Ringkasan Peserta BPJS</h4>
+                        <hr>
+                        <canvas id="chartsosbud-bpjs-ringkasan"></canvas>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="bgg2">
+                    <div class="col-lg-6 col-md-12 col-sm-12" id="alasan">
+                        <h4>
+                            Pendapat tentang BPJS
+                        </h4>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="text-white" style="background :#494e83;">
+                                    <div class="card-body">
+                                        <h6>Mengikuti :</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Membantu masyarakat dalam mengakases kesehatan
+                                            </li>
+                                            <li>Melayani dengan baik
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class=" text-white tidakpuas" style="background : rgb(255, 135, 99);">
+                                    <div class="card-body">
+                                        <h6>Tidak Mengikuti</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Tidak semua rumah sakit dapat melayani pengguna BPJS
+                                            </li>
+                                            <li>Tidak semua obat bisa diakses oleh BPJS
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class=" text-white tidakpuas" style="background : rgb(121, 121, 121);">
+                                    <div class="card-body">
+                                        <h6>Saran Kepada BPJS</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Pelayanan ke semua masyarkat harus sama
+                                            </li>
+                                            <li>Tidak sulit dalam mengakses obat-obatan
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 tgh">
-                        <p>
-                            Permasalahan yang dihadapi oleh masyarakat Kampung BERSAHAJA Rampal Celaket adalah
-                            sebagai berikut.
-                            <br />
-                            a. Kebutuhan meningkarkan kualitas pengambilan keputusan
-                            <br />
-                            b. Kebutuhan untuk mempertimbangkan daya dukung dan daya tampung lingkungan hidup untuk penyusunan pengembangan rencana aksi
-                            <br />
-                            c. Kebutuhan pemantauan dan evaluasi yang terkait dengan dampak perubahan lingkungan
-                            <br />
-                            d. Peningkatan mutu informasi tentang lingkungan hidup yang merupakan bagian dari sistem pelaporan dan bentuk dari akuntabilitas publik
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br />
-        <div id="kami" class="container pb-2 kampung">
-            <h4 id="judul-home">Tujuan</h4>
-            <p style="text-align: center">
-                Penyusunan data base lingkungan secara partisipatif ini bertujuan untuk:</p>
-            <br />
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="row justify-content-center">
-                        <div class="box-item col-md-4 tujuan-left">
-                            <h4>A</h4>
-                            <hr>
-                            <p> Menyediakan data, informasi dan dokumentasi yang akurat untuk meningkatkan kualiatas pengambilan keputusan.</p>
-                        </div>
-                        <div class="box-item col-md-4 tujuan-right">
-                            <h4>B</h4>
-                            <hr>
-                            <p>Mengetahui daya dukung dan daya tampung lingkungan fisik, sosial, budaya, dan ekonomi yang diperlukan untuk mengembangkan dan melaksanakan rencana aksi.</p>
-                        </div>
-                        <div class="box-item col-md-4 tujuan-left">
-                            <h4>C</h4>
-                            <hr>
-                            <p>Menyediakan informasi yang terbuka bagi masyarakat Kampung BERSAHAJA RW O1, sehingga pemantauan dan evaluasi terkait dampak perubahan lingkungan dapat dilakukan semua pihak.</p>
-                        </div>
-                        <div class="box-item col-md-4 tujuan-right">
-                            <h4>D</h4>
-                            <hr>
-                            <p>Menyediakan informasi tentang lingkungan yang menjadi bagian dari sistem pelaporan publik dan sebagai bentuk akuntabilitas publik</p>
-                        </div>
-                        <div class="box-item col-md-4 tujuan-left">
-                            <h4>E</h4>
-                            <hr>
-                            <p>Menyediakan informasi tentang lingkungan yang menjadi bagian dari sistem pelaporan publik dan sebagai bentuk akuntabilitas publik</p>
-                        </div>
-                    </div>
-                    <!--
-                    <p>
-                        Penyusunan data base lingkungan secara partisipatif ini bertujuan untuk:
-                        <br />
-                        a. Menyediakan data, informasi dan dokumentasi yang akurat untuk meningkatkan kualiatas pengambilan keputusan.<br />
-                        b. Mengetahui daya dukung dan daya tampung lingkungan fisik, sosial, budaya, dan ekonomi yang diperlukan untuk mengembangkan dan melaksanakan rencana aksi.<br />
-                        c. Menyediakan informasi yang terbuka bagi masyarakat Kampung BERSAHAJA RW O1, sehingga pemantauan dan evaluasi terkait dampak perubahan lingkungan dapat dilakukan semua pihak.<br />
-                        d. Menyediakan informasi tentang lingkungan yang menjadi bagian dari sistem pelaporan publik dan sebagai bentuk akuntabilitas publik<br />
-                        e. Proses yang dilakukan secara partisipatif merupakan bagian dari gerakan membangun kesadaran terhadap lingkungan dan memberdayakan warga agar mampu mengelola dan mengembangkan potensi sosial-ekonomi-budaya-lingkungan fisiknya secara mandiri dan berkelanjutan.
-                    </p>
--->
-                </div>
-            </div>
-        </div>
-        <br />
-        <div id="kami" class="container pb-2 kampung">
-            <div class="container">
-                <h4 id="judul-home">Sekilas Masyarakat<br />
-                    Kampung BERSAHAJA RW O1</h4>
-            </div>
-            <!--            <br style="clear:both" />-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <!--
-                        <div class="bgg3">
+                        <div class="card text-white puas" style="background :#a3ffa3;">
+                            <div class="card-body">
+                                <h6>Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="card text-white tidakpuas" style="background : rgb(255, 99, 99);">
+                            <div class="card-body">
+                                <h6>Tidak Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 -->
-                        <a class="card" data-toggle="modal" data-target="#myModal">
-                            <img class="peta-utama" src="img/peta-utama.JPG">
-                        </a>
-                        Klik pada Peta untuk Memperbesar Peta.
                     </div>
-
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <p>
-                            Wilayah RW O1 adalah sebuah perkampungan dengan luas ± 3200 m yang terletak di secara administrative meniadi bagian dari Kelurahan Rampal Celaket, Kecamatan Kloien, Kota Malang, Provinsi Jawa Timur. Wilayah RW 01 yang terdiri dari 9 RT ini berbatasan dengan wilayah RW O4 di sebelah utara, RW 05 di sebelah barat laut, Kelurahaan Klojen di sebelah selatan, dan dipisahkan oleh rel kereta api dengan wilayah RW 02 yang terletak di sebelah timurnya.<br />
-                            Permasalahan yang dihadapi oleh masyarakat Kampung BERSAHAJA Kelurahan Rampal Celaket adalah kebutuhan meningkatkan kualitas pengambilan keputusan, kebutuhan untuk mempertimbangkan daya dukung dan daya tampung lingkungan hidup untu penyusunan pengembangan rencana aksi, kebutuhan pemantauan dan evaluasi yang terkait dengan dampak perubahan lingkungan dan peningkatan mutu informasi tentang lingkungan hidup yang merupakan bagian dari system pelaporan dan bentuk akuntabilitas publik.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img class="bgg4" src="img/sekilas1.JPG">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img class="bgg4" src="img/sekilas2.JPG">
-                    </div>
-
                 </div>
             </div>
         </div>
+        <br />
+        <div id="kami" class="container pb-2 kampung">
+            <h4 id="judul-home">Sumber Pembiayaan Pendidikan</h4>
+            <!--            <br style="clear:both" />-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+
+                        <!--
+                        <div class="bgg-sosbud card">
+                        </div>
+-->
+
+                        <img class="img-ttgkm" src="img/peta-sb-bpjs.jpg" id="peta-sb-bpjs">
+                        <!--                        <hr>-->
+                        <div class="button"><a class="btn btn-md btn-info display-4" href="#peta-sb-bpjs" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">Peta BPJS</a></div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+
+                        <!--                        <hr>-->
+                        <h4 style="text-align: left">Keterangan Tingkat Keikutsertaan Program BPJS</h4>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Tingkat Kepuasan Fasilitas Kesehatan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #E4E4AE;"></p>
+                                            </span>Nol
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #BD5E55;"></p>
+                                            </span>Mengikuti
+                                        </a></li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <p style="width: 1.8rem;height: 1rem; background: #a0e6b8;"></p>
+                                            </span>Tidak Mengikuti
+                                        </a></li>
+                                </ul>
+                                <h6>Perairan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #0014ff;"></span>Drainase
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <h6>Jaringan</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem;border-color: #000000;"></span>Jalan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb-bpjs').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Rel Kereta Api
+                                        </a></li>
+
+                                </ul>
+                                <h6>Administrasi</h6>
+                                <ul class="fa-ul">
+                                    <li>
+                                        <a href="#peta-sb-bpjs" class="linkpeta" onclick="document.getElementById('peta-sb').src='img/peta-sb-bpjs.jpg'">
+                                            <span class="fa-li">
+                                                <hr class="style1" style="clear: both;width: 1.8rem; border-top:3px dashed #000000; "></span>Batas RT
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h4 style="text-align: center">Grafik Keikutsertaan dalam BPJS</h4>
+                        <canvas id="chartsosbud-bpjs"></canvas>
+                        <hr>
+                        <h4 style="text-align: center">Ringkasan Peserta BPJS</h4>
+                        <hr>
+                        <canvas id="chartsosbud-bpjs-ringkasan"></canvas>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12" id="alasan">
+                        <h4>
+                            Pendapat tentang BPJS
+                        </h4>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="text-white" style="background :#494e83;">
+                                    <div class="card-body">
+                                        <h6>Mengikuti :</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Membantu masyarakat dalam mengakases kesehatan
+                                            </li>
+                                            <li>Melayani dengan baik
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class=" text-white tidakpuas" style="background : rgb(255, 135, 99);">
+                                    <div class="card-body">
+                                        <h6>Tidak Mengikuti</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Tidak semua rumah sakit dapat melayani pengguna BPJS
+                                            </li>
+                                            <li>Tidak semua obat bisa diakses oleh BPJS
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class=" text-white tidakpuas" style="background : rgb(121, 121, 121);">
+                                    <div class="card-body">
+                                        <h6>Saran Kepada BPJS</h6>
+                                        <ul style="list-style-type:circle;">
+                                            <li>Pelayanan ke semua masyarkat harus sama
+                                            </li>
+                                            <li>Tidak sulit dalam mengakses obat-obatan
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="card text-white puas" style="background :#a3ffa3;">
+                            <div class="card-body">
+                                <h6>Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="card text-white tidakpuas" style="background : rgb(255, 99, 99);">
+                            <div class="card-body">
+                                <h6>Tidak Puas</h6>
+                                <ul style="list-style-type:circle;">
+                                    <li>Pelayanannya baik dan ramah
+                                    </li>
+                                    <li>Harganya terjangkau
+                                    </li>
+                                    <li>memiliki BPJS / tunjangan lainnya
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
     </div>
     <br />
     <!--akhir tentang kami section-->
@@ -229,16 +577,13 @@
     <br />
     <!--akhir berita section-->
     <!--sign in section-->
-    <div id="masuk" class="offset">
-
-    </div>
     <!--akhir sign in section-->
     <!--footer-->
     <section id="footer">
         <div class="container">
             <div class="row align-center justify-content-center">
                 <div class="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
-                    <img src="img/LETS%20DEV.png" style="width: 70%;">
+                    <img src="img/LETS%20DEV.png" style="width: 70%;" />
                 </div>
                 <div class="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
                     <h6 class="headerfooter">
@@ -381,27 +726,100 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
     <!--end footer-->
     <!--- Script Source Files -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <script src="js/javascript.js"></script>
     <!--- End of Script Source Fil  es -->
-    <script language="javascript">
-        function ShowSB() {
-            document.getElementById("image").src = "img/peta-sb.jpg";
-        }
 
-        function ShowUndo() {
-            document.getElementById("image").src = "http://www.userinterfaceicons.com/80x80/undo.png";
-        }
+    <script>
+        var ctx = document.getElementById('chartsosbud').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Puas',
+                    backgroundColor: 'rgb(250, 151, 99,0.7)',
+                    borderColor: 'rgb(250, 151, 99,0.7)',
+                    data: [32, 51, 36, 45, 37, 0, 0, 0, 0]
+                }, {
+                    label: 'Tidak Puas',
+                    backgroundColor: 'rgb(243, 255, 99,0.7)',
+                    borderColor: 'rgb(243, 255, 99,0.7)',
+                    data: [2, 4, 1, 7, 2, 18, 7, 9, 1]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(111, 255, 99,0.7)',
+                    borderColor: 'rgb(111, 255, 99,0.7)',
+                    data: [0, 0, 0, 4, 7, 26, 18, 29, 9]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
 
     </script>
     <script>
-        $('#petaLink').click(ShowSB() {
-            function ShowSB() {
-                document.getElementById("image").src = "img/peta-sb.jpg";
+        var ctx = document.getElementById('chartsosbud-bpjs').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Mengikuti',
+                    backgroundColor: 'rgb(76, 106, 169,0.7)',
+                    borderColor: 'rgb(76, 106, 169,0.7)',
+                    data: [23, 29, 20, 39, 26, 27, 17, 6, 7]
+                }, {
+                    label: 'Tidak Mengikuti',
+                    backgroundColor: 'rgb(235, 140, 67,0.7)',
+                    borderColor: 'rgb(235, 140, 67 ,0.7)',
+                    data: [13, 18, 10, 11, 8, 4, 2, 3, 2]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(164, 168, 163,0.7)',
+                    borderColor: 'rgb(164, 168, 163,0.7)',
+                    data: [4, 9, 7, 6, 12, 13, 6, 9, 1]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+
+    </script>
+    <script>
+        var ctx = document.getElementById("chartsosbud-bpjs-ringkasan").getContext("2d");
+        var data = {
+            labels: ['Mengikuti', 'Tidak Mengikuti'],
+            datasets: [{
+                label: "Penjualan Barang",
+                data: [194, 71],
+                backgroundColor: [
+                    '#29B0D0',
+                    '#2A516E',
+                    '#F07124',
+                    '#CBE0E3',
+                    '#979193'
+                ]
+            }]
+        };
+
+        var mydoughnutchart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: {
+                //                responsive: true
             }
-            return false;
         });
 
     </script>
