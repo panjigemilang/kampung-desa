@@ -308,6 +308,24 @@ class Landing extends Component {
                 </div>
               </div>
             </div>
+
+            <br />
+
+            <div class="container pb-5 kampung">
+              <div class="lokasiId">
+                <h4 id="judul">Lokasi Kami</h4>
+                <hr class="style1" style={{ clear: "both" }} />
+                <br style={{ clear: "both" }} />
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7902.655780332684!2d112.62988467262423!3d-7.965026301689798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6283249b9833f%3A0xe54379f3aa952716!2sRampal+Celaket%2C+Kec.+Klojen%2C+Kota+Malang%2C+Jawa+Timur!5e0!3m2!1sid!2sid!4v1565933211141!5m2!1sid!2sid"
+                width="100%"
+                height="500rem"
+                frameborder="0"
+                style={{ border: "0" }}
+                allowfullscreen
+              ></iframe>
+            </div>
           </section>
 
           {/* BUTTON GO UP: back to the top */}

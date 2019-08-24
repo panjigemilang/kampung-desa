@@ -30,6 +30,16 @@ window.scrollBy({
 });
 
 // Scroll to a certain element
+<<<<<<< HEAD
 document.querySelector('.hello').scrollIntoView({
     behavior: 'smooth'
+=======
+//document.querySelector('.hello').scrollIntoView({
+//    behavior: 'smooth'
+//});
+$("#klik-detail-peta-sosbud").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#peta-sb").offset().top
+    }, 100);
+>>>>>>> 6d7c71ec01747184295c1c45355c2d084cc2fffa
 });

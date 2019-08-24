@@ -26,6 +26,8 @@ import Post from "./components/posts/Post"
 import About from "./components/main/About"
 import Ekonomi from "./components/submain/Ekonomi"
 import Posts from "./components/posts/Posts"
+import Sosbud from "./components/submain/Sosbud"
+import Sapras from "./components/submain/Sapras"
 
 if (localStorage.jwtToken) {
   // set token to authorization
@@ -58,6 +60,8 @@ function App() {
         <Route exact path="/post/:post_id" component={Post} />
         <Route exact path="/tentang-kami" component={About} />
         <Route exact path="/ekonomi" component={Ekonomi} />
+        <Route exact path="/sosbud" component={Sosbud} />
+        <Route exact path="/sarana-prasarana" component={Sapras} />
         <Route exact path="/berita" component={Posts} />
         <Route exact path="/not-found" component={NotFound} />
 

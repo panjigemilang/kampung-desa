@@ -612,6 +612,16 @@ form#login input {
   display: inline-block;
 }
 
+/* ABOUT: Tentang kami */
+.lBelakang p {
+  text-align: justify;
+}
+
+#judul-home {
+  font-family: "montserrat", sans-serif;
+  padding-top: 2rem;
+}
+
 /*============ BOOTSTRAP BREAK POINTS:
 
 Extra small (xs) devices (portrait phones, less than 576px)
