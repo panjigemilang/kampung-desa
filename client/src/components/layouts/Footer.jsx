@@ -2,72 +2,111 @@ import React from "react"
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="container" id="foot">
-        <div className="row">
-          {/* Sisi kiri */}
-          <div className="col-lg-3 col-md-6 col-sm-12">
+    <section id="footer">
+      <div className="container">
+        <div className="row align-center justify-content-center">
+          <div className="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
             <img
-              src={require("../../img/devKami.png")}
-              className="logo"
-              alt="Logo Lets Dev.jpg"
+              src={require("../../img/LETS DEV.png")}
+              alt="logo.png"
+              style={{ width: "70%" }}
             />
-            <br />
           </div>
-
-          <div className="col-lg-2 pembates" />
-
-          {/* Sisi Kanan */}
-          <div className="col-lg-7 col-md-6 col-sm-12" id="about-us">
-            <h4 className="font-weight-bold"> Tentang Kami :</h4>
-            <p>
-              &nbsp;Let's Dev adalah software house yang didirikan oleh 4 orang
-              mahasiswa Brawijaya. Kami menyediakan jasa membuat website dan
-              aplikasi android. Silahkan hubungi kami
-            </p>
+          <div className="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
+            <h6 className="headerfooter">Tentang Kami</h6>
+            <div className="footerttgkm">
+              <ul className="fa-ul">
+                <li>
+                  <a href="#semi-landing" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fas fa-book" />
+                    </span>
+                    Visi dan Misi
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fas fa-theater-masks" />
+                    </span>
+                    Sosial Budaya
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fas fa-coins " />
+                    </span>
+                    Ekonomi
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fas fa-hammer" />
+                    </span>
+                    Sarana dan Prasarana
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="row contact">
-          Hubungi kami : 08980789580
-          <p>Malang, Jawa Timur.</p>
-        </div>
-        {/* Sosmed */}
-        <div className="row sosmed">
-          <div className="col-lg-3 col-md-3 col-sm-3" />
-          <div className="col-lg-2 col-md-2 col-sm-2" id="instagram">
-            <a
-              href="https://instagram.com/_panjig"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram" />
+          <div className="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
+            <a className="linkfooter" href="#berita">
+              <h6>Berita</h6>
             </a>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-2" id="linkedin">
-            <a
-              href="https://linkedin.com/in/panji-g"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin" />
+          <div className="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
+            <a className="linkfooter" href="#pengumuman">
+              <h6>Pengumuman</h6>
             </a>
           </div>
-          <div className="col-lg-2 col-md-2 col-sm-2" id="website">
-            <a
-              href="https://devkami.herokuapp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fas fa-globe" />
+          <div className="col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
+            <a className="linkfooter" href="#pengaduan">
+              <h6>Layanan Pengaduan</h6>
             </a>
           </div>
-          <div className="col-lg-3 col-md-3 col-sm-3" />
+          <div className="col-lg-2 col-xl-2col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
+            <h6 className="headerfooter">Kontak Kami</h6>
+            <div>
+              <ul className="fa-ul">
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fab fa-facebook-square" />
+                    </span>
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fab fa-twitter" />
+                    </span>
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fab fa-instagram " />
+                    </span>
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="#visimisi" className="linkfooter">
+                    <span className="fa-li">
+                      <i className="fab fa-youtube" />
+                    </span>
+                    Youtube
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div id="copyright">
-        <span id="copyright-t">&copy; Panji Gemilang 2019</span>
-      </div>
-    </footer>
+    </section>
   )
 }

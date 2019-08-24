@@ -6,9 +6,15 @@ export default function Spinner() {
     <div>
       <img
         src={spinner}
-        style={{ width: "200px", margin: "auto", display: "block" }}
+        style={{
+          width: "200px",
+          margin: "auto",
+          display: "block",
+          padding: "20vh 0"
+        }}
         alt="Loading . . ."
       />
+      
     </div>
   )
 }

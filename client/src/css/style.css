@@ -1,0 +1,632 @@
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "lato", sans-serif;
+  /*    font-family: 'open sans', sans-serif;*/
+  color: #505962;
+  background: transparent;
+}
+
+[class*="col-"] {
+  padding: 1rem;
+}
+
+.row,
+.container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*ALL*/
+/* LANDING: landing page */
+/*first landing show index.html and tentang kami.html*/
+#tentangkami {
+  background: url("../img/home.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #000;
+}
+
+/*caption setting landing page allpage*/
+#text-caption {
+  padding-top: 7rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-size: 0.7rem;
+}
+
+/*darker landing allpage*/
+.layer {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: inherit;
+}
+
+/*translate to top landing page allpage*/
+#utama {
+  transform: translateY(-10rem);
+}
+
+/* COMMONS */
+/*container allpage*/
+.kampung {
+  /*        background: #ffffff;*/
+  box-shadow: 0.2rem 0.2rem 0.4rem #acacac;
+  border-radius: 0.5rem;
+}
+
+#kami {
+  background: white;
+}
+
+/*button go to top*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #4492fc;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+
+#myBtn:hover {
+  background-color: #2b5793;
+}
+
+/*header tiap container*/
+#judul {
+  color: #102645;
+  text-transform: uppercase;
+  padding-top: 1.2rem;
+}
+
+/*underline header container*/
+.style1 {
+  width: 20rem;
+  float: left;
+  border-top: 3px solid #4492fc;
+}
+
+/*footer*/
+#footer {
+  background: #0e1d28;
+  text-align: left;
+}
+
+/*ul*/
+#footerUl {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+/* BOOTSTRAP */
+
+.card:before {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.card {
+  border: 0;
+  box-shadow: 0.2rem 0.2rem 0.4rem #acacac;
+  list-style: none;
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  cursor: context-menu;
+}
+
+.card:hover {
+  transform: scale(1.01) translateZ(0);
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+}
+
+.navbar-nav li {
+  padding-right: 0.7rem;
+}
+
+.navbar-dark .nav-link {
+  color: white;
+  padding-top: 0.8rem;
+}
+
+.nav-link.active {
+  color: #fefefe;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #4492fc;
+}
+
+/*index.html*/
+/*LANDING*/
+#semi-landing {
+  background: #ffffff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding: 1.5rem;
+  font-size: 0.7rem;
+}
+
+/*COMMONS*/
+/*width landing page*/
+.home {
+  height: 30rem;
+}
+
+/*container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+#ttgkm {
+  color: white;
+  text-decoration: none;
+}
+
+.card-img-maincustom {
+  height: 40vh;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/*overlay container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+.ovl {
+  opacity: 1;
+  transition: 0.5s;
+  text-shadow: 0.1rem 0.1rem 0.2rem black;
+  color: #ffffff;
+}
+
+/*overlay hover container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+.ovl:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+}
+
+/*simbol fontawesome-index.html*/
+.fa-3x {
+  color: #4492fc;
+}
+
+/*simbol fontawesome konten kampung cerdas bersahaja- index.html*/
+.konten {
+  color: #ffffff;
+  filter: drop-shadow(0 0 5px #000000);
+}
+
+/*link dari tentang kami-index.html*/
+#more {
+  color: #4492fc;
+}
+
+/*BOOTSTRAP*/
+/*card berita in index*/
+.card-img-top {
+  width: 320px;
+  height: 200px;
+}
+
+/*header berita in index*/
+#berita-header {
+  position: absolute;
+  padding-top: 40%;
+  padding-left: 7%;
+  color: #ffff;
+}
+
+/*berita card-text */
+.card-text {
+  font-family: inherit;
+  font-size: 0.7rem;
+}
+
+/*konten utama*/
+
+/*end utama*/
+
+/*nav*/
+
+/*end nav*/
+
+/*darker layer parallax home*/
+
+/*end darker layer parallax home*/
+
+#text-caption-sosbud {
+  padding-top: 7rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  top: 30%;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#text-caption-sosbud h2 {
+  font-size: 3rem;
+}
+
+.card-img .kampung {
+  width: 100%;
+  height: 300px;
+  border-radius: 0.5rem;
+}
+
+.linkfooter {
+  color: #ffffff;
+}
+
+.linkfooter:hover {
+  color: #868686;
+  text-decoration: none;
+}
+
+.headerfooter {
+  color: #ffffff;
+}
+
+.kampungan {
+  box-shadow: 0.2rem 0.2rem 0.4rem #333333;
+  border-radius: 0.5rem;
+}
+
+#judul-home {
+  color: #102645;
+  padding-top: 1.2rem;
+  text-align: center;
+}
+
+#semi-landing-home {
+  background: #ffffff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  padding-top: 1.5rem;
+  font-size: 0.7rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.style1-home {
+  width: 20rem;
+  border-top: 3px solid #4492fc;
+}
+
+.bgg {
+  background: url("../img/aa.jpg") center;
+  background-size: 900px;
+  width: 500px;
+  height: 480px;
+}
+
+.bgg-sosbud {
+  background: url("../img/peta-sb.jpg") center;
+  background-size: 900px;
+  width: 500px;
+  height: 480px;
+}
+
+.bgg2 {
+  background: url("../img/bb2.jpg") center;
+  background-size: 1200px;
+  width: 500px;
+  height: 480px;
+}
+
+.bgg4 {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.img-ttgkm {
+  max-width: 100%;
+  height: auto;
+  padding-top: 2%;
+}
+
+#berita {
+  padding-top: 2rem;
+}
+
+.peta-utama {
+  width: 100%;
+  height: 100%;
+}
+
+/*close modal map*/
+.close {
+  color: #ffffff;
+}
+
+.close:hover {
+  color: #ffffff;
+}
+
+.modal {
+  color: #ffffff;
+  background: rgba(0.2, 0.2, 0.2, 0.8);
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background-color: transparent;
+}
+
+.modal-footer {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+}
+
+.modal-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+}
+
+.link-pt-utm {
+  color: #000000;
+}
+
+.pt-utm {
+  color: #000000;
+}
+
+.linkpeta {
+  color: #585754;
+  margin: 10px;
+}
+
+.linkpeta:hover {
+  color: #868686;
+  text-decoration: none;
+}
+
+.tujuan-left:hover {
+  color: #4492fc;
+}
+
+.tujuan-right:hover {
+  color: #4492fc;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+#tentangkami-sosbud {
+  background: url("../img/sosbud.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+  /*ALL*/
+  /* LANDING: landing page */
+  /*first landing show index.html and tentang kami.html*/
+  #utama {
+    transform: translateY(0.1rem);
+  }
+
+  /*COMMONS*/
+  #judul {
+    color: #102645;
+    font-size: 1rem;
+  }
+
+  .style1 {
+    width: 10rem;
+    float: left;
+    border-top: 3px solid #4492fc;
+  }
+
+  /*BOOTSTRAP*/
+
+  /*index.html*/
+  /* LANDING: landing page */
+  /*COMMONS*/
+  /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .card-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  img .gambar-kartu {
+    object-fit: cover;
+    object-position: top;
+    height: 60vh;
+  }
+
+  /*overlay container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .ovl {
+    opacity: 1;
+    transition: 0.5s;
+    font-size: 0.5rem;
+    text-shadow: 0.1rem 0.1rem 0.2rem black;
+    color: #4492fc;
+  }
+
+  /*overlay hover container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .ovl:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+  }
+
+  /*BOOTSTRAP*/
+  .card {
+    cursor: grab;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgg {
+    background: url("../img/aa.jpg") center;
+    background-size: 900px;
+    width: 100%;
+    height: 280px;
+  }
+
+  .bgg-sosbud {
+    background: url("../img/peta-sb.jpg") center;
+    background-size: 300px;
+    width: 100%;
+    height: 280px;
+  }
+
+  .bgg2 {
+    background: url("../img/bb2.jpg") center;
+    background-size: 1200px;
+    width: 10;
+  }
+}
+
+/* EKONOMI: Page ekonomi */
+.card-img .ekon {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LOGIN: page login */
+#tentangkami-login {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/home.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #000;
+}
+
+.text-content h1,
+.text-content h2,
+.text-content h3 {
+  color: white;
+}
+
+.wrapper-login {
+  position: relative;
+}
+
+form label {
+  color: #488eb9;
+  background: white;
+  padding: 0 2vh;
+  transform: translateY(1rem);
+}
+
+form#login {
+  margin: 0 auto;
+  position: static;
+  background: white;
+  padding: 5vh;
+  width: 50%;
+  border-radius: 0.75rem;
+}
+
+form#login input {
+  border: 2px #a8d6f2 solid;
+}
+
+.login-submit {
+  text-align: center !important;
+}
+
+/* POSTS: Isi seluruh berita */
+.card-img-news {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.times {
+  cursor: pointer;
+  color: black;
+  float: right;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  transform: translate3d(468px, 86px, 0px);
+}
+
+.dot {
+  margin-right: 3px;
+  margin-top: 1.4rem;
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/

@@ -12,7 +12,7 @@ import {
 const baseURL = "http://localhost:5000"
 
 // adding a post
-export const addPost = (postData, config) => dispatch => {
+export const addPost = (postData, config, history) => dispatch => {
   dispatch(clearErrors())
   axios
     .post("/api/posts", postData, config)
@@ -22,6 +22,7 @@ export const addPost = (postData, config) => dispatch => {
         type: ADD_POST,
         payload: res.data
       })
+      history.push("/berita")
     })
     .catch(err =>
       dispatch({
@@ -49,25 +50,6 @@ export const addThumbnail = postData => dispatch => {
       })
     )
 }
-
-// // adding a comment
-// export const addComment = (id, comment) => dispatch => {
-//   dispatch(clearErrors())
-//   axios
-//     .post(`/api/posts/comment/${id}`, comment)
-//     .then(res =>
-//       dispatch({
-//         type: GET_POST,
-//         payload: res.data
-//       })
-//     )
-//     .catch(err =>
-//       dispatch({
-//         type: GET_ERRORS,
-//         payload: err.response.data
-//       })
-//     )
-// }
 
 // get all post
 export const getPosts = () => dispatch => {
@@ -140,50 +122,6 @@ export const deleteImage = filename => dispatch =>
         payload: err.response.data
       })
     )
-
-// // delete comment
-// export const deleteComment = (postId, comment) => dispatch => {
-//   axios
-//     .delete(`/api/posts/comment/${postId}/${comment.id}`)
-//     .then(res =>
-//       dispatch({
-//         type: GET_POST,
-//         payload: res.data
-//       })
-//     )
-//     .catch(err =>
-//       dispatch({
-//         type: GET_ERRORS,
-//         payload: err.response.data
-//       })
-//     )
-// }
-
-// // add likes
-// export const addLike = id => dispatch => {
-//   axios
-//     .post(`/api/posts/like/${id}`)
-//     .then(res => dispatch(getPosts()))
-//     .catch(err =>
-//       dispatch({
-//         type: GET_ERRORS,
-//         payload: err.response.data
-//       })
-//     )
-// }
-
-// // add likes
-// export const removeLike = id => dispatch => {
-//   axios
-//     .post(`/api/posts/unlike/${id}`)
-//     .then(res => dispatch(getPosts()))
-//     .catch(err =>
-//       dispatch({
-//         type: GET_ERRORS,
-//         payload: err.response.data
-//       })
-//     )
-// }
 
 export const setPostLoading = () => {
   return {

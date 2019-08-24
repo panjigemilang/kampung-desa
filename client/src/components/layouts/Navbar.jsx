@@ -9,8 +9,26 @@ const mapStateToProps = state => ({
 })
 
 class Navbar extends Component {
+  constructor() {
+    super()
+    this.state = {
+      navbarToggle: true
+    }
+  }
+
+  toggleSlideMenu() {
+    this.setState({
+      navbarToggle: !this.state.navbarToggle
+    })
+
+    if (this.state.navbarToggle) {
+      this.openSLideMenu()
+    } else {
+      this.closeSlideMenu()
+    }
+  }
+
   openSLideMenu() {
-    console.log("Opepn Slinde")
     document.getElementById("side-menu").style.width = "250px"
     document.querySelector("#side-menu > a").style.transition = "1s ease-in"
     document.querySelector("#side-menu > a").style.animation = "5s ease-in"
@@ -25,17 +43,27 @@ class Navbar extends Component {
   }
 
   onLogoutClick(e) {
-    this.closeSlideMenu()
+    this.toggleSlideMenu()
     this.props.logout()
   }
 
   render() {
-    const { isAuthenticated, user } = this.props.auth
+    const { isAuthenticated } = this.props.auth
 
     const guestLink = (
       <React.Fragment>
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item nav-text-color auth">
+          <li className="nav-item">
+            <Link className="nav-link " to="/tentang-kami">
+              <strong>Tentang Kami</strong>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/berita">
+              <strong>Berita</strong>
+            </Link>
+          </li>
+          <li className="nav-item auth">
             <Link className="nav-link " to="/login">
               <strong>Login</strong>
             </Link>
@@ -47,6 +75,16 @@ class Navbar extends Component {
     const authLink = (
       <React.Fragment>
         <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link " to="/tentang-kami">
+              <strong>Tentang Kami</strong>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link " to="/berita">
+              <strong>Berita</strong>
+            </Link>
+          </li>
           <li className="nav-item nav-text-color">
             <a href="/post-berita" className="nav-link">
               <strong>Posting</strong>
@@ -67,28 +105,21 @@ class Navbar extends Component {
 
     return (
       <React.Fragment>
-        <nav className="navbar navbar-dark navbar-expand-lg" id="nav-bg">
+        <nav
+          className="navbar navbar-expand-md navbar-dark bg-dark"
+          id="nav-bg"
+        >
           <Link className="navbar-brand" to="/">
-            <img src={require("../../img/loli.jpg")} alt="lolita.png" />
+            <img src={require("../../img/LETS DEV.png")} alt="logo.png" />
           </Link>
           {/* INI TOMBOL COLLAPSE */}
           <button
-            className="open-slide"
+            className="open-slide ml-auto"
             type="button"
-            onClick={() => this.openSLideMenu()}
+            onClick={() => this.toggleSlideMenu()}
           >
             <span className="navbar-toggler-icon" />
           </button>
-
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item nav-text-color">
-              <Link className="nav-link" to="/karyawan-list">
-                <strong>
-                  Karyawan <span className="sr-only" />
-                </strong>
-              </Link>
-            </li>
-          </ul>
           {isAuthenticated ? authLink : guestLink}
         </nav>
 
@@ -97,16 +128,34 @@ class Navbar extends Component {
           <button
             type="button"
             className="btn-close"
-            onClick={() => this.closeSlideMenu()}
+            onClick={() => this.toggleSlideMenu()}
           >
             &times;
           </button>
 
           {isAuthenticated ? (
             <React.Fragment>
-              <a href="/post-berita" className="nav-link">
+              <Link
+                to="/tentang-kami"
+                className="nav-link"
+                onClick={() => this.toggleSlideMenu()}
+              >
+                <strong>Tentang Kami</strong>
+              </Link>
+              <Link
+                to="/berita"
+                className="nav-link"
+                onClick={() => this.toggleSlideMenu()}
+              >
+                <strong>berita</strong>
+              </Link>
+              <Link
+                to="/post-berita"
+                className="nav-link"
+                onClick={() => this.toggleSlideMenu()}
+              >
                 <strong>Posting</strong>
-              </a>
+              </Link>
               <a
                 href="/login"
                 onClick={e => this.onLogoutClick(e)}
@@ -117,6 +166,12 @@ class Navbar extends Component {
             </React.Fragment>
           ) : (
             <React.Fragment>
+              <Link to="/tentang-kami" className="nav-link">
+                <strong>Tentang Kami</strong>
+              </Link>
+              <Link to="/berita" className="nav-link">
+                <strong>berita</strong>
+              </Link>
               <Link
                 className="nav-link"
                 to="/login"

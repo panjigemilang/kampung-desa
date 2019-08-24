@@ -5,7 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from "./components/layouts/Navbar"
 import Landing from "./components/layouts/Landing"
 import Footer from "./components/layouts/Footer"
-import "./App.css"
+import "./css/App.css"
+import "./css/fixed.css"
+import "./css/style.css"
+import "./css/postingBerita.css"
 
 // Redux setup
 import { Provider } from "react-redux"
@@ -20,6 +23,9 @@ import Login from "./components/auth/Login"
 import AddPost from "./components/posts/AddPost"
 import NotFound from "./components/errors/NotFound"
 import Post from "./components/posts/Post"
+import About from "./components/main/About"
+import Ekonomi from "./components/submain/Ekonomi"
+import Posts from "./components/posts/Posts"
 
 if (localStorage.jwtToken) {
   // set token to authorization
@@ -44,17 +50,21 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div className="App">
+        <div className="tentangkami">
           <Navbar />
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/not-found" component={NotFound} />
-          <Route exact path="/post/:post_id" component={Post} />
-          <Switch>
-            <PrivateRoute exact path="/post-berita" component={AddPost} />
-          </Switch>
-          <Footer />
         </div>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/post/:post_id" component={Post} />
+        <Route exact path="/tentang-kami" component={About} />
+        <Route exact path="/ekonomi" component={Ekonomi} />
+        <Route exact path="/berita" component={Posts} />
+        <Route exact path="/not-found" component={NotFound} />
+
+        <Switch>
+          <PrivateRoute exact path="/post-berita" component={AddPost} />
+        </Switch>
+        <Footer />
       </Router>
     </Provider>
   )

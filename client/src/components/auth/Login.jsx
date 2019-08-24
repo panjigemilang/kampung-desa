@@ -59,41 +59,65 @@ class Login extends Component {
     const { errors } = this.props
 
     return (
-      <div className="container">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div className="row">
-          <div className="col-lg-12 col-md-12">
-            <h1>Coba Login</h1>
-            <form onSubmit={e => this.onAxiosSubmit(e)}>
-              <TextFieldGroup
-                name="username"
-                className="form-control"
-                placeHolder="username"
-                value={this.state.username}
-                onChange={e => this.onChange(e)}
-                errors={errors.username}
-              />
+      <div id="tentangkami-login" className="layer">
+        {/* <div className="layer"> */}
 
-              <TextFieldGroup
-                name="password"
-                type="password"
-                className="form-control"
-                placeHolder="password"
-                value={this.state.password}
-                onChange={e => this.onChange(e)}
-                errors={errors.password}
-              />
+        <br />
+        <br />
+        <br />
+        <br />
 
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
+        <section className="home-login" id="header1-1">
+          <br />
+          <div className="container text-content">
+            <h3 className="text-center">Admin</h3>
+            <h1 className="display-4 text-center">Kampung Cerdas Bersahaja</h1>
+            <h2 className="text-center">Sign In</h2>
+
+            <br />
+
+            <form id="login" onSubmit={e => this.onAxiosSubmit(e)}>
+              <div className="form-group">
+                <label htmlFor="username">
+                  <strong>Username</strong>
+                </label>
+                <TextFieldGroup
+                  name="username"
+                  className="form-control"
+                  placeHolder="Masukkan username"
+                  value={this.state.username}
+                  onChange={e => this.onChange(e)}
+                  errors={errors.username}
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="password">
+                  <strong>Password</strong>
+                </label>
+                <TextFieldGroup
+                  name="password"
+                  type="password"
+                  className="form-control"
+                  placeHolder="Masukkan password"
+                  value={this.state.password}
+                  onChange={e => this.onChange(e)}
+                  errors={errors.password}
+                />
+              </div>
+
+              <div className="login-submit">
+                <button type="submit" className="btn btn-primary">
+                  Masuk
+                </button>
+              </div>
             </form>
+
+            <br />
+            <br />
           </div>
-        </div>
+        </section>
+        {/* </div> */}
         <br />
       </div>
     )
