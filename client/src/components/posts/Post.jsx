@@ -28,7 +28,7 @@ function Post(props) {
   const { post } = props.posts
   const { posts, loading } = props.posts
   const maxPosts = 8
-  const baseURL = "http://localhost:5000/image/"
+  const baseURL = "https://api-kampungdesa.herokuapp.com/image/"
 
   let postContent
   let postsContent = []

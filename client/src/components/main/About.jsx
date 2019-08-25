@@ -50,6 +50,7 @@ export default function About() {
             <div className="row">
               <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
+                  alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/latarbelakang1.1.jpg")}
                 />
@@ -94,6 +95,7 @@ export default function About() {
               </div>
               <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
+                  alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/latarbelakang2.1.jpg")}
                 />
@@ -111,6 +113,7 @@ export default function About() {
             <div className="row">
               <div className="col-lg-6 col-md-12 col-sm-12">
                 <img
+                  alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/tujuan1.jpg")}
                   style={{ height: "428px" }}
@@ -118,6 +121,7 @@ export default function About() {
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
                 <img
+                  alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/tujuan2.jpg")}
                 />
@@ -248,6 +252,7 @@ export default function About() {
               <div className="col-lg-6 col-md-12 col-sm-12">
                 <a className="card" data-toggle="modal" data-target="#myModal">
                   <img
+                    alt="foto.jpg"
                     className="peta-utama"
                     src={require("../../img/peta-utama.JPG")}
                     style={{ cursor: "pointer" }}
@@ -283,10 +288,18 @@ export default function About() {
               </div>
 
               <div className="col-lg-6 col-md-6 col-sm-6">
-                <img className="bgg4" src={require("../../img/sekilas1.JPG")} />
+                <img
+                  alt="foto.jpg"
+                  className="bgg4"
+                  src={require("../../img/sekilas1.JPG")}
+                />
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6">
-                <img className="bgg4" src={require("../../img/sekilas2.JPG")} />
+                <img
+                  alt="foto.jpg"
+                  className="bgg4"
+                  src={require("../../img/sekilas2.JPG")}
+                />
               </div>
             </div>
           </div>
@@ -310,7 +323,11 @@ export default function About() {
             <div className="modal-body">
               <div className="row">
                 <div className="col-lg-7 col-md-12 col-sm-12">
-                  <img src={require("../../img/peta-utama.JPG")} id="image" />
+                  <img
+                    alt="foto.jpg"
+                    src={require("../../img/peta-utama.JPG")}
+                    id="image"
+                  />
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12">
                   Lihat Detail Peta menurut :

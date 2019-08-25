@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 
 function CarouselItem(props) {
   const { post, auth } = props
-  const baseURL = "http://localhost:5000/image/"
+  const baseURL = "https://api-kampungdesa.herokuapp.com/image/"
   const onClickDelete = (filename, post_id) => {
     if (
       window.confirm(
@@ -32,7 +32,7 @@ function CarouselItem(props) {
         <img
           className="gambar-kartu"
           src={baseURL + post.foto}
-          alt="Card image"
+          alt="Card_image.jpg"
         />
         {auth.isAuthenticated ? (
           <button
@@ -216,7 +216,7 @@ class Landing extends Component {
                           <img
                             className="card-img card-img-maincustom"
                             src={require("../../img/homee.jpg")}
-                            alt="card image"
+                            alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
                             <i className="fas fa-home fa-3x konten" />
@@ -231,7 +231,7 @@ class Landing extends Component {
                           <img
                             className="card-img card-img-maincustom"
                             src={require("../../img/sb.jpg")}
-                            alt="card image"
+                            alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
                             <i className="fas fa-theater-masks fa-3x konten" />
@@ -246,7 +246,7 @@ class Landing extends Component {
                           <img
                             className="card-img card-img-maincustom"
                             src={require("../../img/ekonomi.jpg")}
-                            alt="card image"
+                            alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
                             <i className="fas fa-coins fa-3x konten" />
@@ -261,7 +261,7 @@ class Landing extends Component {
                           <img
                             className="card-img card-img-maincustom"
                             src={require("../../img/sp.jpg")}
-                            alt="card image"
+                            alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
                             <i className="fas fa-hammer fa-3x konten" />
@@ -311,19 +311,19 @@ class Landing extends Component {
 
             <br />
 
-            <div class="container pb-5 kampung">
-              <div class="lokasiId">
+            <div className="container pb-5 kampung">
+              <div className="lokasiId">
                 <h4 id="judul">Lokasi Kami</h4>
-                <hr class="style1" style={{ clear: "both" }} />
+                <hr className="style1" style={{ clear: "both" }} />
                 <br style={{ clear: "both" }} />
               </div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7902.655780332684!2d112.62988467262423!3d-7.965026301689798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6283249b9833f%3A0xe54379f3aa952716!2sRampal+Celaket%2C+Kec.+Klojen%2C+Kota+Malang%2C+Jawa+Timur!5e0!3m2!1sid!2sid!4v1565933211141!5m2!1sid!2sid"
                 width="100%"
                 height="500rem"
-                frameborder="0"
+                frameBorder="0"
                 style={{ border: "0" }}
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </section>

@@ -348,9 +348,7 @@ export default function Sosbud() {
       <div id="tentangkami-sosbud">
       <section className="home" id="header1-1">
             <div className="layer">
-
                 <div className="container text-content" id="text-caption-sosbud">
-
                     <h2>Sosial Budaya</h2>
                 </div>
             </div>
@@ -363,7 +361,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb.jpg" )} id="peta-sb" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb.jpg" )} id="peta-sb" />
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb.jpg')}`}>Peta Sosial Budaya</a></div>
 
@@ -393,7 +391,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-nodata.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height: "1.1rem", marginBottom: "1rem"}} />
+                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height: "1.1rem", marginBottom: "1rem"}} />
                                             </span>
                                             No Data
                                         </a></li>
@@ -430,7 +428,7 @@ export default function Sosbud() {
                                         <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb.jpg')}`}>
 
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -494,7 +492,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-bpjs.jpg")} id="peta-sb-bpjs" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-bpjs.jpg")} id="peta-sb-bpjs" />
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-bpjs" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>Peta BPJS</a></div>
 
@@ -558,7 +556,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width: "2rem", height: "1.2rem"}} /> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width: "2rem", height: "1.2rem"}} /> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -636,7 +634,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-spp.jpg")} id="peta-sb-spp" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-spp.jpg")} id="peta-sb-spp" />
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-spp" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>Peta Pendidikan</a></div>
 
@@ -701,7 +699,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}} /> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}} /> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -756,7 +754,7 @@ export default function Sosbud() {
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
 
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-ppp.jpg")} id="peta-sb-ppp"/>
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-ppp.jpg")} id="peta-sb-ppp"/>
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-ppp" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>Peta Pendidikan Khusus</a></div>
 
@@ -815,7 +813,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -844,7 +842,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-buta.jpg")} id="peta-sb-buta" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-buta.jpg")} id="peta-sb-buta" />
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-spp" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>Peta Buta Huruf</a></div>
 
@@ -908,7 +906,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -959,7 +957,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-kpip.jpg")} id="peta-sb-kpip" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kpip.jpg")} id="peta-sb-kpip" />
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kpip" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>Peta Pengembangan Informasi</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
@@ -1027,7 +1025,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -1062,7 +1060,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-kmtk.jpg")} id="peta-sb-kmtk" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kmtk.jpg")} id="peta-sb-kmtk" />
 
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmtk" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>Peta Keamanan</a></div>
                     </div>
@@ -1076,7 +1074,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/nodata.JPG")} style={{width:"1,8rem",height: "1.1rem", marginBottom: "1rem"}} />
+                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1,8rem",height: "1.1rem", marginBottom: "1rem"}} />
                                             </span>
                                             No Data
                                         </a>
@@ -1131,7 +1129,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -1160,7 +1158,7 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-sb-kmk.jpg")} id="peta-sb-kmk" />
+                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kmk.jpg")} id="peta-sb-kmk" />
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmk" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>Peta Koperasi</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
@@ -1173,7 +1171,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/nodata.JPG")} style={{width:"1,8rem", height: "1.1rem", marginBottom: "1rem"}}/>
+                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1,8rem", height: "1.1rem", marginBottom: "1rem"}}/>
                                             </span>
                                             No Data
                                         </a>
@@ -1222,7 +1220,7 @@ export default function Sosbud() {
                                     <li>
                                         <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>

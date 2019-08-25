@@ -43,7 +43,7 @@ function Post(props) {
   // }, [])
 
   const { post, auth, deletePost, deleteImage } = props
-  const baseURL = "http://localhost:5000/image/"
+  const baseURL = "https://api-kampungdesa.herokuapp.com/image/"
 
   const onClickDelete = (filename, post_id) => {
     if (
