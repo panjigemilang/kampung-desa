@@ -1,6 +1,348 @@
 import React from "react"
+import Chart from "chart.js"
 
 export default function Sosbud() {
+    React.useEffect(() => {
+        // Chart Sosbud
+        let ctx = document.getElementById('chartsosbud').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Puas',
+                    backgroundColor: 'rgb(250, 151, 99,0.7)',
+                    borderColor: 'rgb(250, 151, 99,0.7)',
+                    data: [32, 51, 36, 45, 37, 0, 0, 0, 0]
+                }, {
+                    label: 'Tidak Puas',
+                    backgroundColor: 'rgb(243, 255, 99,0.7)',
+                    borderColor: 'rgb(243, 255, 99,0.7)',
+                    data: [2, 4, 1, 7, 2, 18, 7, 9, 1]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(111, 255, 99,0.7)',
+                    borderColor: 'rgb(111, 255, 99,0.7)',
+                    data: [0, 0, 0, 4, 7, 26, 18, 29, 9]
+                }]
+            },
+            
+        });
+
+        // Chart BPJS
+        ctx = document.getElementById('chartsosbud-bpjs').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Mengikuti',
+                    backgroundColor: 'rgb(76, 106, 169,0.7)',
+                    borderColor: 'rgb(76, 106, 169,0.7)',
+                    data: [23, 29, 20, 39, 26, 27, 17, 6, 7]
+                }, {
+                    label: 'Tidak Mengikuti',
+                    backgroundColor: 'rgb(235, 140, 67,0.7)',
+                    borderColor: 'rgb(235, 140, 67 ,0.7)',
+                    data: [13, 18, 10, 11, 8, 4, 2, 3, 2]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(164, 168, 163,0.7)',
+                    borderColor: 'rgb(164, 168, 163,0.7)',
+                    data: [4, 9, 7, 6, 12, 13, 6, 9, 1]
+                }]
+            },
+            
+        });
+
+        // Donut Chart
+        ctx = document.getElementById("chartsosbud-bpjs-ringkasan").getContext("2d");
+        let data = {
+            labels: ['Mengikuti', 'Tidak Mengikuti'],
+            datasets: [{
+                data: [194, 71],
+                backgroundColor: [
+                    '#29B0D0',
+                    '#2A516E',
+                    '#F07124',
+                    '#CBE0E3',
+                    '#979193'
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            
+        });
+
+        // Chart SPP
+        ctx = document.getElementById('chartsosbud-spp').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Pribadi',
+                    backgroundColor: 'rgb(225, 112, 25,0.7)',
+                    borderColor: 'rgb(225, 112, 25,0.7)',
+                    data: [26, 24, 23, 28, 28, 29, 13, 26, 4]
+                }, {
+                    label: 'Beasiswa',
+                    backgroundColor: 'rgb(237, 181, 27,0.7)',
+                    borderColor: 'rgb(237, 181, 27,0.7)',
+                    data: [1, 0, 0, 3, 3, 0, 2, 0, 1]
+                }, {
+                    label: 'Bantuan Sosial',
+                    backgroundColor: 'rgb(128, 172, 40,0.7)',
+                    borderColor: 'rgb(128, 172, 40,0.7)',
+                    data: [0, 1, 2, 3, 1, 0, 0, 0, 0]
+                }, {
+                    label: 'Dll',
+                    backgroundColor: 'rgb(124, 31, 6,0.7)',
+                    borderColor: 'rgb(124, 31, 6,0.7)',
+                    data: [0, 4, 2, 1, 2, 1, 1, 0, 0]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(139, 116, 63,0.7)',
+                    borderColor: 'rgb(139, 116, 63,0.7)',
+                    data: [11, 28, 13, 25, 16, 14, 10, 12, 5]
+                }]
+            },
+            
+        });
+
+        // Chart Donut SPP ringkasan
+        ctx = document.getElementById("chartsosbud-spp-ringkasan").getContext("2d");
+        data = {
+            labels: ['Dana Pribadi', 'Beasiswa', 'Bantuan Sosial', 'Dana Lain'],
+            datasets: [{
+                data: [201, 10, 7, 11],
+                backgroundColor: [
+                    '#A8DBA8',
+                    '#56d895',
+                    '#3B8686',
+                    '#0B486B'
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            
+        });
+
+        // Chart PPP
+        ctx = document.getElementById('chartsosbud-ppp').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Terus dilaksanakan',
+                    backgroundColor: 'rgb(237, 181, 27,0.7)',
+                    borderColor: 'rgb(237, 181, 27,0.7)',
+                    data: [37, 56, 38, 55, 46, 44, 25, 38, 10]
+                }, {
+                    label: 'Sosialisasi ke Semua Masyarakat',
+                    backgroundColor: 'rgb(225, 112, 25,0.7)',
+                    borderColor: 'rgb(225, 112, 25,0.7)',
+                    data: [1, 0, 0, 1, 0, 0, 0, 0, 0]
+                }]
+            },
+            
+        });        
+
+        // Chart Donut ppp ringkasan
+        ctx = document.getElementById("chartsosbud-ppp-ringkasan").getContext("2d");
+        data = {
+            labels: ['Terus Dilaksanakan', 'Sosialisasi ke Masyarakat'],
+            datasets: [{
+                data: [349, 2],
+                backgroundColor: [
+                    '#ff6363',
+                    '#ffc400',
+                    '#4d7e65',
+                    '#3B8686',
+                    '#0B486B'
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            
+        });
+
+        // Chart buta
+        ctx = document.getElementById('chartsosbud-buta').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Mengikuti',
+                    backgroundColor: 'rgb(34, 54, 92,0.7)',
+                    borderColor: 'rgb(34, 54, 92,0.7)',
+                    data: [0, 1, 0, 1, 0, 0, 0, 0, 0]
+                }, {
+                    label: 'Tidak Mengikuti',
+                    backgroundColor: 'rgb(221, 128, 74,0.7)',
+                    borderColor: 'rgb(225, 112, 25,0.7)',
+                    data: [33, 45, 32, 35, 36, 0, 0, 0, 8]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(170, 166, 161,0.7)',
+                    borderColor: 'rgb(170, 166, 161,0.7)',
+                    data: [5, 10, 6, 20, 10, 44, 24, 28, 2]
+                }]
+            },
+            
+        });
+
+        // Chart Donut buta Ringkasan
+        ctx = document.getElementById("chartsosbud-buta-ringkasan").getContext("2d");
+        data = {
+            labels: ['Mengikuti', 'Tidak Mengikuti', 'Tidak Menjawab'],
+            datasets: [{
+                data: [2, 159, 189],
+                backgroundColor: [
+                    '#ff6363',
+                    '#ffc400',
+                    '#4d7e65',
+                    '#3B8686',
+                    '#0B486B'
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            
+        });
+
+        // Chart kpip
+        ctx = document.getElementById('chartsosbud-kpip').getContext('2d');
+        new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ['RT 01', 'RT 02', 'RT 03', 'RT 04', 'RT 05', 'RT 06', 'RT 07', 'RT 08', 'RT 09'],
+                datasets: [{
+                    label: 'Taman Bacaan',
+                    backgroundColor: 'rgb(104, 125, 180,0.7)',
+                    borderColor: 'rgb(104, 125, 180,0.7)',
+                    data: [5, 1, 5, 8, 2, 1, 5, 5, 1]
+                }, {
+                    label: 'Taman Bacaan, Internet',
+                    backgroundColor: 'rgb(160, 164, 153,0.7)',
+                    borderColor: 'rgb(160, 164, 153,0.7)',
+                    data: [31, 53, 25, 37, 32, 36, 16, 29, 7]
+                }, {
+                    label: 'Internet',
+                    backgroundColor: 'rgb(226, 148, 100,0.7)',
+                    borderColor: 'rgb(226, 148, 100,0.7)',
+                    data: [0, 1, 1, 1, 1, 2, 0, 2, 1]
+                }, {
+                    label: 'Tidak Menjawab',
+                    backgroundColor: 'rgb(235, 193, 92,0.7)',
+                    borderColor: 'rgb(235, 193, 92,0.7)',
+                    data: [2, 1, 7, 11, 11, 5, 4, 2, 1]
+                }]
+            },
+
+            // Configuration options go here
+            
+        });
+
+        // Chart KPIP ringkasan
+        ctx = document.getElementById("chartsosbud-kpip-ringkasan").getContext("2d");
+        data = {
+            labels: ['Pengembangan Internet', 'Pengembangan Taman Bacaan', 'Pengembangan Taman Bacaan dan Internet'],
+            datasets: [{
+                data: [33, 9, 266],
+                backgroundColor: [
+                    '#c363ff',
+                    '#7f5df0',
+                    '#ea793d',
+                    '#3B8686',
+                    '#0B486B'
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: data
+        });
+
+        // Chart KMTK ringkasan
+        ctx = document.getElementById("chartsosbud-kmtk-ringkasan").getContext("2d");
+        data = {
+            labels: ['Ronda', 'Iuran', 'Ronda & Iuran', 'Iuran & lain-lain', 'Ronda & lain-lain', 'Lain-lain', 'No Data'],
+            datasets: [{
+                data: [23, 43, 6, 0, 0, 2, 26],
+                backgroundColor: [
+                    '#365db7',
+                    '#f08a5d',
+                    '#eac23d',
+                    '#559dff',
+                    '#297c26',
+                    '#7f7f80',
+                    '#1f285c'
+
+                ]
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: data
+        });
+
+        // Chart KMK ringkasan
+        ctx = document.getElementById("chartsosbud-kmk-ringkasan").getContext("2d");
+        data = {
+            labels: ['Ikut', 'Tidak Ikut', 'No Data'],
+            datasets: [{
+                data: [23, 55, 22],
+                backgroundColor: [
+                    '#365db7',
+                    '#f08a5d',
+                    '#848484'
+                ]
+            }]
+        };
+        new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true
+            }
+        });
+
+    }, [])
+    
   return (
     <React.Fragment>
       <div id="tentangkami-sosbud">
@@ -13,6 +355,8 @@ export default function Sosbud() {
                 </div>
             </div>
         </section>
+        
+        </div>
 
         <div className="container" id="utama">
         <div id="kami" className="container pb-2 kampungan">
@@ -25,7 +369,7 @@ export default function Sosbud() {
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <p>Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan.</p>
+                        <p>&nbsp;&nbsp;&nbsp;Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan.</p>
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr />
                         <div className="row">
@@ -106,7 +450,7 @@ export default function Sosbud() {
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12" id="alasan">
                         <h4>
-                            Tanggapan MengenaiKepuasan Fasilitas Kesehatan
+                            Tanggapan Mengenai Kepuasan Fasilitas Kesehatan
                         </h4>
                         <hr />
                         <div className="row">
@@ -953,7 +1297,6 @@ export default function Sosbud() {
         </div>
         <br />
     </div>
-          </div>
     </React.Fragment>
   )
 }

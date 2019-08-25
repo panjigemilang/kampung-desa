@@ -1,6 +1,32 @@
 import React from "react"
 
 export default function About() {
+  // Import Image
+  const petaUtama = require("../../img/peta-utama.JPG")
+  const petaSB = require("../../img/peta-sb.jpg")
+  const petaEK = require("../../img/peta-e.jpg")
+  const petaSP = require("../../img/peta-sp.jpg")
+
+  const showNormalPeta = e => {
+    e.preventDefault()
+    document.getElementById("image").src = petaUtama
+  }
+
+  const showSB = e => {
+    e.preventDefault()
+    document.getElementById("image").src = petaSB
+  }
+
+  const showEK = e => {
+    e.preventDefault()
+    document.getElementById("image").src = petaEK
+  }
+
+  const showSP = e => {
+    e.preventDefault()
+    document.getElementById("image").src = petaSP
+  }
+
   return (
     <React.Fragment>
       <div id="tentangkami">
@@ -224,6 +250,7 @@ export default function About() {
                   <img
                     className="peta-utama"
                     src={require("../../img/peta-utama.JPG")}
+                    style={{ cursor: "pointer" }}
                   />
                 </a>
                 <span className="text-muted">
@@ -266,6 +293,71 @@ export default function About() {
         </div>
       </div>
       <br />
+
+      {/* <!--modal--> */}
+      <div className="modal fade" id="myModal" role="dialog">
+        <div className="modal-dialog modal-lg">
+          {/* <!-- Modal content--> */}
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">
+                Peta Letak Kampung Cerdas Bersahaja
+              </h5>
+              <button type="button" className="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="row">
+                <div className="col-lg-7 col-md-12 col-sm-12">
+                  <img src={require("../../img/peta-utama.JPG")} id="image" />
+                </div>
+                <div className="col-lg-5 col-md-12 col-sm-12">
+                  Lihat Detail Peta menurut :
+                  <ul style={{ listStyleType: "none" }}>
+                    <li>
+                      <button
+                        type="button"
+                        className="btn btn-success btnInModal"
+                        onClick={e => showNormalPeta(e)}
+                      >
+                        Satelite
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        className="btn btn-primary btnInModal"
+                        onClick={e => showSB(e)}
+                      >
+                        Sosial Budaya
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        className="btn btn-warning btnInModal"
+                        onClick={e => showEK(e)}
+                      >
+                        Ekonomi
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        className="btn btn-info btnInModal"
+                        onClick={e => showSP(e)}
+                      >
+                        Sarana dan Prasarana
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   )
 }

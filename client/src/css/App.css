@@ -140,6 +140,10 @@ nav-link {
   align-items: center;
 }
 
+.swiper-pagination {
+  color: white;
+}
+
 /* Swiper: Element child */
 .caption {
   margin: 2rem;

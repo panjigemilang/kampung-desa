@@ -37,7 +37,7 @@ body {
 
 /*caption setting landing page allpage*/
 #text-caption {
-  padding-top: 7rem;
+  padding-top: 10rem;
   width: 100%;
   padding-bottom: 7rem;
   color: white;
@@ -440,7 +440,11 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #ffffff;
+  color: #000;
+}
+
+#tentangkami-sosbud p {
+  text-align: justify;
 }
 
 @media (max-width: 575.98px) {
@@ -613,6 +617,11 @@ form#login input {
 }
 
 /* ABOUT: Tentang kami */
+#image {
+  width: 60vh;
+  object-fit: cover;
+}
+
 .lBelakang p {
   text-align: justify;
 }
@@ -620,6 +629,12 @@ form#login input {
 #judul-home {
   font-family: "montserrat", sans-serif;
   padding-top: 2rem;
+}
+
+.modal-body .btnInModal {
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 /*============ BOOTSTRAP BREAK POINTS:
