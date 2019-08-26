@@ -10,6 +10,7 @@
     "ckeditor4-react": "^1.0.0-beta.2",
     "classnames": "^2.2.6",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "http-proxy-middleware": "^0.19.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -44,7 +45,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://api-kampungdesa.herokuapp.com",
   "presets": [
     "env",
     "react"
@@ -55,5 +55,10 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-  }
+  },
+  "description": "deploy kampung desa",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
 }
