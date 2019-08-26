@@ -49,7 +49,6 @@
     "env",
     "react"
   ],
-  "proxy": "https://api-kampungdesa.herokuapp.com",
   "plugins": [
     "react-hooks"
   ],
