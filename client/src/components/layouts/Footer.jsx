@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="footerttgkm">
               <ul className="fa-ul">
                 <li>
-                  <a href="#semi-landing" className="linkfooter">
+                  <a href="#utama" className="linkfooter">
                     <span className="fa-li">
                       <i className="fas fa-book" />
                     </span>
@@ -25,7 +25,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#visimisi" className="linkfooter">
+                  <a href="/sosbud" className="linkfooter">
                     <span className="fa-li">
                       <i className="fas fa-theater-masks" />
                     </span>
@@ -33,7 +33,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#visimisi" className="linkfooter">
+                  <a href="/ekonomi" className="linkfooter">
                     <span className="fa-li">
                       <i className="fas fa-coins " />
                     </span>
@@ -41,7 +41,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#visimisi" className="linkfooter">
+                  <a href="/sarana-prasarana" className="linkfooter">
                     <span className="fa-li">
                       <i className="fas fa-hammer" />
                     </span>
@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="col-lg-2 col-xl-2col-lg-2 col-md-6  col-sm-6 col-xl-2 ftr">
             <h6 className="headerfooter">Kontak Kami</h6>
             <div>
-              <ul className="fa-ul">
+              <ul className="fa-ul" id="footerUl">
                 <li>
                   <a href="#visimisi" className="linkfooter">
                     <span className="fa-li">

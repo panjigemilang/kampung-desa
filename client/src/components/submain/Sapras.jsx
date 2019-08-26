@@ -5,48 +5,32 @@ import Swiper from "react-id-swiper"
 export default function Sapras() {
     // Import Image
     const petaSPLP = require("../../img/peta-sp-lp.jpg")
-    const petaSBPuas = require("../../img/peta-sb-puas.jpg")
-    const petaSP = require("../../img/peta-sp.jpg")
-    const petaRel = require("../../img/peta-sb-rel.jpg")
     const petaSPSS = require("../../img/peta-sp-ss.jpg")
     const petaSPFJ = require("../../img/peta-sp-fj.jpg")
     const petaSPSL = require("../../img/peta-sp-sl.jpg")
     const petaSPSK = require("../../img/peta-sp-sk.jpg")
-    const petaTidakPuas = require("../../img/peta-sb-tidakpuas.jpg")
 
     const setOnClick = (e, type) => {
         e.preventDefault()
 
         switch (type.toLowerCase()) {
-            case "peta-sp-ss":
-                document.getElementById('peta-sp-ss').src = petaSPLP
-                break;
             case "peta-sp":
-                document.getElementById('peta-sp').src = petaSBPuas
+                document.getElementById(type).src = petaSPLP
                 break;
-            case "peta-sp-":
-                document.getElementById('peta-sp').src = petaSP
-                break;
-            case "peta-sp-rel":
-                document.getElementById('peta-sp').src = petaRel
+            case "peta-sp-lp":            
+                document.getElementById('peta-sp').src = petaSPLP
                 break;
             case "peta-sp-ss":
-                document.getElementById('peta-sp-ss').src = petaSPSS
+                document.getElementById(type).src = petaSPSS
                 break;
             case "peta-sp-fj":
-                document.getElementById('peta-sp-fj').src = petaSPFJ
+                document.getElementById(type).src = petaSPFJ
                 break;
             case "peta-sp-sl":
-                document.getElementById('peta-sp-sl').src = petaSPSL
-                break;
-            case "peta-sb":
-                document.getElementById('peta-sb').src = petaSBPuas
+                document.getElementById(type).src = petaSPSL
                 break;
             case "peta-sp-sk":
-                document.getElementById('peta-sp-sk').src = petaSPSK
-                break;
-            case "peta-tak-sb":
-                document.getElementById('peta-sb').src = petaTidakPuas
+                document.getElementById(type).src = petaSPSK
                 break;
             default:
                 window.alert("gamasuk gayn")
@@ -205,7 +189,7 @@ export default function Sapras() {
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-lp.jpg")} />
                         
                         <div className="button-sosbud-map">
-                            <a className="btn btn-md btn-info display-4" href="#peta-sp-lp" onClick={(e) => setOnClick(e, "peta-sp-lp")}>Peta Sarana Prasarana Parkir</a>
+                            <a className="btn btn-md btn-info display-4" href="#peta-sp-lp" onClick={(e) => setOnClick(e, "peta-sp-lp")} data-toggle="modal" data-target="#modal-sp-lp">Peta Sarana Prasarana Parkir</a>
                             </div>
 
                     </div>
@@ -249,7 +233,7 @@ export default function Sapras() {
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-lp" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-")}>
+                                        <a href="#peta-sp-lp" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp")}>
                                            <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
@@ -320,7 +304,7 @@ export default function Sapras() {
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-ss.jpg")} id="peta-sp-ss" />                        
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-ss" onClick={(e) => setOnClick(e, "peta-sp-ss")}>Peta Sanitasi Sampah</a></div>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-ss" onClick={(e) => setOnClick(e, "peta-sp-ss")} data-toggle="modal" data-target="#modal-sp-ss">Peta Sanitasi Sampah</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
@@ -330,7 +314,7 @@ export default function Sapras() {
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-ss" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-lp")}>
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-ss")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
@@ -341,7 +325,7 @@ export default function Sapras() {
                                 <ul className="fa-ul">
                                     <li style={{marginBottom:" 0.5rem"}}>
 
-                                        <a href="#peta-sp-ss" className="linkpeta">
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-ss")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/mckumum.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/> MCK
                                             </span>
@@ -349,7 +333,7 @@ export default function Sapras() {
                                     </li>
                                     <li style={{marginBottom:" 0.5rem"}}>
 
-                                        <a href="#peta-sp-ss" className="linkpeta">
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-ss")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/tps.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/> TPS
                                             </span>
@@ -360,7 +344,7 @@ export default function Sapras() {
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-ss" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp")}>
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-ss")}>
                                            <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
@@ -371,13 +355,13 @@ export default function Sapras() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-ss" className="linkpeta" >
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-ss")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sp-ss" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-rel")}>
+                                        <a href="#peta-sp-ss" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-ss")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem",  borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a>
@@ -429,7 +413,7 @@ export default function Sapras() {
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-fj.jpg")} id="peta-sp-fj" />
                     
                         <div className="button-sosbud-map">
-                            <a className="btn btn-md btn-info display-4" href="#peta-sp-fj" onClick={(e) => setOnClick(e, "peta-sp-fj")}>Peta Fasilitas Jalan</a>
+                            <a className="btn btn-md btn-info display-4" href="#peta-sp-fj" onClick={(e) => setOnClick(e, "peta-sp-fj")}  data-toggle="modal" data-target="#modal-sp-fj">Peta Fasilitas Jalan</a>
                         </div>
                         
                     </div>
@@ -441,7 +425,7 @@ export default function Sapras() {
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-lp")}>
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-fj")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
@@ -451,7 +435,7 @@ export default function Sapras() {
                                 <ul className="fa-ul">
                                     <li style={{marginBottom:" 0.5rem"}}>
 
-                                        <a href="#peta-sp" className="linkpeta" >
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-fj")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/signage.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/> Signage
                                             </span>
@@ -459,7 +443,7 @@ export default function Sapras() {
                                     </li>
                                     <li style={{marginBottom:" 0.5rem"}}>
 
-                                        <a href="#peta-sp" className="linkpeta" >
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-fj")}>
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/landmark.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/> Landmark
                                             </span>
@@ -469,7 +453,7 @@ export default function Sapras() {
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp")}>
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp-fj")}>
                                            <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
@@ -480,13 +464,13 @@ export default function Sapras() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp" className="linkpeta" >
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-fj")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sp" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-rel")}  >
+                                        <a href="#peta-sp-fj" className="linkpeta" onClick={e => setOnClick(e, "peta-sp-fj")}  >
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem",  borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
@@ -544,7 +528,7 @@ export default function Sapras() {
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sl.jpg")} id="peta-sp-sl" />
                         
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sl" onClick={(e) => setOnClick(e, "peta-sp-sl")}>Peta Sarana Lingkungan</a></div>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sl" onClick={(e) => setOnClick(e, "peta-sp-sl")} data-toggle="modal" data-target="#modal-sp-sl">Peta Sarana Lingkungan</a></div>
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
@@ -703,7 +687,7 @@ export default function Sapras() {
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sk.jpg")} id="peta-sp-sk" />
                         
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sk" onClick={(e) => setOnClick(e, "peta-sp-sk")}>Peta Sarana Lingkungan</a></div>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sk" onClick={(e) => setOnClick(e, "peta-sp-sk")} data-toggle="modal" data-target="#modal-sp-sk">Peta Sarana Lingkungan</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
@@ -713,7 +697,7 @@ export default function Sapras() {
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
 
                                             <span className="fa-li" style={{display: "inline", width:" 100%", textAlign: "left"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
@@ -723,7 +707,7 @@ export default function Sapras() {
                                 <h6>Toponimi</h6>
                                 <ul className="fa-ul">
                                     <li style={{marginBottom:" 0.5rem"}}>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li" style={{marginLeft:" -0.15rem"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/banksampah.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/>
                                             </span>
@@ -731,7 +715,7 @@ export default function Sapras() {
                                             </span>
                                         </a></li>
                                     <li style={{marginBottom:" 0.5rem"}}>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li" style={{marginLeft:" -0.15rem"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/kebunpembibitan.JPG")} style={{width:"1.5rem", height:" 1.5rem"}}/>
                                             </span>
@@ -740,7 +724,7 @@ export default function Sapras() {
                                             </span>
                                         </a></li>
                                     <li style={{marginBottom:" 0.5rem"}}>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li" style={{marginLeft:" -0.15rem"}}>
                                                 <img alt="foto.jpg"  src={require("../../img/industrikerajinan.jpg")} style={{width:"1.5rem", height:" 1.5rem"}}/>
                                             </span>
@@ -753,26 +737,26 @@ export default function Sapras() {
                                 <ul className="fa-ul">
                                     <li>
 
-                                        <a href="#peta-sb" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sb")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <p style={{width:" 1.8rem",height:" 1rem", background:" rgb(111, 255, 99)"}}></p>
                                             </span>Peribadatan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={(e) => setOnClick(e, "peta-tak-sb")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <p style={{width:" 1.8rem",height:" 1rem", background:" #334ec1"}}></p>
                                             </span>Pemerintahan dan pelayanan Umum
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-tak-sb")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <p style={{width:" 1.8rem",height:" 1rem", background:" #691f1f"}}></p>
                                             </span>Pendidikan
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-tak-sb")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <p style={{width:" 1.8rem",height:" 1rem", background:" red"}}></p>
                                             </span>Perdagangan dan Jasa
@@ -783,7 +767,7 @@ export default function Sapras() {
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
@@ -792,13 +776,13 @@ export default function Sapras() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem", borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sp-sl" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sl")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <hr className="style1" style={{clear:" both",width:" 1.8rem",  borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
@@ -858,6 +842,102 @@ export default function Sapras() {
 
     <br />        
     <br />
-        </React.Fragment>
+
+    {/* <!--modal--> */}
+    <div class="modal fade" id="modal-sp-lp" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            {/* <!-- Modal content--> */}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peta Lokasi Parkir</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src={require("../../img/peta-sp-lp.jpg")} alt="peta.jpg" id="modal-img" /> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sp-ss" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            {/* <!-- Modal content--> */}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peta Sanitasi Sampah</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src={require("../../img/peta-sp-ss.jpg")} alt="peta.jpg" id="modal-img" /> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sp-fj" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            {/* <!-- Modal content--> */}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peta Fasilitas Jalan</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src={require("../../img/peta-sp-fj.jpg")} alt="peta.jpg" id="modal-img" /> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sp-sl" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            {/* <!-- Modal content--> */}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peta Sarana Lingkungan</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src={require("../../img/peta-sp-sl.jpg")} alt="peta.jpg" id="modal-img" /> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-sp-sk" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            {/* <!-- Modal content--> */}
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peta Sarana Kampung</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <img src={require("../../img/peta-sp-sk.jpg")} alt="peta.jpg" id="modal-img" /> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </React.Fragment>
     )
 }

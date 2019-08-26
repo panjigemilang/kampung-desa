@@ -2,6 +2,69 @@ import React from "react"
 import Chart from "chart.js"
 
 export default function Sosbud() {
+    const petaSBSPP = require("../../img/peta-sb-spp.jpg")
+    const petaSB = require("../../img/peta-sb.jpg")
+    const petaSBPuas = require("../../img/peta-sb-puas.jpg")
+    const petaSBTidakPuas = require("../../img/peta-sb-tidakpuas.jpg")
+    const petaSBnodata = require("../../img/peta-sb-nodata.jpg")
+    const petaSBJalan = require("../../img/peta-sb-jalan.jpg")
+    const petaSBrel = require("../../img/peta-sb-rel.jpg")
+    const petaSBBPJS = require("../../img/peta-sb-bpjs.jpg")
+    const petaSBPPP = require("../../img/peta-sb-ppp.jpg")
+    const petaSBButa = require("../../img/peta-sb-buta.jpg")
+    const petaSBkpip = require("../../img/peta-sb-kpip.jpg")
+    const petaSBkmtk = require("../../img/peta-sb-kmtk.jpg")
+    const petaSBkmk = require("../../img/peta-sb-kmk.jpg")
+
+    const setOnClick = (e, type) => {
+        e.preventDefault()
+
+        switch (type.toLowerCase()) {
+            case "peta-sb":
+                document.getElementById(type).src = petaSB
+                break;
+            case "peta-sb-puas":
+                document.getElementById("peta-sb").src = petaSBPuas
+                break;
+            case "peta-sb-takpuas":
+                document.getElementById("peta-sb").src = petaSBTidakPuas
+                break;
+            case "peta-sb-nodata":
+                document.getElementById("peta-sb").src = petaSBnodata
+                break;
+            case "peta-sb-jalan":
+                document.getElementById("peta-sb").src = petaSBJalan
+                break;
+            case "peta-sb-rel":
+                document.getElementById("peta-sb").src = petaSBrel
+                break;
+            case "peta-sb-bpjs":
+                document.getElementById(type).src = petaSBBPJS
+                break;
+            case "peta-sb-spp":
+                document.getElementById(type).src = petaSBSPP
+                break;
+            case "peta-sb-ppp":
+                document.getElementById(type).src = petaSBPPP
+                break;
+            case "peta-sb-buta":
+                document.getElementById(type).src = petaSBButa
+                break;
+            case "peta-sb-kpip":
+                document.getElementById(type).src = petaSBkpip
+                break;                
+            case "peta-sb-kmtk":
+                document.getElementById(type).src = petaSBkmtk
+                break;                
+            case "peta-sb-kmk":
+                document.getElementById(type).src = petaSBkmk
+                break;
+            default:
+                window.alert("Kosong coyyy")
+                break;
+        }
+    }
+
     React.useEffect(() => {
         // Chart Sosbud
         let ctx = document.getElementById('chartsosbud').getContext('2d');
@@ -353,7 +416,6 @@ export default function Sosbud() {
                 </div>
             </div>
         </section>
-        
         </div>
 
         <div className="container" id="utama">
@@ -361,37 +423,37 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb.jpg" )} id="peta-sb" />
+                        <img className="img-ttgkm" src={require("../../img/peta-sb.jpg" )}id="peta-sb"/>
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb.jpg')}`}>Peta Sosial Budaya</a></div>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb" onclick={e => setOnClick(e, "peta-sb")} data-toggle="modal" data-target="#modal-sb">Peta Sosial Budaya</a></div>
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <p>&nbsp;&nbsp;&nbsp;Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan.</p>
-                        <h4 style={{textAlign:" left"}}>Keterangan</h4>
-                        <hr />
+                        <p>Aset sosial-budaya masyarakat meliputi pelayanan fasilitas sosial seperti kesehatan dan pendidikan. Selain itu juga menyangkut keterlibatan warga dalam kegiatan kegiatan sosial dan budaya seperti program kesehatan BPJS, pemberantasan buta huruf, program kebutuhan khusus, pemberantasan kemiskinan, posyandu, keamanan, dan gotong royong. Pendataan aset sosial-budaya juga mencakup kemungkinan pengembangan informasi dan pengetahuan.</p>
+                        <h4>Keterangan</h4>
+                        <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Tingkat Kepuasan Fasilitas Kesehatan</h6>
                                 <ul className="fa-ul">
                                     <li>
 
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-puas.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-puas")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "rgb(111, 255, 99)"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" rgb(11, 255, 99)"}}></p>
                                             </span>Puas
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-tidakpuas.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-takpuas")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height: "1rem" ,background: "red"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" red"}}></p>
                                             </span>Tidak Puas
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-nodata.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-nodata")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height: "1.1rem", marginBottom: "1rem"}} />
+                                                <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom:" 1rem"}}/>
                                             </span>
                                             No Data
                                         </a></li>
@@ -399,9 +461,9 @@ export default function Sosbud() {
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width: "1.8rem", borderColor: "#5da2ff}}"}} /></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff;"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -410,53 +472,46 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-nodata.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-jalan")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width: "1.8rem", borderColor: "#000000"}} /></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb-rel.jpg')}`}>
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-rel")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width: "1.8rem", borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
-
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb" className="linkpeta" onClick={`document.getElementById('peta-sb').src=${require('../../img/peta-sb.jpg')}`}>
-
+                                        <a href="#peta-sb" className="linkpeta" onclick={e => setOnClick(e, "peta-sb")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-                
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <h4>Tingkat Kepuasan Fasilitas Kesehatan</h4>
-                        <hr />
+                        <hr/>
                         <canvas id="chartsosbud"></canvas>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12" id="alasan">
                         <h4>
-                            Tanggapan Mengenai Kepuasan Fasilitas Kesehatan
+                            Tanggapan MengenaiKepuasan Fasilitas Kesehatan
                         </h4>
                         <hr />
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12">
                                 <div className="row justify-content-center">
                                     <div className="box-item col-md-12 tujuan-left">
-                                        <h6>Puas</h6>
-                                        
+                                        <h6>Puas</h6>                                                                                
                                         <ul style={{listStyleType:"circle"}}>
                                             <li>Pelayanannya baik dan ramah
                                             </li>
@@ -467,8 +522,7 @@ export default function Sosbud() {
                                         </ul>
                                     </div>
                                     <div className="box-item col-lg-12 col-md-4 tujuan-right">
-                                        <h6>Tidak Puas</h6>
-                                        
+                                        <h6>Tidak Puas</h6>                                                                                
                                         <ul style={{listStyleType:"circle"}}>
                                             <li>Pelayanannya baik dan ramah
                                             </li>
@@ -492,45 +546,43 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-bpjs.jpg")} id="peta-sb-bpjs" />
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-bpjs.jpg" )}id="peta-sb-bpjs"/>
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-bpjs" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>Peta BPJS</a></div>
-
-
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-bpjs" onclick={e => setOnClick(e, "peta-sb-bpjs")} data-toggle="modal" data-target="#modal-sb-bpjs">Peta BPJS</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" left"}}>Keterangan</h4>
-                        <hr />
+                        <h4>Keterangan</h4>
+                        <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Tingkat Keikutsertaan Program BPJS</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#E4E4AE"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #E4E4AE"}}></p>
                                             </span>Nol
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#BD5E55"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #BD5E55"}}></p>
                                             </span>Mengikuti
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#a0e6b8"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #a0e6b8"}}></p>
                                             </span>Tidak Mengikuti
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width: "1.8rem", borderColor: "#5da2ff}}"}} /></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -539,24 +591,25 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width: "1.8rem", borderColor: "#000000}}"}} /></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both", width:" 1.8rem", borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-bpjs" className="linkpeta" onClick={`document.getElementById('peta-sb-bpjs').src=${require('../../img/peta-sb-bpjs.jpg')}`}>
+                                        <a href="#peta-sb-bpjs" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-bpjs")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width: "2rem", height: "1.2rem"}} /> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}
+                                                />Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -567,14 +620,14 @@ export default function Sosbud() {
 
 
                 </div>
-                <hr />
+                <hr/>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Grafik Keikutsertaan dalam BPJS</h4>
+                        <h4 style={{textAlign: "center"}}>Grafik Keikutsertaan dalam BPJS</h4>
                         <canvas id="chartsosbud-bpjs"></canvas>
-                        <hr />
-                        <h4 style={{textAlign:" center"}}>Ringkasan Peserta BPJS</h4>
-                        <hr />
+                        <hr/>
+                        <h4 style={{textAlign: "center"}}>Ringkasan Peserta BPJS</h4>
+                        <hr/>
                         <canvas id="chartsosbud-bpjs-ringkasan"></canvas>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12" id="alasan">
@@ -597,7 +650,7 @@ export default function Sosbud() {
                                 </div>
                                 <br />
                                 <br />
-                                <div className=" text-white tidakpuas" style={{background :" rgb(255, 135, 99)"}}>
+                                <div className=" text-white tidakpuas" style={{background : "rgb(255, 135, 99)"}}>
                                     <div className="card-body">
                                         <h6>Tidak Mengikuti</h6>
                                         <ul style={{listStyleType:"circle"}}>
@@ -610,7 +663,7 @@ export default function Sosbud() {
                                 </div>
                                 <br />
                                 <br />
-                                <div className=" text-white tidakpuas" style={{background :" rgb(121, 121, 121)"}}>
+                                <div className=" text-white tidakpuas" style={{background : "rgb(121, 121, 121)"}}>
                                     <div className="card-body">
                                         <h6>Saran Kepada BPJS</h6>
                                         <ul style={{listStyleType:"circle"}}>
@@ -634,72 +687,46 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-spp.jpg")} id="peta-sb-spp" />
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-spp.jpg" )}id="peta-sb-spp" />
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-spp" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>Peta Pendidikan</a></div>
-
-
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-spp" onclick={e => setOnClick(e, "peta-sb-spp")} data-toggle="modal" data-target="#modal-sb-spp">Peta Pendidikan</a></div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
 
-                        <h4 style={{textAlign:" left"}}>Keterangan</h4>
-                        <hr />
+                    <div className="col-lg-6 col-md-12 col-sm-12">
+                        <h4>Keterangan</h4>
+                        <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
-                                <h6> Sumber Pembiayaan Pendidikan</h6>
-                                <ul className="fa-ul">
-                                    <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
-                                            <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#E4E4AE"}}></p>
-                                            </span>Nol
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
-                                            <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#BD5E55"}}></p>
-                                            </span>Surat Menyurat
-                                        </a></li>
-                                    <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
-                                            <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#a0e6b8"}}></p>
-                                            </span>Tidak Mengikuti
-                                        </a></li>
-                                </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
+                                        <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}} /></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
+                                        <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
+                                        <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-spp" className="linkpeta" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>
+                                        <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}} /> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -707,17 +734,109 @@ export default function Sosbud() {
                         </div>
                     </div>
                 </div>
-                <hr />
+                <div className="row">
+                    <div className="col-lg-12 col-md-12 col-sm-12">
+                        <h6> Sumber Pembiayaan Pendidikan</h6>
+                        <ul className="fa-ul">
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
+                                        <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom:" 1rem"}}/>
+                                    </span>Nol
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #BEDCEE"}}></p>
+                                    </span>Surat Menyurat
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #E1B6C2"}}></p>
+                                    </span>Harus Merata
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #C7E1E1"}}></p>
+                                    </span>Keringanan Biaya, Lain-lain
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #E3A6CF"}}></p>
+                                    </span>Lain-lain
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #4E0013"}}></p>
+                                    </span>Perketat, Tingkatkan, dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #D38947"}}></p>
+                                    </span>Harus Merata, Perketat, Tingkatkan, dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #A0D2E9"}}></p>
+                                    </span>Tepat Sasaran dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #E2E5ED"}}></p>
+                                    </span>Keringanan, Perketat, Tingkatkan, dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #E7E4BB"}}></p>
+                                    </span>Keringanan Biaya, Permudah urusan Surat Menyurat, Tepat Sasaran, Harus Merata, Perketat, Tingkatkan, dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #EE4C10"}}></p>
+                                    </span>Surat Menyurat, Perketat, Tingkatkan, dan Konsekuensi dalam Memberikan Bantuan
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #E7E37A"}}></p>
+                                    </span>Keringanan Biaya
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #8FBE5E"}}></p>
+                                    </span>Tepat Sasaran
+                                </a></li>
+                            <li>
+                                <a href="#peta-sb-spp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-spp")}>
+                                    <span className="fa-li">
+                                        <p style={{width:" 1.8rem",height:" 1rem", background:" #4C0957"}}></p>
+                                    </span>Tepat Sasaran, Harus Merata
+                                </a></li>
+                        </ul>
+
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Grafik Sumber Biaya Pendidikan</h4>
+                        <h4 style={{textAlign: "center"}}>Grafik Sumber Biaya Pendidikan</h4>
                         <canvas id="chartsosbud-spp"></canvas>
-                        <hr />
+                        <hr/>
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Ringkasan Sumber Biaya Pendidikan</h4>
-                        <hr />
+                        <h4 style={{textAlign: "center"}}>Ringkasan Sumber Biaya Pendidikan</h4>
+                        <hr/>
                         <canvas id="chartsosbud-spp-ringkasan"></canvas>
                     </div>
                     <div className="col-lg-12 col-md-12 col-sm-12" id="alasan">
@@ -734,19 +853,22 @@ export default function Sosbud() {
                                             <li>
                                                 Perketat, tingkatkan, dan konsekuen dalam memberikan bantuan
                                             </li>
-
                                         </ul>
                                     </div>
                                 </div>
+
                                 <br />
                                 <br />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <br />
+
         <div id="kami" className="container pb-2 kampung">
             <h4 id="judul-home">Program Pendidikan Khusus</h4>
 
@@ -754,40 +876,38 @@ export default function Sosbud() {
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
 
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-ppp.jpg")} id="peta-sb-ppp"/>
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-ppp.jpg" )}id="peta-sb-ppp" />
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-ppp" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>Peta Pendidikan Khusus</a></div>
-
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-ppp" onclick={e => setOnClick(e, "peta-sb-ppp")} data-toggle="modal" data-target="#modal-sb-ppp">Peta Pendidikan Khusus</a></div>
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-
-                        <h4 style={{textAlign:" left"}}>Keterangan</h4>
-                        <hr />
+                        <h4>Keterangan</h4>
+                        <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6> Tingkat Kepentingan Program Pendidikan Khusus</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#554452"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #554452"}}></p>
                                             </span>Terus Dilaksanakan Karena ada Masyarakat yang Membutuhkan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#A5443D"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #A5443D"}}></p>
                                             </span>Sosialisasi ke Semua Masyarakat
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}}/></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -796,24 +916,24 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-ppp" className="linkpeta" onClick={`document.getElementById('peta-sb-ppp').src=${require('../../img/peta-sb-ppp.jpg')}`}>
+                                        <a href="#peta-sb-ppp" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-ppp")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -821,17 +941,17 @@ export default function Sosbud() {
                         </div>
                     </div>
                 </div>
-                <hr />
+                <hr/>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Grafik Tingkat Kepentingan Program Pendidikan Khusus</h4>
+                        <h4 style={{textAlign: "center"}}>Grafik Tingkat Kepentingan Program Pendidikan Khusus</h4>
                         <canvas id="chartsosbud-ppp"></canvas>
-                        <hr />
+                        <hr/>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Chart Hasil Kuesioner tentang Program Pendidikan Khusus</h4>
+                        <h4 style={{textAlign: "center"}}>Chart Hasil Kuesioner tentang Program Pendidikan Khusus</h4>
                         <canvas id="chartsosbud-ppp-ringkasan"></canvas>
-                        <hr />
+                        <hr/>
                     </div>
                 </div>
             </div>
@@ -842,45 +962,43 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-buta.jpg")} id="peta-sb-buta" />
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-buta.jpg" )}id="peta-sb-buta"/>
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-spp" onClick={`document.getElementById('peta-sb-spp').src=${require('../../img/peta-sb-spp.jpg')}`}>Peta Buta Huruf</a></div>
-
-
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-buta" onclick={e => setOnClick(e, "peta-sb-buta")} data-toggle="modal" data-target="#modal-sb-buta">Peta Buta Huruf</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" left"}}>Keterangan </h4>
-                        <hr />
+                        <h4>Keterangan </h4>
+                        <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Keikutsertaan Program Buta Huruf</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#A1CAE0"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #A1CAE0"}}></p>
                                             </span>Nol
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#ffba8a"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #ffba8a"}}></p>
                                             </span>Ada
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#8EB971"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #8EB971"}}></p>
                                             </span>Tidak Ada
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}}/></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -889,24 +1007,24 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-buta" className="linkpeta" onClick={`document.getElementById('peta-sb-buta').src=${require('../../img/peta-sb-buta.jpg')}`}>
+                                        <a href="#peta-sb-buta" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-buta")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -914,18 +1032,18 @@ export default function Sosbud() {
                         </div>
                     </div>
                 </div>
-                <hr />
+                <hr/>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Grafik Tingkat Keikutsertaan dalam Program</h4>
+                        <h4 style={{textAlign: "center"}}>Grafik Tingkat Keikutsertaan dalam Program</h4>
                         <canvas id="chartsosbud-buta"></canvas>
-                        <hr />
+                        <hr/>
 
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
 
-                        <h4 style={{textAlign:" center"}}>Ringkasan terhadap program Buta Huruf</h4>
-                        <hr />
+                        <h4 style={{textAlign: "center"}}>Ringkasan terhadap program Buta Huruf</h4>
+                        <hr/>
                         <canvas id="chartsosbud-buta-ringkasan"></canvas>
                     </div>
                     <div className="col-lg-12 col-md-12 col-sm-12" id="alasan">
@@ -957,49 +1075,49 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kpip.jpg")} id="peta-sb-kpip" />
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kpip" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>Peta Pengembangan Informasi</a></div>
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-kpip.jpg" )}id="peta-sb-kpip"/>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kpip" onclick={e => setOnClick(e, "peta-sb-kpip")} data-toggle="modal" data-target="#modal-sb-kpip">Peta Pengembangan Informasi</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
 
-                        <h4 style={{textAlign:" left"}}>Keterangan </h4>
+                        <h4>Keterangan </h4>
                         <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Tingkat Kepentingan Pengembangan Informasi dan Pengetahuan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#92c856"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #92c856"}}></p>
                                             </span>-
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#dd5443"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #dd5443"}}></p>
                                             </span>Taman Bacaan
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#e37b46"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #e37b46"}}></p>
                                             </span>Internet
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#686ea9"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #686ea9"}}></p>
                                             </span>Taman Bacaan, Internet
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}}/></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -1008,24 +1126,24 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kpip" className="linkpeta" onClick={`document.getElementById('peta-sb-kpip').src=${require('../../img/peta-sb-kpip.jpg')}`}>
+                                        <a href="#peta-sb-kpip" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kpip")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
@@ -1039,12 +1157,12 @@ export default function Sosbud() {
                 <hr/>
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Grafik Tingkat Kepentingan Pengembangan Informasi dan Pengetahuan </h4>
+                        <h4 style={{textAlign: "center"}}>Grafik Tingkat Kepentingan Pengembangan Informasi dan Pengetahuan </h4>
                         <canvas id="chartsosbud-kpip"></canvas>
                         <hr/>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" center"}}>Pengembangan Informasi dan Pengetahuan</h4>
+                        <h4 style={{textAlign: "center"}}>Pengembangan Informasi dan Pengetahuan</h4>
                         <hr/>
                         <canvas id="chartsosbud-kpip-ringkasan"></canvas>
                         <hr/>
@@ -1060,50 +1178,50 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kmtk.jpg")} id="peta-sb-kmtk" />
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-kmtk.jpg" )}id="peta-sb-kmtk" />
 
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmtk" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>Peta Keamanan</a></div>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmtk" onclick={e => setOnClick(e, "peta-sb-kmtk")} data-toggle="modal" data-target="#modal-sb-kmtk">Peta Keamanan</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" left"}}>Keterangan </h4>
+                        <h4>Keterangan </h4>
                         <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Jenis Keikutsertaan Masyarakat Terhadap Keamanan Kampung</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1,8rem",height: "1.1rem", marginBottom: "1rem"}} />
+                                                <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom:" 1rem"}}/>
                                             </span>
                                             No Data
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#E1E3BA"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #E1E3BA"}}></p>
                                             </span>Ikut Jaga/ Ronda
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#D2ABC7"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #D2ABC7"}}></p>
                                             </span>Iuran
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#C6B7D4"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #C6B7D4"}}></p>
                                             </span>Lain-lain
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}}/></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -1112,29 +1230,29 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmtk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmtk').src=${require('../../img/peta-sb-kmtk.jpg')}`}>
+                                        <a href="#peta-sb-kmtk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmtk")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
                             </div>
-                            <h5 style={{textAlign:" center"}}>Presentase Keikutsertaan Masyarakat (%)</h5>
+                            <h5 style={{textAlign: "center"}}>Presentase Keikutsertaan Masyarakat (%)</h5>
                             <hr/>
                             <canvas id="chartsosbud-kmtk-ringkasan"></canvas>
                         </div>
@@ -1158,43 +1276,43 @@ export default function Sosbud() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg" className="img-ttgkm" src={require("../../img/peta-sb-kmk.jpg")} id="peta-sb-kmk" />
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmk" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>Peta Koperasi</a></div>
+                        <img className="img-ttgkm" src={require("../../img/peta-sb-kmk.jpg" )}id="peta-sb-kmk"/>
+                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sb-kmk" onclick={e => setOnClick(e, "peta-sb-kmk")} data-toggle="modal" data-target="#modal-sb-kmk">Peta Koperasi</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4 style={{textAlign:" left"}}>Keterangan</h4>
+                        <h4>Keterangan</h4>
                         <hr/>
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-6">
                                 <h6>Keikutsertaan Masyarakat dalam Kelembagaan Koperasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1,8rem", height: "1.1rem", marginBottom: "1rem"}}/>
+                                                <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom:" 1rem"}}/>
                                             </span>
                                             No Data
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#f2aaa3"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #f2aaa3"}}></p>
                                             </span>Mengikuti
                                         </a></li>
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li">
-                                                <p style={{width: "1.8rem", height:" 1rem", background: "#a0e6b8"}}></p>
+                                                <p style={{width:" 1.8rem",height:" 1rem", background:" #a0e6b8"}}></p>
                                             </span>Tidak Mengikuti
                                         </a></li>
                                 </ul>
                                 <h6>Perairan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #5da2ff"}}/></span>Drainase
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#5da2ff"}}/></span>Drainase
                                         </a>
                                     </li>
                                 </ul>
@@ -1203,29 +1321,29 @@ export default function Sosbud() {
                                 <h6>Jaringan</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem", borderColor:" #000000"}}/></span>Jalan
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem",borderColor: "#000000"}}/></span>Jalan
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li">
-                                                <hr className="style1" style={{clear: "both",width:" 1.8rem",  borderTop:"3px dashed #000000"}} /></span>Rel Kereta Api
+                                                <hr className="style1" style={{clear:" both",width:" 1.8rem", borderTop:"3px dashed #000000 "}}/></span>Rel Kereta Api
                                         </a></li>
 
                                 </ul>
                                 <h6>Administrasi</h6>
                                 <ul className="fa-ul">
                                     <li>
-                                        <a href="#peta-sb-kmk" className="linkpeta" onClick={`document.getElementById('peta-sb-kmk').src=${require('../../img/peta-sb-kmk.jpg')}`}>
+                                        <a href="#peta-sb-kmk" className="linkpeta" onclick={e => setOnClick(e, "peta-sb-kmk")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img src={require("../../img/sosbud-batas-rt.JPG")} style={{width:"2rem", height: "1.2rem"}}/> Batas RT
                                             </span>
                                         </a></li>
                                 </ul>
                             </div>
-                            <h4 style={{textAlign:" center"}}>Ringkasan Jumlah Masyarakat (%)</h4>
+                            <h4 style={{textAlign: "center"}}>Ringkasan Jumlah Masyarakat (%)</h4>
                             <hr/>
                             <canvas id="chartsosbud-kmk-ringkasan"></canvas>
                         </div>
@@ -1255,8 +1373,8 @@ export default function Sosbud() {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12">
-                                <div className=" text-white tidakpuas" style={{background :" rgb(54, 113, 124)"}}>
-                                    <div className="card-body" style={{height: "14.5rem",  marginBottom: "-2.5rem"}}>
+                                <div className=" text-white tidakpuas" style={{background : "rgb(54, 113, 124)"}}>
+                                    <div className="card-body" style={{height:" 14.5rem", marginBottom: "-2.5rem"}}>
                                         <h6>Ketidakpuasan Terhadap Kinerja Koperasi:</h6>
                                         <ul style={{listStyleType:"circle"}}>
                                             <li>Visi dan Misi belum Jelas
@@ -1272,7 +1390,7 @@ export default function Sosbud() {
                                 <br />
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12">
-                                <div className=" text-white tidakpuas" style={{background :" rgb(123, 50, 50)"}}>
+                                <div className=" text-white tidakpuas" style={{background : "rgb(123, 50, 50)"}}>
                                     <div className="card-body">
                                         <h6>Tidak Bergabung dalam Koperasi:</h6>
                                         <ul style={{listStyleType:"circle"}}>

@@ -104,16 +104,8 @@ body {
   border-top: 3px solid #4492fc;
 }
 
-/*footer*/
-#footer {
-  background: #0e1d28;
-  text-align: left;
-}
-
-/*ul*/
-#footerUl {
-  list-style-type: none;
-  font-size: 16px;
+#judul-home {
+  text-transform: uppercase;
 }
 
 /* BOOTSTRAP */
@@ -248,18 +240,6 @@ body {
   font-size: 0.7rem;
 }
 
-/*konten utama*/
-
-/*end utama*/
-
-/*nav*/
-
-/*end nav*/
-
-/*darker layer parallax home*/
-
-/*end darker layer parallax home*/
-
 #text-caption-sosbud {
   padding-top: 7rem;
   width: 100%;
@@ -279,19 +259,6 @@ body {
   width: 100%;
   height: 300px;
   border-radius: 0.5rem;
-}
-
-.linkfooter {
-  color: #ffffff;
-}
-
-.linkfooter:hover {
-  color: #868686;
-  text-decoration: none;
-}
-
-.headerfooter {
-  color: #ffffff;
 }
 
 .kampungan {
@@ -315,41 +282,33 @@ body {
   z-index: 1;
 }
 
+.img-ttgkm {
+  max-width: 100%;
+  height: auto;
+  padding-top: 2%;
+}
+
+.peta-utama {
+  width: 100%;
+  height: 100%;
+}
+
 .style1-home {
   width: 20rem;
   border-top: 3px solid #4492fc;
 }
 
-.bgg {
-  background: url("../img/aa.jpg") center;
-  background-size: 900px;
-  width: 500px;
-  height: 480px;
+.tujuan-left:hover {
+  color: #4492fc;
 }
 
-.bgg-sosbud {
-  background: url("../img/peta-sb.jpg") center;
-  background-size: 900px;
-  width: 500px;
-  height: 480px;
-}
-
-.bgg2 {
-  background: url("../img/bb2.jpg") center;
-  background-size: 1200px;
-  width: 500px;
-  height: 480px;
+.tujuan-right:hover {
+  color: #4492fc;
 }
 
 .bgg4 {
   border-radius: 0.5rem;
   width: 100%;
-}
-
-.img-ttgkm {
-  max-width: 100%;
-  height: auto;
-  padding-top: 2%;
 }
 
 #berita {
@@ -359,6 +318,18 @@ body {
 .peta-utama {
   width: 100%;
   height: 100%;
+}
+
+/*BOOTSTRAP*/
+.btnInModal:nth-child(n) {
+  /*    color: white;*/
+  width: 250px;
+}
+
+.btnInModal:nth-child(n) {
+  color: white;
+  width: 250px;
+  margin: 0.2rem;
 }
 
 /*close modal map*/
@@ -419,14 +390,6 @@ body {
   text-decoration: none;
 }
 
-.tujuan-left:hover {
-  color: #4492fc;
-}
-
-.tujuan-right:hover {
-  color: #4492fc;
-}
-
 #map {
   height: 400px;
   /* The height is 400 pixels */
@@ -434,6 +397,7 @@ body {
   /* The width is the width of the web page */
 }
 
+/* SOSBUD: Sosial Budaya */
 #tentangkami-sosbud {
   background: url("../img/sosbud.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -447,10 +411,84 @@ body {
   text-align: justify;
 }
 
+#text-caption-sosbud {
+  padding-top: 7rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  top: 30%;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#text-caption-sosbud h2 {
+  font-size: 3rem;
+}
+
+/*COMMONS*/
+#klik-detail-peta-sosbud {
+  cursor: pointer;
+}
+
+.button-sosbud-map {
+  margin-top: 1rem;
+}
+
+/*BOOTSTRAP*/
+#modal-img {
+  width: 575px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*FOOTER: footer*/
+#footer {
+  background: #0e1d28;
+  text-align: left;
+}
+
+/*ul*/
+#footerUl {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+/*logo footer*/
+#logoFooter {
+  width: 60%;
+}
+
+.linkfooter {
+  color: #ffffff;
+}
+
+.linkfooter:hover {
+  color: #868686;
+  text-decoration: none;
+}
+
+.headerfooter {
+  color: #ffffff;
+}
+
+.linkfooter {
+  color: #ffffff;
+}
+
+.linkfooter:hover {
+  color: #868686;
+  text-decoration: none;
+}
+
+.headerfooter {
+  color: #ffffff;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 575.98px) {
   /*ALL*/
-  /* LANDING: landing page */
-  /*first landing show index.html and tentang kami.html*/
   #utama {
     transform: translateY(0.1rem);
   }
@@ -467,11 +505,16 @@ body {
     border-top: 3px solid #4492fc;
   }
 
-  /*BOOTSTRAP*/
+  .tujuan-left {
+    text-align: left;
+  }
 
+  .tujuan-right {
+    text-align: right;
+  }
+
+  /*BOOTSTRAP*/
   /*index.html*/
-  /* LANDING: landing page */
-  /*COMMONS*/
   /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
   .card-img {
     width: 100%;
@@ -536,10 +579,315 @@ body {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /*ALL*/
+  /* LANDING: landing page */
+  /*first landing show index.html and tentang kami.html*/
+  p {
+    font-size: 1rem;
+  }
+
+  #utama {
+    transform: translateY(-9rem);
+  }
+
+  .tujuan-left {
+    text-align: left;
+  }
+
+  .tujuan-right {
+    text-align: right;
+  }
+
+  /*COMMONS*/
+  /*BOOTSTRAP*/
+
+  /*index.html*/
+  /* LANDING: landing page */
+  /*COMMONS*/
+  /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .card-img {
+    width: 100%;
+    height: 250px;
+  }
+
+  /*overlay container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .ovl {
+    opacity: 1;
+    transition: 0.5s;
+    font-size: 0.5rem;
+    color: #ffffff;
+  }
+
+  .ovl:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 250px;
+  }
+
+  /*BOOTSTRAP*/
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*sosbud.html*/
+  /*LANDING*/
+  /*COMMONS*/
+  /*BOOTSTRAP*/
+  #modal-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /*ALL*/
+  /* LANDING: landing page */
+  p {
+    font-size: 0.7rem;
+  }
+
+  /*COMMONS*/
+  .tujuan-left {
+    text-align: left;
+  }
+
+  .tujuan-right {
+    text-align: left;
+  }
+
+  /*BOOTSTRAP*/
+
+  /*index.html*/
+  /* LANDING: landing page */
+  #utama {
+    transform: translateY(-9rem);
+  }
+
+  /*COMMONS*/
+  /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .card-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /*overlay container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .ovl {
+    opacity: 1;
+    transition: 0.5s;
+    font-size: 0.5rem;
+    color: #ffffff;
+  }
+
+  .ovl:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 200px;
+  }
+
+  /*BOOTSTRAP*/
+  /*card berita*/
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+
+  #berita-header {
+    position: absolute;
+    padding-top: 40%;
+    padding-left: 7%;
+    color: #ffff;
+    /*    background: rgba(0, 0, 0, 0.5);*/
+  }
+  /*sosbud.html*/
+  /*LANDING*/
+  /*COMMONS*/
+  /*BOOTSTRAP*/
+  #modal-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /*ALL*/
+  /* LANDING: landing page */
+  #utama {
+    transform: translateY(-9rem);
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  /*index.html*/
+  /* LANDING: landing page */
+
+  /*COMMONS*/
+  /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .card-img {
+    width: 100%;
+    height: 250px;
+  }
+
+  /*overlay container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+  .ovl {
+    opacity: 1;
+    transition: 0.5s;
+    font-size: 0.5rem;
+    color: #ffffff;
+  }
+
+  .ovl:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 250px;
+  }
+
+  /*BOOTSTRAP*/
+  /*card berita*/
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+
+  #berita-header {
+    position: absolute;
+    padding-top: 40%;
+    padding-left: 7%;
+    color: #ffff;
+    /*    background: rgba(0, 0, 0, 0.5);*/
+  }
+
+  .card-text {
+    font-size: 0.7rem;
+  }
+
+  /*sosbud.html*/
+  /*LANDING*/
+  /*COMMONS*/
+  /*BOOTSTRAP*/
+  #modal-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*index.html*/
+  /* LANDING: landing page */
+
+  /*COMMONS*/
+  .card-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  /*card image container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
+
+  /*BOOTSTRAP*/
+  /*card berita*/
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+  /*sosbud.html*/
+  /*LANDING*/
+  /*COMMONS*/
+  /*BOOTSTRAP*/
+  #modal-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* EKONOMI: Page ekonomi */
 .card-img .ekon {
   height: 100%;
   object-fit: cover;
+}
+
+#tentangkami-ekonomi {
+  /*    background-color: black;*/
+  background: url("../img/Ekonomi-landing.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+
+#text-caption-ekonomi {
+  padding-top: 7rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  top: 30%;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#text-caption-ekonomi h2 {
+  font-size: 3rem;
+}
+
+/*COMMONS*/
+#pic-ekonomi {
+  width: 320px;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#keterangan-sb-sumberBiayaPendidikan {
+  font-size: 12px;
+}
+
+/* SAPRAS: Sarana dan Prasarana */
+#tentangkami-saranaPrasarana {
+  /*    background-color: black;*/
+  background../: url("../img/sapras.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+
+#text-caption-saranaPrasarana {
+  padding-top: 7rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  top: 30%;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#text-caption-saranaPrasarana h2 {
+  font-size: 3rem;
 }
 
 /* LOGIN: page login */
@@ -636,22 +984,3 @@ form#login input {
   margin-top: 1rem;
   width: 100%;
 }
-
-/*============ BOOTSTRAP BREAK POINTS:
-
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-=============*/
