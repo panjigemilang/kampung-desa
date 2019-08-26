@@ -9,13 +9,13 @@ import {
   GET_POST
 } from "./types"
 
-const baseURL = "http://localhost:5000"
+const baseURL = "https://api-kampungdesa.herokuapp.com"
 
 // adding a post
 export const addPost = (postData, config, history) => dispatch => {
   dispatch(clearErrors())
   axios
-    .post("/api/posts", postData, config)
+    .post(`${baseURL}/api/posts`, postData, config)
     .then(res => {
       alert("Berhasil menambahkan post!")
       dispatch({
@@ -36,7 +36,7 @@ export const addPost = (postData, config, history) => dispatch => {
 export const addThumbnail = postData => dispatch => {
   dispatch(clearErrors())
   axios
-    .post("/", postData)
+    .post(baseURL + "/", postData)
     .then(res =>
       dispatch({
         type: ADD_POST,
@@ -55,7 +55,7 @@ export const addThumbnail = postData => dispatch => {
 export const getPosts = () => dispatch => {
   dispatch(setPostLoading())
   axios
-    .get("/api/posts")
+    .get(baseURL + "/api/posts")
     .then(res =>
       dispatch({
         type: GET_POSTS,
@@ -74,7 +74,7 @@ export const getPosts = () => dispatch => {
 export const getPost = id => dispatch => {
   dispatch(setPostLoading())
   axios
-    .get(`/api/posts/${id}`)
+    .get(`${baseURL}/api/posts/${id}`)
     .then(res =>
       dispatch({
         type: GET_POST,
@@ -92,7 +92,7 @@ export const getPost = id => dispatch => {
 // delete post
 export const deletePost = id => dispatch => {
   axios
-    .delete(`/api/posts/${id}`)
+    .delete(`${baseURL}/api/posts/${id}`)
     .then(res =>
       dispatch({
         type: DELETE_POST,

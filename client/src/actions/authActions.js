@@ -4,12 +4,12 @@ import axios from "axios"
 import jwt_decode from "jwt-decode"
 import { clearErrors } from "./postActions"
 
-let baseUrl = "http://localhost:5000/api/"
+let baseUrl = "https://api-kampungdesa.herokuapp.com"
 
 // Register users
 export const registerusers = (userData, history) => dispatch => {
   axios
-    .post("/api/users/register", userData)
+    .post(`${baseUrl}/api/users/register`, userData)
     .then(res => history.push("/login"))
     .catch(err =>
       dispatch({
