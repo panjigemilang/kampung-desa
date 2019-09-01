@@ -71,7 +71,7 @@ function NewsItem(props) {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     keyboard: true,
     coverflowEffect: {
       rotate: 50,
