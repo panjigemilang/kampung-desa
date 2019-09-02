@@ -66,12 +66,14 @@ function CarouselItem(props) {
 }
 
 function NewsItem(props) {
+  const size = window.innerWidth <= 375 ? 1 : 3
+
   const { posts } = props.post
   const params = {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 1,
+    slidesPerView: size,
     keyboard: true,
     coverflowEffect: {
       rotate: 50,
@@ -108,6 +110,15 @@ function NewsItem(props) {
 }
 
 class Landing extends Component {
+  constructor() {
+    super()
+    this.state = {
+      scroll: document.body.scrollTop,
+      size: window.innerWidth,
+      slidesPerView: 0
+    }
+  }
+
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/")
@@ -215,7 +226,7 @@ class Landing extends Component {
                         <a href="/tentang-kami" id="ttgkm">
                           <img
                             className="card-img card-img-maincustom"
-                            src={require("../../img/homee.jpg")}
+                            src={require("../../img/highcompress-homee.jpg")}
                             alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
@@ -230,7 +241,7 @@ class Landing extends Component {
                         <a href="/sosbud" id="ttgkm">
                           <img
                             className="card-img card-img-maincustom"
-                            src={require("../../img/sb.jpg")}
+                            src={require("../../img/highcompress-sb.jpg")}
                             alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
@@ -245,7 +256,7 @@ class Landing extends Component {
                         <a href="/ekonomi" id="ttgkm">
                           <img
                             className="card-img card-img-maincustom"
-                            src={require("../../img/ekonomi.jpg")}
+                            src={require("../../img/highcompress-ekonomi.jpg")}
                             alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
@@ -260,7 +271,7 @@ class Landing extends Component {
                         <a href="/sarana-prasarana" id="ttgkm">
                           <img
                             className="card-img card-img-maincustom"
-                            src={require("../../img/sp.jpg")}
+                            src={require("../../img/highcompress-sp.jpg")}
                             alt="card_image.jpg"
                           />
                           <div className="card-img-overlay ovl">
@@ -328,14 +339,6 @@ class Landing extends Component {
             </div>
           </section>
 
-          {/* BUTTON GO UP: back to the top */}
-          <button
-            onClick={() => this.topFunction()}
-            id="myBtn"
-            title="Go to top"
-          >
-            <i className="fas fa-angle-up" />
-          </button>
           <br />
         </div>
       )

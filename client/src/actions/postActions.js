@@ -72,7 +72,6 @@ export const getPosts = () => dispatch => {
 
 // get post by id
 export const getPost = id => dispatch => {
-  dispatch(setPostLoading())
   axios
     .get(`${baseURL}/api/posts/${id}`)
     .then(res =>

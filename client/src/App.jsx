@@ -28,6 +28,7 @@ import Ekonomi from "./components/submain/Ekonomi"
 import Posts from "./components/posts/Posts"
 import Sosbud from "./components/submain/Sosbud"
 import Sapras from "./components/submain/Sapras"
+import isEmpty from "./validations/is-empty"
 
 if (localStorage.jwtToken) {
   // set token to authorization
@@ -49,26 +50,64 @@ if (localStorage.jwtToken) {
 }
 
 function App() {
+  const [scroll, setScroll] = React.useState(window.pageYOffset)
+
+  React.useEffect(() => {
+    window.addEventListener(
+      "scroll",
+      () => {
+        setScroll(window.scrollY)
+      },
+      true
+    )
+
+    return () =>
+      window.addEventListener(
+        "scroll",
+        () => {
+          setScroll(window.scrollY)
+        },
+        true
+      )
+  }, [])
+
+  const upBtn = document.getElementById("myBtn")
+
+  const backTop = () => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: 0
+    })
+  }
+
+  if (scroll > 200 && !isEmpty(upBtn)) {
+    upBtn.style.opacity = "1"
+  } else if (scroll < 200 && !isEmpty(upBtn)) {
+    upBtn.style.opacity = "0"
+  }
+
   return (
     <Provider store={store}>
       <Router>
         <div className="tentangkami">
           <Navbar />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/post/:post_id" component={Post} />
+          <Route exact path="/tentang-kami" component={About} />
+          <Route exact path="/ekonomi" component={Ekonomi} />
+          <Route exact path="/sosbud" component={Sosbud} />
+          <Route exact path="/sarana-prasarana" component={Sapras} />
+          <Route exact path="/berita" component={Posts} />
+          <Route exact path="/not-found" component={NotFound} />
+          <Switch>
+            <PrivateRoute exact path="/post-berita" component={AddPost} />
+          </Switch>
+          <Footer />
+          <button onClick={e => backTop(e)} id="myBtn" title="Go to top">
+            <i className="fas fa-angle-up"></i>
+          </button>
         </div>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/post/:post_id" component={Post} />
-        <Route exact path="/tentang-kami" component={About} />
-        <Route exact path="/ekonomi" component={Ekonomi} />
-        <Route exact path="/sosbud" component={Sosbud} />
-        <Route exact path="/sarana-prasarana" component={Sapras} />
-        <Route exact path="/berita" component={Posts} />
-        <Route exact path="/not-found" component={NotFound} />
-
-        <Switch>
-          <PrivateRoute exact path="/post-berita" component={AddPost} />
-        </Switch>
-        <Footer />
       </Router>
     </Provider>
   )

@@ -5,6 +5,7 @@ export default function Ekonomi() {
   // Import Image
   const petaE = require("../../img/peta-e.jpg")
   const petaEMPS = require("../../img/peta-e-mps.jpg")
+  const petaEMPM = require("../../img/peta-e-mpm.jpg")
 
   const setOnClick = (e, type) => {
     e.preventDefault()
@@ -384,8 +385,7 @@ export default function Ekonomi() {
                 <div className="modal-body">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12">
-                            <img src={require("../../img/peta-e-mpm.jpg")} id="modal-img" alt="peta.jpg"/> </div>
-
+                            <img src={petaEMPM} id="modal-img" alt="peta.jpg"/> </div>
                      </div>
                 </div>
             </div>
@@ -404,7 +404,7 @@ export default function Ekonomi() {
                 <div className="modal-body">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12">
-                            <img src={require("../../img/peta-e-mps.jpg")} id="modal-img" alt="peta.jpg"/> </div>
+                            <img src={petaEMPS} id="modal-img" alt="peta.jpg"/> </div>
 
                      </div>
                 </div>

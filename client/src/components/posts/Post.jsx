@@ -8,12 +8,44 @@ import {
 } from "../../actions/postActions"
 import { PropTypes } from "prop-types"
 import ReactHtmlParser from "react-html-parser"
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LineShareButton,
+  LineIcon
+} from "react-share"
+import styled from "styled-components"
 import Spinner from "../commons/Spinner"
 
 const mapStateToProps = state => ({
   auth: state.auth,
   posts: state.posts
 })
+
+const BeritaLain = styled.a`
+  color: inherit;
+  text-decoration: none;
+`
+
+const DisplayInline = styled.div`
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    color: black;
+  }
+`
+const DivRight = styled.div`
+  float: right;
+`
 
 function Post(props) {
   useEffect(() => {
@@ -27,7 +59,7 @@ function Post(props) {
   const { auth, deleteImage, deletePost } = props
   const { post } = props.posts
   const { posts, loading } = props.posts
-  const maxPosts = 8
+  const maxPosts = 7
   const baseURL = "https://api-kampungdesa.herokuapp.com/image/"
 
   let postContent
@@ -61,6 +93,8 @@ function Post(props) {
     postsContent = posts
   }
 
+  console.log("ini ape gayn", window.location)
+
   // Content
   if (loading) {
     postContent = <Spinner />
@@ -81,23 +115,38 @@ function Post(props) {
           <div id="kami" className="container pb-0 kampung">
             <div className="row pb-2">
               <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                {/* DROPDOWN */}
-                {auth.isAuthenticated ? (
-                  <div
-                    className="row"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <div className="times">
-                      <span className="dot" />
-                      <span className="dot" />
-                      <span className="dot" />
-                    </div>
+                <div className="row">
+                  <div className="col-lg-6" data-toggle="dropdown">
+                    {/* DROPDOWN */}
+                    {auth.isAuthenticated ? (
+                      <div className="times" style={{ float: "left" }}>
+                        <span className="dot" />
+                        <span className="dot" />
+                        <span className="dot" />
+                      </div>
+                    ) : null}
                   </div>
-                ) : null}
-
+                  <div className="col-lg-6">
+                    <DivRight>
+                      Share this News
+                      <DisplayInline>
+                        <FacebookShareButton url={window.location.href}>
+                          <FacebookIcon size={32} round={true}></FacebookIcon>
+                        </FacebookShareButton>
+                      </DisplayInline>
+                      <DisplayInline>
+                        <WhatsappShareButton url={window.location.href}>
+                          <WhatsappIcon size={32} round={true}></WhatsappIcon>
+                        </WhatsappShareButton>
+                      </DisplayInline>
+                      <DisplayInline>
+                        <LineShareButton url={window.location.href}>
+                          <LineIcon size={32} round={true}></LineIcon>
+                        </LineShareButton>
+                      </DisplayInline>
+                    </DivRight>
+                  </div>
+                </div>
                 <div
                   className="dropdown-menu"
                   aria-labelledby="dropdownMenuButton"
@@ -117,9 +166,7 @@ function Post(props) {
                     Share Post
                   </button>
                 </div>
-
                 <br />
-
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img"
@@ -144,18 +191,18 @@ function Post(props) {
                   />
                   {postsContent.map(item => (
                     <React.Fragment key={item._id}>
-                      <a
-                        href={`/post/${item._id}`}
-                        className="btn"
-                        role="button"
-                      >
-                        <h4>
-                          {item.judul.length > 30
-                            ? item.judul.substring(0, 30) + " ... "
-                            : item.judul}
-                        </h4>
-                      </a>
-                      <hr />
+                      <BeritaLain href={`/post/${item._id}`} role="button">
+                        {post.judul != item.judul ? (
+                          <React.Fragment>
+                            <h4>
+                              {item.judul.length > 30
+                                ? item.judul.substring(0, 30) + " ... "
+                                : item.judul}
+                            </h4>
+                            <hr />
+                          </React.Fragment>
+                        ) : null}
+                      </BeritaLain>
                     </React.Fragment>
                   ))}
                 </div>
