@@ -116,17 +116,45 @@ function Post(props) {
             <div className="row pb-2">
               <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <div className="row">
-                  <div className="col-lg-6" data-toggle="dropdown">
+                  <div
+                    className="col-lg-2"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
                     {/* DROPDOWN */}
                     {auth.isAuthenticated ? (
-                      <div className="times" style={{ float: "left" }}>
-                        <span className="dot" />
-                        <span className="dot" />
-                        <span className="dot" />
-                      </div>
+                      <React.Fragment>
+                        <div className="times" style={{ float: "left" }}>
+                          <span className="dot" />
+                          <span className="dot" />
+                          <span className="dot" />
+                        </div>
+                        {/* DropDown Menu */}
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <button
+                            className="dropdown-item"
+                            onClick={() => onClickDelete(post.foto, post._id)}
+                            style={{ cursor: "pointer", zIndex: "99" }}
+                          >
+                            Delete Post
+                          </button>
+                          <button
+                            className="dropdown-item"
+                            onClick={e => onShareClick(e, post._id)}
+                            style={{ cursor: "pointer" }}
+                          >
+                            Share Post
+                          </button>
+                        </div>
+                      </React.Fragment>
                     ) : null}
                   </div>
-                  <div className="col-lg-6">
+                  <div className="col-lg-10">
                     <DivRight>
                       Share this News
                       <DisplayInline>
@@ -147,26 +175,9 @@ function Post(props) {
                     </DivRight>
                   </div>
                 </div>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton"
-                >
-                  <button
-                    className="dropdown-item"
-                    onClick={() => onClickDelete(post.foto, post._id)}
-                    style={{ cursor: "pointer", zIndex: "99" }}
-                  >
-                    Delete Post
-                  </button>
-                  <button
-                    className="dropdown-item"
-                    onClick={e => onShareClick(e, post._id)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Share Post
-                  </button>
-                </div>
+
                 <br />
+
                 <div className="card bg-dark text-white">
                   <img
                     className="card-img"
