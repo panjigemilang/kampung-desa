@@ -323,11 +323,7 @@ export default function About() {
             <div className="modal-body">
               <div className="row">
                 <div className="col-lg-7 col-md-12 col-sm-12">
-                  <img
-                    alt="foto.jpg"
-                    src={require("../../img/peta-utama.JPG")}
-                    id="image"
-                  />
+                  <img alt="foto.jpg" src={petaUtama} id="image" />
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12">
                   Lihat Detail Peta menurut :

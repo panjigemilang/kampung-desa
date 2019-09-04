@@ -142,7 +142,15 @@ export default function Ekonomi() {
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <img className="img-ttgkm" src={require("../../img/peta-e.jpg")} id="peta-e" />
-                        <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-e" onClick={e => setOnClick(e, "peta-e")} data-toggle="modal" data-target="#modal-e">Peta Pekerjaan Utama</a></div>
+                        <div className="button-sosbud-map">
+                            <a 
+                            className="btn btn-md btn-info display-4" 
+                            href="#peta-e" 
+                            onClick={e => setOnClick(e, "peta-e")} data-toggle="modal" 
+                            data-target="#modal-e">
+                                Peta Pekerjaan Utama
+                            </a>
+                        </div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <p>Aspek ekonomi membahas tentang jenis mata pencaharian utama, jenis mata pencaharian sampingan, dan keterlibatan masyarakat dalam kelembagaan koperasi.</p>

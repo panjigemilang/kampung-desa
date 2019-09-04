@@ -90,6 +90,7 @@ function Post(props) {
                   : post.judul}
               </h3>
             </a>
+            <hr />
           </div>
           {/* DROPDOWN */}
           {auth.isAuthenticated ? (

@@ -18,6 +18,7 @@ import {
   LineShareButton,
   LineIcon
 } from "react-share"
+import Moment from "react-moment"
 import styled from "styled-components"
 import Spinner from "../commons/Spinner"
 
@@ -45,6 +46,15 @@ const DisplayInline = styled.div`
 `
 const DivRight = styled.div`
   float: right;
+`
+
+const Hr = styled.hr`
+  display: none;
+  width: 90% !important;
+
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
 `
 
 function Post(props) {
@@ -156,7 +166,7 @@ function Post(props) {
                   </div>
                   <div className="col-lg-10">
                     <DivRight>
-                      Share this News
+                      Share this news
                       <DisplayInline>
                         <FacebookShareButton url={window.location.href}>
                           <FacebookIcon size={32} round={true}></FacebookIcon>
@@ -176,9 +186,19 @@ function Post(props) {
                   </div>
                 </div>
 
+                <div className="row">
+                  <i className="far fa-clock"></i>
+                  <small className="text-muted">
+                    &nbsp; Posted : &nbsp;<Moment fromNow>{post.date}</Moment>
+                  </small>
+                </div>
+
                 <br />
 
-                <div className="card bg-dark text-white">
+                <div
+                  className="bg-dark text-white"
+                  style={{ borderRadius: "15px" }}
+                >
                   <img
                     className="card-img"
                     src={baseURL + post.foto}
@@ -191,10 +211,45 @@ function Post(props) {
                   />
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div className="col-lg-4 col-md-3 col-sm-4 col-xs-12 beritalain">
                 <div className="container">
                   <h4>
-                    <i>Berita Lainnya</i>
+                    <i className="font-weight-bolder">Berita Lainnya</i>
+                  </h4>
+                  <hr
+                    className="style1"
+                    style={{ clear: "both", float: "none" }}
+                  />
+                  {postsContent.map(item => (
+                    <React.Fragment key={item._id}>
+                      <BeritaLain href={`/post/${item._id}`} role="button">
+                        {post.judul != item.judul ? (
+                          <React.Fragment>
+                            <h4>
+                              {item.judul.length > 30
+                                ? item.judul.substring(0, 30) + " ... "
+                                : item.judul}
+                            </h4>
+                            <hr />
+                          </React.Fragment>
+                        ) : null}
+                      </BeritaLain>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+              <div className="col-lg-12 col-md-9 col-sm-8 col-xs-12">
+                <p className="text-justify deskripsi">
+                  {ReactHtmlParser(post.deskripsi)}
+                </p>
+              </div>
+
+              <Hr></Hr>
+
+              <div className="col-lg-4 col-md-3 col-sm-2 col-xs-12 beritalainsmall">
+                <div className="container">
+                  <h4>
+                    <i className="font-weight-bolder">Berita Lainnya</i>
                   </h4>
                   <hr
                     className="style1"
@@ -219,13 +274,9 @@ function Post(props) {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p className="text-justify deskripsi">
-                  {ReactHtmlParser(post.deskripsi)}
-                </p>
-              </div>
-            </div>
+            {/* <div className="row"> */}
+
+            {/* </div> */}
           </div>
         </section>
       </div>

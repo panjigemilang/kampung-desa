@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { PropTypes } from "prop-types"
 import { getPosts, deletePost, deleteImage } from "../../actions/postActions"
 import Swiper from "react-id-swiper"
+import { Link } from "react-router-dom"
 import Spinner from "../commons/Spinner"
 import ReactHtmlParser from "react-html-parser"
 
@@ -28,12 +29,21 @@ function CarouselItem(props) {
 
   return (
     <div className="swiper-slide">
-      <div className="card">
-        <img
-          className="gambar-kartu"
-          src={baseURL + post.foto}
-          alt="Card_image.jpg"
-        />
+      <div className="card kartu">
+        <div className="img-box">
+          <a href={`/post/${post._id}`} role="button">
+            <img
+              className="gambar-kartu"
+              src={baseURL + post.foto}
+              alt="Card_image.jpg"
+            />
+            <div className="text-content-container">
+              <div className="content-text">
+                <h1 className="font-weight-bolder">Baca Selengkapnya</h1>
+              </div>
+            </div>
+          </a>
+        </div>
         {auth.isAuthenticated ? (
           <button
             type="button"
@@ -45,20 +55,18 @@ function CarouselItem(props) {
         ) : null}
 
         <div className="caption">
-          <h5 className="card-title berita">
-            {post.judul.length > 40
-              ? post.judul.substring(0, 40) + " ..."
-              : post.judul}
-          </h5>
+          <a href={`/post/${post._id}`} role="button">
+            <h5 className="card-title berita">
+              {post.judul.length > 40
+                ? post.judul.substring(0, 40) + " ..."
+                : post.judul}
+            </h5>
+          </a>
           <p className="card-text">
             {post.deskripsi.length > 200
               ? ReactHtmlParser(post.deskripsi.substring(0, 200) + " ... ")
               : ReactHtmlParser(post.deskripsi)}
           </p>
-          <a href={`/post/${post._id}`} className="btn btn-primary">
-            Baca Selengkapnya&nbsp;
-            <i className="fas fa-long-arrow-alt-right" />
-          </a>
         </div>
       </div>
     </div>
@@ -66,7 +74,7 @@ function CarouselItem(props) {
 }
 
 function NewsItem(props) {
-  const size = window.innerWidth <= 375 ? 1 : 3
+  const size = window.innerWidth <= 575 ? 1 : 3
 
   const { posts } = props.post
   const params = {
@@ -142,9 +150,8 @@ class Landing extends Component {
               <div className="layer">
                 <div className="container text-content" id="text-caption">
                   <h4>Selamat Datang di</h4>
-
                   <h2>Kampung Cerdas Bersahaja</h2>
-                  <p>
+                  <p className="h5">
                     Kerjasama Tim Pengabdian Jurusan PWK FT-UB dengan Tim
                     Pemetaan Masyarakat RW 01 kelurahan Rampal Celaket Kota
                     Malang
@@ -177,10 +184,10 @@ class Landing extends Component {
                     menimbulkan masalah-masalah lingkungan fisik, sosial,
                     ekonomi dan juga budaya...
                   </p>
-                  <a href="#" id="more">
+                  <Link to="/tentang-kami" id="more">
                     Lihat Selengkapnya&nbsp;
                     <i className="fas fa-long-arrow-alt-right" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="box-item col-md-4">
                   <i className="fas fa-book fa-3x" />
@@ -191,10 +198,10 @@ class Landing extends Component {
                     menyediakan data, informasi dan doumentasi yang akurat untuk
                     meningkatkan kualitas pengambilan keputusan...
                   </p>
-                  <a href="#" id="more">
+                  <Link to="/tentang-kami" id="more">
                     Lihat Selengkapnya&nbsp;
                     <i className="fas fa-long-arrow-alt-right" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="box-item col-md-4">
                   <i className="fas fa-phone-square fa-3x" />
@@ -204,7 +211,7 @@ class Landing extends Component {
                     &nbsp;Kenali kami lebih dekat untuk mengetahui program
                     kerjasama dengan berbagai pihak
                   </p>
-                  <a href="#" id="more">
+                  <a href="#footer" id="more">
                     Lihat Selengkapnya&nbsp;
                     <i className="fas fa-long-arrow-alt-right" />
                   </a>
@@ -218,69 +225,65 @@ class Landing extends Component {
                 <br style={{ clear: "both" }} />
               </div>
 
-              <div className="container">
-                <div className="container">
-                  <div className="row pb-2">
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <div className="card bg-dark text-white">
-                        <a href="/tentang-kami" id="ttgkm">
-                          <img
-                            className="card-img card-img-maincustom"
-                            src={require("../../img/highcompress-homee.jpg")}
-                            alt="card_image.jpg"
-                          />
-                          <div className="card-img-overlay ovl">
-                            <i className="fas fa-home fa-3x konten" />
-                            <h4 className="card-title">About</h4>
-                          </div>
-                        </a>
+              <div className="row pb-2">
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <div className="card bg-dark text-white">
+                    <a href="/tentang-kami" id="ttgkm">
+                      <img
+                        className="card-img card-img-maincustom"
+                        src={require("../../img/highcompress-homee.jpg")}
+                        alt="card_image.jpg"
+                      />
+                      <div className="card-img-overlay ovl">
+                        <i className="fas fa-home fa-3x konten" />
+                        <h4 className="card-title">About</h4>
                       </div>
-                    </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <div className="card bg-dark text-white">
-                        <a href="/sosbud" id="ttgkm">
-                          <img
-                            className="card-img card-img-maincustom"
-                            src={require("../../img/highcompress-sb.jpg")}
-                            alt="card_image.jpg"
-                          />
-                          <div className="card-img-overlay ovl">
-                            <i className="fas fa-theater-masks fa-3x konten" />
-                            <h4 className="card-title">Sosial Budaya</h4>
-                          </div>
-                        </a>
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <div className="card bg-dark text-white">
+                    <a href="/sosbud" id="ttgkm">
+                      <img
+                        className="card-img card-img-maincustom"
+                        src={require("../../img/highcompress-sb.jpg")}
+                        alt="card_image.jpg"
+                      />
+                      <div className="card-img-overlay ovl">
+                        <i className="fas fa-theater-masks fa-3x konten" />
+                        <h4 className="card-title">Sosial Budaya</h4>
                       </div>
-                    </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <div className="card bg-dark text-white">
-                        <a href="/ekonomi" id="ttgkm">
-                          <img
-                            className="card-img card-img-maincustom"
-                            src={require("../../img/highcompress-ekonomi.jpg")}
-                            alt="card_image.jpg"
-                          />
-                          <div className="card-img-overlay ovl">
-                            <i className="fas fa-coins fa-3x konten" />
-                            <h4 className="card-title">Ekonomi</h4>
-                          </div>
-                        </a>
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <div className="card bg-dark text-white">
+                    <a href="/ekonomi" id="ttgkm">
+                      <img
+                        className="card-img card-img-maincustom"
+                        src={require("../../img/highcompress-ekonomi.jpg")}
+                        alt="card_image.jpg"
+                      />
+                      <div className="card-img-overlay ovl">
+                        <i className="fas fa-coins fa-3x konten" />
+                        <h4 className="card-title">Ekonomi</h4>
                       </div>
-                    </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                      <div className="card bg-dark text-white">
-                        <a href="/sarana-prasarana" id="ttgkm">
-                          <img
-                            className="card-img card-img-maincustom"
-                            src={require("../../img/highcompress-sp.jpg")}
-                            alt="card_image.jpg"
-                          />
-                          <div className="card-img-overlay ovl">
-                            <i className="fas fa-hammer fa-3x konten" />
-                            <h4 className="card-title">Sarana dan Prasarana</h4>
-                          </div>
-                        </a>
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <div className="card bg-dark text-white">
+                    <a href="/sarana-prasarana" id="ttgkm">
+                      <img
+                        className="card-img card-img-maincustom"
+                        src={require("../../img/highcompress-sp.jpg")}
+                        alt="card_image.jpg"
+                      />
+                      <div className="card-img-overlay ovl">
+                        <i className="fas fa-hammer fa-3x konten" />
+                        <h4 className="card-title">Sarana dan Prasarana</h4>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -295,27 +298,23 @@ class Landing extends Component {
                   <br style={{ clear: "both" }} />
                 </div>
               </div>
-              <div className="container">
-                <div className="container pt-0 pb-0">
-                  <div className="row pb-5">
-                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      {Object.keys(posts.posts).length > 0 ? (
-                        <NewsItem
-                          post={posts}
-                          auth={auth}
-                          deletePost={deletePost}
-                          deleteImage={deleteImage}
-                        />
-                      ) : (
-                        <div className="container">
-                          <h3 style={{ marginTop: "1rem" }}>
-                            Tidak ada berita untuk saat ini. Terus nantikan
-                            berita dari kami!
-                          </h3>
-                        </div>
-                      )}
+              <div className="row pb-5">
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  {Object.keys(posts.posts).length > 0 ? (
+                    <NewsItem
+                      post={posts}
+                      auth={auth}
+                      deletePost={deletePost}
+                      deleteImage={deleteImage}
+                    />
+                  ) : (
+                    <div className="container">
+                      <h3 style={{ marginTop: "1rem" }}>
+                        Tidak ada berita untuk saat ini. Terus nantikan berita
+                        dari kami!
+                      </h3>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>

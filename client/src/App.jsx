@@ -62,7 +62,7 @@ function App() {
     )
 
     return () =>
-      window.addEventListener(
+      window.removeEventListener(
         "scroll",
         () => {
           setScroll(window.scrollY)

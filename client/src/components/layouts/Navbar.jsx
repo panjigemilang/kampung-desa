@@ -166,16 +166,24 @@ class Navbar extends Component {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <Link to="/tentang-kami" className="nav-link">
+              <Link
+                to="/tentang-kami"
+                className="nav-link"
+                onClick={() => this.toggleSlideMenu()}
+              >
                 <strong>Tentang Kami</strong>
               </Link>
-              <Link to="/berita" className="nav-link">
+              <Link
+                to="/berita"
+                className="nav-link"
+                onClick={() => this.toggleSlideMenu()}
+              >
                 <strong>berita</strong>
               </Link>
               <Link
                 className="nav-link"
                 to="/login"
-                onClick={() => this.closeSlideMenu()}
+                onClick={() => this.toggleSlideMenu()}
               >
                 <strong>Login</strong>
               </Link>

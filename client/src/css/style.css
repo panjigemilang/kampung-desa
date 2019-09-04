@@ -49,7 +49,7 @@ body {
 
 /*translate to top landing page allpage*/
 #utama {
-  transform: translateY(-10rem);
+  transform: translateY(-7rem);
 }
 
 /* COMMONS */
@@ -62,6 +62,7 @@ body {
 
 #kami {
   background: white;
+  margin-bottom: 20px;
 }
 
 /*button go to top*/
@@ -125,6 +126,10 @@ body {
   transform: scale(1) translateZ(0);
   transition: filter 200ms linear, transform 200ms linear;
   cursor: context-menu;
+}
+
+h4.card-title {
+  color: white;
 }
 
 .card:hover {
@@ -486,8 +491,42 @@ body {
 }
 
 /* MEDIA QUERIES */
+/* SUPER SMALL SCREEN */
+@media (max-width: 375px) {
+  h2,
+  h4 {
+    font-size: 1.2rem !important;
+  }
+
+  #text-caption p {
+    font-size: 0.8rem;
+  }
+
+  #text-caption a {
+    font-size: 1rem !important;
+    line-height: 1.2;
+  }
+}
+
 @media (max-width: 575.98px) {
   /*ALL*/
+  /* Header */
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  #text-caption p {
+    text-align: justify;
+  }
+
   #modal-img {
     width: 100%;
     max-width: 300px;
@@ -557,7 +596,6 @@ body {
 
   .card-title {
     font-size: 1rem;
-    color: white;
   }
 
   .card-img-top {
@@ -584,18 +622,49 @@ body {
     background-size: 1200px;
     width: 10;
   }
+
+  /* Swiper */
+  .swiper-container .caption {
+    margin: 1rem;
+  }
+
+  .swiper-container p {
+    font-size: 0.7rem;
+  }
+
+  .swiper-container a {
+    font-size: 0.7rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-size: 1rem;
+  }
+
+  #myBtn {
+    padding: 10px 15px;
+  }
+
+  /* LOGIN: Login page */
+  form#login {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   /*ALL*/
   /* LANDING: landing page */
   /*first landing show index.html and tentang kami.html*/
+  h1 {
+    font-size: 2.7rem !important;
+  }
+
   p {
     font-size: 1rem;
   }
 
   #utama {
-    transform: translateY(-9rem);
+    transform: translateY(-5rem);
   }
 
   .tujuan-left {
@@ -651,6 +720,11 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* LOGIN: Login page */
+  form#login {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -674,7 +748,7 @@ body {
   /*index.html*/
   /* LANDING: landing page */
   #utama {
-    transform: translateY(-9rem);
+    transform: translateY(-5rem);
   }
 
   /*COMMONS*/
@@ -725,17 +799,18 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* LOGIN: Login page */
+  form#login {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /*ALL*/
   /* LANDING: landing page */
   #utama {
-    transform: translateY(-9rem);
-  }
-
-  p {
-    font-size: 0.7rem;
+    transform: translateY(-7rem);
   }
 
   /*index.html*/
