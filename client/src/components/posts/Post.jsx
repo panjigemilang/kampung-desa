@@ -182,6 +182,11 @@ function Post(props) {
                           <LineIcon size={32} round={true}></LineIcon>
                         </LineShareButton>
                       </DisplayInline>
+                      <DisplayInline>
+                        <TwitterShareButton url={window.location.href}>
+                          <TwitterIcon size={32} round={true}></TwitterIcon>
+                        </TwitterShareButton>
+                      </DisplayInline>
                     </DivRight>
                   </div>
                 </div>

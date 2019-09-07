@@ -300,7 +300,7 @@ export default function Sapras() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg"  className="img-ttgkm" id="peta-sp-lp" src={require("../../img/peta-sp-ss.jpg")} id="peta-sp-ss" />                        
+                        <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-ss.jpg")} id="peta-sp-ss" />                        
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-ss" onClick={(e) => setOnClick(e, "peta-sp-ss")} data-toggle="modal" data-target="#modal-sp-ss">Peta Sanitasi Sampah</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
@@ -407,7 +407,7 @@ export default function Sapras() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg"  className="img-ttgkm" id="peta-sp-lp" src={require("../../img/peta-sp-fj.jpg")} id="peta-sp-fj" />
+                        <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-fj.jpg")} id="peta-sp-fj" />
                     
                         <div className="button-sosbud-map">
                             <a className="btn btn-md btn-info display-4" href="#peta-sp-fj" onClick={(e) => setOnClick(e, "peta-sp-fj")}  data-toggle="modal" data-target="#modal-sp-fj">Peta Fasilitas Jalan</a>
@@ -523,7 +523,7 @@ export default function Sapras() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg"  className="img-ttgkm" id="peta-sp-lp" src={require("../../img/peta-sp-sl.jpg")} id="peta-sp-sl" />
+                        <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sl.jpg")} id="peta-sp-sl" />
                         
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sl" onClick={(e) => setOnClick(e, "peta-sp-sl")} data-toggle="modal" data-target="#modal-sp-sl">Peta Sarana Lingkungan</a></div>
 
@@ -682,7 +682,7 @@ export default function Sapras() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img alt="foto.jpg"  className="img-ttgkm" id="peta-sp-lp" src={require("../../img/peta-sp-sk.jpg")} id="peta-sp-sk" />
+                        <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sk.jpg")} id="peta-sp-sk" />
                         
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sk" onClick={(e) => setOnClick(e, "peta-sp-sk")} data-toggle="modal" data-target="#modal-sp-sk">Peta Sarana Lingkungan</a></div>
                     </div>

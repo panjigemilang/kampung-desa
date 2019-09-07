@@ -74,7 +74,7 @@ function CarouselItem(props) {
 }
 
 function NewsItem(props) {
-  const size = window.innerWidth <= 575 ? 1 : 3
+  const size = window.innerWidth <= 375 ? 1 : 3
 
   const { posts } = props.post
   const params = {
@@ -132,6 +132,12 @@ class Landing extends Component {
       this.props.history.push("/")
     }
     this.props.getPosts()
+  }
+
+  hrefClick(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth"
+    })
   }
 
   render() {
@@ -211,7 +217,11 @@ class Landing extends Component {
                     &nbsp;Kenali kami lebih dekat untuk mengetahui program
                     kerjasama dengan berbagai pihak
                   </p>
-                  <a href="#footer" id="more">
+                  <a
+                    href="#footer"
+                    id="more"
+                    onClick={e => this.hrefClick("footer")}
+                  >
                     Lihat Selengkapnya&nbsp;
                     <i className="fas fa-long-arrow-alt-right" />
                   </a>

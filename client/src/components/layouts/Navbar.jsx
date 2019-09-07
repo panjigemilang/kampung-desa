@@ -30,16 +30,12 @@ class Navbar extends Component {
 
   openSLideMenu() {
     document.getElementById("side-menu").style.width = "250px"
-    document.querySelector("#side-menu > a").style.transition = "1s ease-in"
-    document.querySelector("#side-menu > a").style.animation = "5s ease-in"
-    document.querySelector("#side-menu > a").style.display = "block"
+    document.querySelector("#side-menu a").style.opacity = 1
   }
 
   closeSlideMenu() {
     document.getElementById("side-menu").style.width = "0"
-    document.querySelector("#side-menu > a").style.transition = "0.5s ease-out"
-    document.querySelector("#side-menu > a").style.animation = "5s ease-out"
-    document.querySelector("#side-menu > a").style.display = "none"
+    document.querySelector("#side-menu a").style.opacity = 0
   }
 
   onLogoutClick(e) {

@@ -24,9 +24,12 @@ export default function Ekonomi() {
   }
 
   React.useEffect(() => {
+
     // Chart Ekonomi
     let ctx = document.getElementById('chartekonomi').getContext('2d');
     new Chart(ctx, {
+        responsive: true,
+        aspectRatio: 2,
         // The type of chart we want to create
         type: 'bar',
 
@@ -39,36 +42,6 @@ export default function Ekonomi() {
                 borderColor: 'rgb(255, 200, 97)',
                 data: [7.62, 2.64, 28.74, 7.92, 9.38, 0.29, 0.29, 0.88, 0.29, 1.76, 1.47, 0.59, 19.06, 0.59, 0.59, 0.29, 0.29, 0.29, 0.29, 0.29, 16.42]
             }]
-        },
-
-        // Configuration options go here
-        options: {
-            showTooltips: false,
-            animation: {
-                duration: 500,
-                easing: "easeOutQuart",
-                onComplete: function() {
-                    let ctx = this.chart.ctx;
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
-
-                    this.data.datasets.forEach(function(dataset) {
-                        for (let i = 0; i < dataset.data.length; i++) {
-                            let model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
-                                scale_max = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._yScale.maxHeight;
-                            ctx.fillStyle = '#444';
-                            let y_pos = model.y - 5;
-                            // Make sure data value does not get overflown and hidden
-                            // when the bar's value is too close to max value of scale
-                            // Note: The y value is reverse, it counts from top down
-                            if ((scale_max - model.y) / scale_max >= 0.93)
-                                y_pos = model.y + 20;
-                            ctx.fillText(dataset.data[i], model.x, y_pos);
-                        }
-                    });
-                }
-            }
         }
     });
 
@@ -104,7 +77,7 @@ export default function Ekonomi() {
                     meta.data.forEach(function(element, index) {
                         // Draw the text in black, with the specified font
                         ctx.fillStyle = '#ffffff';
-                        let fontSize = 16;
+                        let fontSize = 11;
                         let fontStyle = 'normal';
                         let fontFamily = 'lato';
                         ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
@@ -141,7 +114,7 @@ export default function Ekonomi() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-e.jpg")} id="peta-e" />
+                        <img className="img-ttgkm" alt="foto.jpg" src={require("../../img/peta-e.jpg")} id="peta-e" />
                         <div className="button-sosbud-map">
                             <a 
                             className="btn btn-md btn-info display-4" 
@@ -227,7 +200,7 @@ export default function Ekonomi() {
                                         <a href="#peta-e" className="linkpeta" onClick={e => setOnClick(e, "peta-e")}>
 
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG" )}style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG" )}style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a>
                                     </li>
@@ -241,13 +214,13 @@ export default function Ekonomi() {
 
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-12">
-                        <img id="pic-ekonomi" src={require("../../img/peta-e-mpm1.jpg")} />
+                        <img id="pic-ekonomi" alt="foto.jpg" src={require("../../img/peta-e-mpm1.jpg")} />
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
-                        <img id="pic-ekonomi" src={require("../../img/peta-e-mpm2.jpg")} />
+                        <img id="pic-ekonomi" alt="foto.jpg" src={require("../../img/peta-e-mpm2.jpg")} />
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
-                        <img id="pic-ekonomi" src={require("../../img/peta-e-mpm3.jpg")} />
+                        <img id="pic-ekonomi" alt="foto.jpg" src={require("../../img/peta-e-mpm3.jpg")} />
                     </div>
                 </div>
             </div>
@@ -259,8 +232,8 @@ export default function Ekonomi() {
             
             <div className="row">
                 <div className="col-lg-12 col-md-12 col-sm-12">
-
-                    <canvas id="chartekonomi"></canvas>
+                
+                    <canvas id="chartekonomi"></canvas>                
 
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-12">
@@ -282,7 +255,7 @@ export default function Ekonomi() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img className="img-ttgkm" src={require("../../img/peta-e-mps.jpg" )} id="peta-e-mps" />
+                        <img className="img-ttgkm" alt="foto.jpg" src={require("../../img/peta-e-mps.jpg" )} id="peta-e-mps" />
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-e-mps" onClick={e => setOnClick(e, "peta-e-mps")} data-toggle="modal" data-target="#modal-e-mps">Peta Pekerjaan Sampingan</a></div>
                     </div>
                     <div className="col-lg-6 col-md-12 col-sm-12">
@@ -295,7 +268,7 @@ export default function Ekonomi() {
                                     <li>
                                         <a href="#peta-e-mps" className="linkpeta" onClick={e => setOnClick(e, "peta-e-mps")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom: "1rem"}}/>
+                                                <img alt="foto.jpg" src={require("../../img/nodata.JPG")} style={{width:"1.8rem", height:" 1.1rem", marginBottom: "1rem"}}/>
                                             </span>
                                             No Data
                                         </a>
@@ -347,7 +320,7 @@ export default function Ekonomi() {
                                     <li>
                                         <a href="#peta-e-mps" className="linkpeta" onClick={e => setOnClick(e, "peta-e-mps")}>
                                             <span className="fa-li" style={{display:" inline", width:" 100%", textAlign:" left"}}>
-                                                <img src={require("../../img/sosbud-batas-rt.JPG" )}style={{width:"2rem", height:"1.2rem"}}/> Batas RT
+                                                <img alt="foto.jpg" src={require("../../img/sosbud-batas-rt.JPG" )}style={{width:"2rem", height:"1.2rem"}}/> Batas RT
                                             </span>
                                         </a>
                                     </li>

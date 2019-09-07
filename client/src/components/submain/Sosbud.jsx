@@ -517,6 +517,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb"
                 />
 
@@ -601,6 +602,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/nodata.JPG")}
+                              alt="foto.jpg"
                               style={{
                                 width: "1.8rem",
                                 height: " 1.1rem",
@@ -695,6 +697,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -751,6 +754,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-bpjs.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-bpjs"
                 />
 
@@ -911,6 +915,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -998,6 +1003,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-spp.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-spp"
                 />
 
@@ -1100,6 +1106,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -1131,6 +1138,7 @@ export default function Sosbud() {
                       >
                         <img
                           src={require("../../img/nodata.JPG")}
+                          alt="foto.jpg"
                           style={{
                             width: "1.8rem",
                             height: " 1.1rem",
@@ -1439,6 +1447,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-ppp.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-ppp"
                 />
 
@@ -1582,6 +1591,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -1621,6 +1631,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-buta.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-buta"
                 />
 
@@ -1781,6 +1792,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -1848,6 +1860,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kpip.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-kpip"
                 />
                 <div className="button-sosbud-map">
@@ -2027,6 +2040,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -2069,6 +2083,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kmtk.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-kmtk"
                 />
 
@@ -2109,6 +2124,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/nodata.JPG")}
+                              alt="foto.jpg"
                               style={{
                                 width: "1.8rem",
                                 height: " 1.1rem",
@@ -2257,6 +2273,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
@@ -2288,6 +2305,7 @@ export default function Sosbud() {
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kmk.jpg")}
+                  alt="foto.jpg"
                   id="peta-sb-kmk"
                 />
                 <div className="button-sosbud-map">
@@ -2325,6 +2343,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/nodata.JPG")}
+                              alt="foto.jpg"
                               style={{
                                 width: "1.8rem",
                                 height: " 1.1rem",
@@ -2455,6 +2474,7 @@ export default function Sosbud() {
                           >
                             <img
                               src={require("../../img/sosbud-batas-rt.JPG")}
+                              alt="foto.jpg"
                               style={{ width: "2rem", height: "1.2rem" }}
                             />
                             Batas RT
