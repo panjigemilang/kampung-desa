@@ -75,14 +75,14 @@ function Post(props) {
   let postContent
   let postsContent = []
 
-  const onClickDelete = (filename, post_id) => {
+  const onClickDelete = async (filename, post_id) => {
     if (
       window.confirm(
         "Anda yakin untuk menghapus postingan? Hal ini bersifat permanent."
       )
     ) {
-      deletePost(post_id)
-      deleteImage(filename)
+      await deletePost(post_id)
+      await deleteImage(filename)
       props.history.push("/berita")
     }
   }
@@ -102,8 +102,6 @@ function Post(props) {
   } else {
     postsContent = posts
   }
-
-  console.log("ini ape gayn", window.location)
 
   // Content
   if (loading) {
@@ -135,34 +133,34 @@ function Post(props) {
                   >
                     {/* DROPDOWN */}
                     {auth.isAuthenticated ? (
-                      <React.Fragment>
-                        <div className="times" style={{ float: "left" }}>
-                          <span className="dot" />
-                          <span className="dot" />
-                          <span className="dot" />
-                        </div>
-                        {/* DropDown Menu */}
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <button
-                            className="dropdown-item"
-                            onClick={() => onClickDelete(post.foto, post._id)}
-                            style={{ cursor: "pointer", zIndex: "99" }}
-                          >
-                            Delete Post
-                          </button>
-                          <button
-                            className="dropdown-item"
-                            onClick={e => onShareClick(e, post._id)}
-                            style={{ cursor: "pointer" }}
-                          >
-                            Share Post
-                          </button>
-                        </div>
-                      </React.Fragment>
+                      <div className="times" style={{ float: "left" }}>
+                        <span className="dot" />
+                        <span className="dot" />
+                        <span className="dot" />
+                      </div>
                     ) : null}
+                    {/* DropDown Menu */}
+
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                      // style={{ cursor: "pointer", zIndex: "99" }}
+                      style={{ cursor: "pointer" }}
+                      onClick={() => window.alert("tae")}
+                    >
+                      <button
+                        className="dropdown-item"
+                        onClick={() => onClickDelete(post.foto, post._id)}
+                      >
+                        Delete Post
+                      </button>
+                      <button
+                        className="dropdown-item"
+                        onClick={e => onShareClick(e, post._id)}
+                      >
+                        Share Post
+                      </button>
+                    </div>
                   </div>
                   <div className="col-lg-10">
                     <DivRight>
@@ -204,16 +202,23 @@ function Post(props) {
                   className="bg-dark text-white"
                   style={{ borderRadius: "15px" }}
                 >
-                  <img
-                    className="card-img"
-                    src={baseURL + post.foto}
-                    alt="card image"
-                    style={{
-                      height: "90vh",
-                      objectFit: "cover",
-                      objectPosition: "center"
-                    }}
-                  />
+                  <a
+                    role="button"
+                    data-toggle="modal"
+                    data-target="#modal-e"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img
+                      className="card-img"
+                      src={baseURL + post.foto}
+                      alt="card image"
+                      style={{
+                        height: "90vh",
+                        objectFit: "cover",
+                        objectPosition: "center"
+                      }}
+                    />
+                  </a>
                 </div>
               </div>
               <div className="col-lg-4 col-md-3 col-sm-4 col-xs-12 beritalain">
@@ -279,11 +284,33 @@ function Post(props) {
                 </div>
               </div>
             </div>
-            {/* <div className="row"> */}
-
-            {/* </div> */}
           </div>
         </section>
+
+        <div className="modal fade" id="modal-e" role="dialog">
+          <div className="modal-dialog modal-lg">
+            {/* <!-- Modal content--> */}
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">{post.judul}</h5>
+                <button type="button" className="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div className="modal-body">
+                <div className="row">
+                  <div className="col-lg-12 col-md-12 col-sm-12">
+                    <img
+                      src={baseURL + post.foto}
+                      id="modal-img"
+                      alt="image.jpg"
+                    />{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

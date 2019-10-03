@@ -39,20 +39,17 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 }
 
 function Post(props) {
-  // useEffect(() => {
-  // }, [])
-
   const { post, auth, deletePost, deleteImage } = props
   const baseURL = "https://api-kampungdesa.herokuapp.com/image/"
 
-  const onClickDelete = (filename, post_id) => {
+  const onClickDelete = async (filename, post_id) => {
     if (
       window.confirm(
         "Anda yakin untuk menghapus postingan? Hal ini bersifat permanent."
       )
     ) {
-      deletePost(post_id)
-      deleteImage(filename)
+      await deletePost(post_id)
+      await deleteImage(filename)
 
       document.location.reload(true)
     }
@@ -158,8 +155,6 @@ function Posts(props) {
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
-
-  console.log("Ini props posts", document.location)
 
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber)

@@ -7,9 +7,15 @@ export default function Footer() {
         <div className="row align-center justify-content-center pt-2">
           <div className="col-lg-2 col-md-6 col-sm-6 col-xl-2 ftr">
             <img
-              src={require("../../img/LETS DEV.png")}
-              alt="logo.png"
-              style={{ width: "70%" }}
+              src="/logo-ub-min.png"
+              alt="logo_UB.png"
+              style={{ width: "40%" }}
+            />
+            &nbsp;
+            <img
+              src="/Logo_Kota_Malang_color.png"
+              alt="logo_Malang.png"
+              style={{ width: "35%", marginLeft: "10px" }}
             />
           </div>
           <div className="col-lg-2 col-md-6 col-sm-6 col-xl-2 ftr">
@@ -29,7 +35,7 @@ export default function Footer() {
                     <span className="fa-li">
                       <i className="fas fa-theater-masks" />
                     </span>
-                    Sosial Budaya
+                    Sosbud
                   </a>
                 </li>
                 <li>
@@ -45,7 +51,7 @@ export default function Footer() {
                     <span className="fa-li">
                       <i className="fas fa-hammer" />
                     </span>
-                    Sarana dan Prasarana
+                    Sapras
                   </a>
                 </li>
               </ul>

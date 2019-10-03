@@ -106,7 +106,9 @@ class Navbar extends Component {
           id="nav-bg"
         >
           <Link className="navbar-brand" to="/">
-            <img src={require("../../img/LETS DEV.png")} alt="logo.png" />
+            <img src="/logo-ub-min.png" alt="logo_UB.png" />
+            &nbsp;&nbsp;
+            <img src="/Logo_Kota_Malang_color.png" alt="logo_Malang.png" />
           </Link>
           {/* INI TOMBOL COLLAPSE */}
           <button

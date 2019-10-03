@@ -154,13 +154,15 @@ class Landing extends Component {
           <div id="tentangkami">
             <section className="home" id="header1-1">
               <div className="layer">
-                <div className="container text-content" id="text-caption">
+                <div
+                  className="container text-content landing-title"
+                  id="text-caption"
+                >
                   <h4>Selamat Datang di</h4>
                   <h2>Kampung Cerdas Bersahaja</h2>
-                  <p className="h5">
+                  <p>
                     Kerjasama Tim Pengabdian Jurusan PWK FT-UB dengan Tim
-                    Pemetaan Masyarakat RW 01 kelurahan Rampal Celaket Kota
-                    Malang
+                    Masyarakat RW 01 kelurahan Rampal Celaket Kota Malang
                   </p>
                   <div className="button">
                     <a className="btn btn-md btn-info display-4" href="/berita">

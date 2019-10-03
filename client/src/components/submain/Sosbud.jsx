@@ -534,16 +534,6 @@ export default function Sosbud() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12">
-                <p>
-                  Aset sosial-budaya masyarakat meliputi pelayanan fasilitas
-                  sosial seperti kesehatan dan pendidikan. Selain itu juga
-                  menyangkut keterlibatan warga dalam kegiatan kegiatan sosial
-                  dan budaya seperti program kesehatan BPJS, pemberantasan buta
-                  huruf, program kebutuhan khusus, pemberantasan kemiskinan,
-                  posyandu, keamanan, dan gotong royong. Pendataan aset
-                  sosial-budaya juga mencakup kemungkinan pengembangan informasi
-                  dan pengetahuan.
-                </p>
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -707,6 +697,16 @@ export default function Sosbud() {
                     </ul>
                   </div>
                 </div>
+                <p className="text-justify">
+                  &nbsp; Aset sosial-budaya masyarakat meliputi pelayanan
+                  fasilitas sosial seperti kesehatan dan pendidikan. Selain itu
+                  juga menyangkut keterlibatan warga dalam kegiatan kegiatan
+                  sosial dan budaya seperti program kesehatan BPJS,
+                  pemberantasan buta huruf, program kebutuhan khusus,
+                  pemberantasan kemiskinan, posyandu, keamanan, dan gotong
+                  royong. Pendataan aset sosial-budaya juga mencakup kemungkinan
+                  pengembangan informasi dan pengetahuan.
+                </p>
               </div>
             </div>
             <div className="row">

@@ -19,6 +19,11 @@ body {
   margin-right: 0px !important;
 }
 
+/* Base */
+.tentangkami {
+  background-color: #e1e6e8;
+}
+
 /*ALL*/
 /* LANDING: landing page */
 /*first landing show index.html and tentang kami.html*/
@@ -41,6 +46,10 @@ body {
   font-size: 0.7rem;
 }
 
+.landing-title {
+  padding-top: 6.5rem !important;
+}
+
 /*darker landing allpage*/
 .layer {
   background-color: rgba(0, 0, 0, 0.7);
@@ -55,8 +64,7 @@ body {
 /* COMMONS */
 /*container allpage*/
 .kampung {
-  /*        background: #ffffff;*/
-  box-shadow: 0.2rem 0.2rem 0.4rem #acacac;
+  background-color: white;
   border-radius: 0.5rem;
 }
 
@@ -177,7 +185,7 @@ h4.card-title {
 /*COMMONS*/
 /*width landing page*/
 .home {
-  height: 30rem;
+  height: 24rem;
 }
 
 /*container kampung cerdas bersahaja (about, sosbud,ekonomi,sarana)*/
@@ -266,7 +274,6 @@ h4.card-title {
 }
 
 .kampungan {
-  box-shadow: 0.2rem 0.2rem 0.4rem #333333;
   border-radius: 0.5rem;
 }
 
@@ -451,12 +458,16 @@ h4.card-title {
 #footer {
   background: #0e1d28;
   text-align: left;
+  font-size: 12px;
+}
+
+#footer h6 {
+  font-size: 12px;
 }
 
 /*ul*/
 #footerUl {
   list-style-type: none;
-  font-size: 16px;
 }
 
 /*logo footer*/
