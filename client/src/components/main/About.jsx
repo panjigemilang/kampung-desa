@@ -48,14 +48,14 @@ export default function About() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12">
+              <div className="col-lg-2 col-md-12 col-sm-12">
                 <img
                   alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/latarbelakang1.1.jpg")}
                 />
               </div>
-              <div className="col-lg-8 col-md-12 col-sm-12 lBelakang">
+              <div className="col-lg-10 col-md-12 col-sm-12 lBelakang">
                 <p>
                   &nbsp;&nbsp;&nbsp;Pertumbuhan penduduk kota yang semakin
                   meningkat juga menimbulkan masalah-masalah lingkungan fisik,
@@ -73,7 +73,7 @@ export default function About() {
                   perkotaan.
                 </p>
               </div>
-              <div className="col-lg-8 col-md-12 col-sm-12 lBelakang">
+              <div className="col-lg-10 col-md-12 col-sm-12 lBelakang">
                 <p>
                   &nbsp;&nbsp;&nbsp;Untuk mencapai tujuan tersebut, maka
                   diperlukan sebuah data base potensi lingkungan kampung yang
@@ -93,7 +93,7 @@ export default function About() {
                   warga kampung secara mandiri.
                 </p>
               </div>
-              <div className="col-lg-4 col-md-12 col-sm-12">
+              <div className="col-lg-2 col-md-12 col-sm-12">
                 <img
                   alt="foto.jpg"
                   className="img-ttgkm"
@@ -111,21 +111,23 @@ export default function About() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-2"></div>
+              <div className="col-lg-3 col-md-12 col-sm-12">
                 <img
                   alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/tujuan1.jpg")}
-                  style={{ height: "428px" }}
                 />
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-2"></div>
+              <div className="col-lg-3 col-md-12 col-sm-12">
                 <img
                   alt="foto.jpg"
                   className="img-ttgkm"
                   src={require("../../img/tujuan2.jpg")}
                 />
               </div>
+              <div className="col-lg-2"></div>
             </div>
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12 lBelakang">
@@ -161,7 +163,7 @@ export default function About() {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="row justify-content-center lBelakang">
-                <div className="box-item col-md-4 tujuan-left">
+                <div className="col-md-4 tujuan-left">
                   <h4>A</h4>
                   <hr />
                   <p>
@@ -169,7 +171,7 @@ export default function About() {
                     untuk meningkatkan kualiatas pengambilan keputusan.
                   </p>
                 </div>
-                <div className="box-item col-md-4 tujuan-right">
+                <div className="col-md-4 tujuan-right">
                   <h4>B</h4>
                   <hr />
                   <p>
@@ -178,7 +180,7 @@ export default function About() {
                     mengembangkan dan melaksanakan rencana aksi.
                   </p>
                 </div>
-                <div className="box-item col-md-4 tujuan-left">
+                <div className="col-md-4 tujuan-left">
                   <h4>C</h4>
                   <hr />
                   <p>
@@ -187,7 +189,7 @@ export default function About() {
                     dampak perubahan lingkungan dapat dilakukan semua pihak.
                   </p>
                 </div>
-                <div className="box-item col-md-4 tujuan-right">
+                <div className="col-md-4 tujuan-right">
                   <h4>D</h4>
                   <hr />
                   <p>
@@ -196,43 +198,17 @@ export default function About() {
                     akuntabilitas publik
                   </p>
                 </div>
-                <div className="box-item col-md-4 tujuan-left">
+                <div className="col-md-4 tujuan-left">
                   <h4>E</h4>
                   <hr />
                   <p>
-                    Menyediakan informasi tentang lingkungan yang menjadi bagian
-                    dari sistem pelaporan publik dan sebagai bentuk
-                    akuntabilitas publik
+                    Proses yang dilakukan secara partisipatif merupakan bagian
+                    dari gerakan membangun kesadaran terhadap lingkungan dan
+                    memberdayakan warga agar mampu mengelola dan mengembangkan
+                    potensi sosial-ekonomi-budaya-lingkungan fisiknya secara
+                    mandiri dan berkelanjutan.
                   </p>
                 </div>
-              </div>
-
-              <div className="lBelakang">
-                <p>
-                  &nbsp;&nbsp;&nbsp;Penyusunan data base lingkungan secara
-                  partisipatif ini bertujuan untuk:
-                  <br />
-                  a. Menyediakan data, informasi dan dokumentasi yang akurat
-                  untuk meningkatkan kualiatas pengambilan keputusan.
-                  <br />
-                  b. Mengetahui daya dukung dan daya tampung lingkungan fisik,
-                  sosial, budaya, dan ekonomi yang diperlukan untuk
-                  mengembangkan dan melaksanakan rencana aksi.
-                  <br />
-                  c. Menyediakan informasi yang terbuka bagi masyarakat Kampung
-                  BERSAHAJA RW O1, sehingga pemantauan dan evaluasi terkait
-                  dampak perubahan lingkungan dapat dilakukan semua pihak.
-                  <br />
-                  d. Menyediakan informasi tentang lingkungan yang menjadi
-                  bagian dari sistem pelaporan publik dan sebagai bentuk
-                  akuntabilitas publik
-                  <br />
-                  e. Proses yang dilakukan secara partisipatif merupakan bagian
-                  dari gerakan membangun kesadaran terhadap lingkungan dan
-                  memberdayakan warga agar mampu mengelola dan mengembangkan
-                  potensi sosial-ekonomi-budaya-lingkungan fisiknya secara
-                  mandiri dan berkelanjutan.
-                </p>
               </div>
             </div>
           </div>
@@ -249,13 +225,13 @@ export default function About() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <a className="card" data-toggle="modal" data-target="#myModal">
                   <img
                     alt="foto.jpg"
                     className="peta-utama"
                     src={require("../../img/peta-utama.JPG")}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", clipPath: "inset(2px 0%)" }}
                   />
                 </a>
                 <span className="text-muted">
@@ -263,7 +239,7 @@ export default function About() {
                 </span>
               </div>
 
-              <div className="col-lg-6 col-md-12 col-sm-12 lBelakang">
+              <div className="col-lg-8 col-md-12 col-sm-12 lBelakang">
                 <p>
                   &nbsp;&nbsp;&nbsp;Wilayah RW O1 adalah sebuah perkampungan
                   dengan luas ± 3200 m yang terletak di secara administrative
@@ -287,20 +263,23 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="col-lg-6 col-md-6 col-sm-6">
+              <div className="col-lg-2" />
+              <div className="col-lg-3 col-md-6 col-sm-6">
                 <img
                   alt="foto.jpg"
                   className="bgg4"
                   src={require("../../img/sekilas1.JPG")}
                 />
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-6">
+              <div className="col-lg-2" />
+              <div className="col-lg-3 col-md-6 col-sm-6">
                 <img
                   alt="foto.jpg"
                   className="bgg4"
                   src={require("../../img/sekilas2.JPG")}
                 />
               </div>
+              <div className="col-lg-2" />
             </div>
           </div>
         </div>
@@ -323,7 +302,12 @@ export default function About() {
             <div className="modal-body">
               <div className="row">
                 <div className="col-lg-7 col-md-12 col-sm-12">
-                  <img alt="foto.jpg" src={petaUtama} id="image" />
+                  <img
+                    alt="foto.jpg"
+                    src={petaUtama}
+                    id="image"
+                    style={{ clipPath: "inset(2% 2%)" }}
+                  />
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12">
                   Lihat Detail Peta menurut :

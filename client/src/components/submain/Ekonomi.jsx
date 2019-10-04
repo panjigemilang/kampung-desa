@@ -113,7 +113,7 @@ export default function Ekonomi() {
         <div id="kami" className="container pb-2 kampungan">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img className="img-ttgkm" alt="foto.jpg" src={require("../../img/peta-e.jpg")} id="peta-e" />
                         <div className="button-sosbud-map">
                             <a 
@@ -125,12 +125,11 @@ export default function Ekonomi() {
                             </a>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                        <p>Aspek ekonomi membahas tentang jenis mata pencaharian utama, jenis mata pencaharian sampingan, dan keterlibatan masyarakat dalam kelembagaan koperasi.</p>
-                        <h4 style={{textAlign: "left"}}>Keterangan</h4>
-                        <hr />
+                    <div className="col-lg-8 col-md-12 col-sm-12">                        
+                            <h4 style={{textAlign: "left"}}>Keterangan</h4>    
+                        <hr />       
                         <div className="row">
-                            <div className="col-lg-6 col-md-6 col-sm-6">             
+                            <div className="col-lg-6 col-md-6 col-sm-6">  
                                 <ul className="fa-ul">
                                     <li>
                                         <a href="#peta-e" className="linkpeta" onClick={e => setOnClick(e, "peta-e")}>
@@ -207,6 +206,7 @@ export default function Ekonomi() {
                                 </ul>
                             </div>
                         </div>
+                        <p className="text-justify"> &nbsp;Aspek ekonomi membahas tentang jenis mata pencaharian utama, jenis mata pencaharian sampingan, dan keterlibatan masyarakat dalam kelembagaan koperasi.</p>
                     </div>
                 </div>
 
@@ -254,11 +254,11 @@ export default function Ekonomi() {
             <h4 id="judul-home">Mata Pencaharian Sampingan</h4>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img className="img-ttgkm" alt="foto.jpg" src={require("../../img/peta-e-mps.jpg" )} id="peta-e-mps" />
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-e-mps" onClick={e => setOnClick(e, "peta-e-mps")} data-toggle="modal" data-target="#modal-e-mps">Peta Pekerjaan Sampingan</a></div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4 style={{textAlign: "left"}}>Keterangan </h4>
                         <hr />
                         <div className="row">

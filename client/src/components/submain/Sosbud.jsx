@@ -513,7 +513,7 @@ export default function Sosbud() {
         <div id="kami" className="container pb-2 kampungan">
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb.jpg")}
@@ -533,7 +533,8 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -697,16 +698,18 @@ export default function Sosbud() {
                     </ul>
                   </div>
                 </div>
-                <p className="text-justify">
-                  &nbsp; Aset sosial-budaya masyarakat meliputi pelayanan
-                  fasilitas sosial seperti kesehatan dan pendidikan. Selain itu
-                  juga menyangkut keterlibatan warga dalam kegiatan kegiatan
-                  sosial dan budaya seperti program kesehatan BPJS,
-                  pemberantasan buta huruf, program kebutuhan khusus,
-                  pemberantasan kemiskinan, posyandu, keamanan, dan gotong
-                  royong. Pendataan aset sosial-budaya juga mencakup kemungkinan
-                  pengembangan informasi dan pengetahuan.
-                </p>
+                <div className="row">
+                  <p className="text-justify">
+                    &nbsp; Aset sosial-budaya masyarakat meliputi pelayanan
+                    fasilitas sosial seperti kesehatan dan pendidikan. Selain
+                    itu juga menyangkut keterlibatan warga dalam kegiatan
+                    kegiatan sosial dan budaya seperti program kesehatan BPJS,
+                    pemberantasan buta huruf, program kebutuhan khusus,
+                    pemberantasan kemiskinan, posyandu, keamanan, dan gotong
+                    royong. Pendataan aset sosial-budaya juga mencakup
+                    kemungkinan pengembangan informasi dan pengetahuan.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="row">
@@ -750,7 +753,7 @@ export default function Sosbud() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-bpjs.jpg")}
@@ -770,7 +773,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -960,7 +963,7 @@ export default function Sosbud() {
                     <br />
                     <br />
                     <div
-                      className=" text-white tidakpuas"
+                      className="text-white"
                       style={{ background: "rgb(255, 135, 99)" }}
                     >
                       <div className="card-body">
@@ -976,7 +979,7 @@ export default function Sosbud() {
                     <br />
                     <br />
                     <div
-                      className=" text-white tidakpuas"
+                      className=" text-white"
                       style={{ background: "rgb(121, 121, 121)" }}
                     >
                       <div className="card-body">
@@ -999,7 +1002,7 @@ export default function Sosbud() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-spp.jpg")}
@@ -1020,7 +1023,7 @@ export default function Sosbud() {
                 </div>
               </div>
 
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -1443,7 +1446,7 @@ export default function Sosbud() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-ppp.jpg")}
@@ -1463,7 +1466,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -1627,7 +1630,7 @@ export default function Sosbud() {
           <h4 id="judul-home">Program Buta Huruf</h4>
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-buta.jpg")}
@@ -1647,7 +1650,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan </h4>
                 <hr />
                 <div className="row">
@@ -1856,7 +1859,7 @@ export default function Sosbud() {
           </h4>
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kpip.jpg")}
@@ -1875,7 +1878,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan </h4>
                 <hr />
                 <div className="row">
@@ -2079,7 +2082,7 @@ export default function Sosbud() {
 
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kmtk.jpg")}
@@ -2099,7 +2102,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan </h4>
                 <hr />
                 <div className="row">
@@ -2290,10 +2293,6 @@ export default function Sosbud() {
                 </div>
               </div>
             </div>
-            <hr />
-            <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12"></div>
-            </div>
           </div>
         </div>
         <br />
@@ -2301,7 +2300,7 @@ export default function Sosbud() {
           <h4 id="judul-home">Keterlibatan Masyarakat Dalam Koperasi</h4>
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-4 col-md-12 col-sm-12">
                 <img
                   className="img-ttgkm"
                   src={require("../../img/peta-sb-kmk.jpg")}
@@ -2320,7 +2319,7 @@ export default function Sosbud() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-8 col-md-12 col-sm-12">
                 <h4>Keterangan</h4>
                 <hr />
                 <div className="row">
@@ -2494,12 +2493,12 @@ export default function Sosbud() {
             <hr />
 
             <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12" id="alasan">
+              <div className="col-lg-12 col-md-12 col-sm-12" id="alasan2">
                 <h4>Pendapat tentang Koperasi:</h4>
                 <div className="row">
                   <div className="col-lg-4 col-md-12 col-sm-12">
                     <div
-                      className="text-white"
+                      className="text-white tidakpuas"
                       style={{ background: "#49834b" }}
                     >
                       <div className="card-body">
@@ -2519,7 +2518,7 @@ export default function Sosbud() {
                     >
                       <div
                         className="card-body"
-                        style={{ height: " 14.5rem", marginBottom: "-2.5rem" }}
+                        style={{ height: "100%", marginBottom: "-2.5rem" }}
                       >
                         <h6>Ketidakpuasan Terhadap Kinerja Koperasi:</h6>
                         <ul style={{ listStyleType: "circle" }}>

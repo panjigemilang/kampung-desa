@@ -169,9 +169,7 @@ export default function Sapras() {
         <div id="tentangkami-saranaPrasarana">
         <section className="home" id="header1-1">
             <div className="layer">
-
                 <div className="container text-content" id="text-caption-saranaPrasarana">
-
                     <h2>Sarana dan Prasarana</h2>
                 </div>
             </div>
@@ -182,7 +180,7 @@ export default function Sapras() {
         <div id="kami" className="container pb-2 kampungan">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img alt="foto.jpg" className="img-ttgkm" id="peta-sp-lp" src={require("../../img/peta-sp-lp.jpg")} />
                         
                         <div className="button-sosbud-map">
@@ -190,9 +188,7 @@ export default function Sapras() {
                             </div>
 
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                        <p>Aspek sarana prasarana terdiri dari persebaran sarana, persebaran sarana lingkungan,persebaran sarana sanitasi dan sampah, persebaran ruang terbuka, persebaran fasilitas jalan, dan lokasi parkir.</p>
-                        
+                    <div className="col-lg-8 col-md-12 col-sm-12">                        
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr/>
                         <div className="row">
@@ -254,6 +250,7 @@ export default function Sapras() {
                                 </ul>
                             </div>
                         </div>
+                        <p className="text-justify"> &nbsp;Aspek sarana prasarana terdiri dari persebaran sarana, persebaran sarana lingkungan, persebaran sarana sanitasi dan sampah, persebaran ruang terbuka, persebaran fasilitas jalan, dan lokasi parkir.</p>
                     </div>
                 </div>
                 
@@ -299,11 +296,11 @@ export default function Sapras() {
             <h4 id="judul-home">Sanitasi Sampah</h4>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-ss.jpg")} id="peta-sp-ss" />                        
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-ss" onClick={(e) => setOnClick(e, "peta-sp-ss")} data-toggle="modal" data-target="#modal-sp-ss">Peta Sanitasi Sampah</a></div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr/>
                         <div className="row">
@@ -370,19 +367,13 @@ export default function Sapras() {
                 </div>
                 
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4>Chart Jumlah Sanitasi dan Sampah</h4>
                         <hr/>
                         <canvas id="chartsarana-sanitasi"></canvas>
                         <br />
-                        <div className="text-white" style={{background :" #764719"}}>
-                            <div className="card-body">
-                                <span style={{listStyleType:"none",textAlign:" justify"}}>Terdapat 4 MCK umum yang tersebar di RT O1, RT O4, RT 02, dan RT 06. Sedangkan terdapat i tempat pembuangan sampah sementara di RT 06.
-                                </span>
-                            </div>                        
-                        </div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <h4>Lokasi Sanitasi Sampah</h4>
                         <div className="row">
                         {/* Swiper Parkir */}
@@ -399,6 +390,15 @@ export default function Sapras() {
                         </div>
                     </div>
                 </div>
+                <div className="row">
+                    
+                <div className="text-white mb-2" style={{background :" #764719"}}>
+                            <div className="card-body">
+                                <span style={{listStyleType:"none",textAlign:" justify"}}>Terdapat 4 MCK umum yang tersebar di RT O1, RT O4, RT 02, dan RT 06. Sedangkan terdapat i tempat pembuangan sampah sementara di RT 06.
+                                </span>
+                            </div>                        
+                        </div>
+                </div>
             </div>
         </div>
         <br />
@@ -406,7 +406,7 @@ export default function Sapras() {
             <h4 id="judul-home">Fasilitas Jalan</h4>            
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-fj.jpg")} id="peta-sp-fj" />
                     
                         <div className="button-sosbud-map">
@@ -414,7 +414,7 @@ export default function Sapras() {
                         </div>
                         
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr/>
                         <div className="row">
@@ -522,13 +522,13 @@ export default function Sapras() {
         
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sl.jpg")} id="peta-sp-sl" />
                         
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sl" onClick={(e) => setOnClick(e, "peta-sp-sl")} data-toggle="modal" data-target="#modal-sp-sl">Peta Sarana Lingkungan</a></div>
 
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr/>
                         <div className="row">
@@ -681,12 +681,12 @@ export default function Sapras() {
             
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <img alt="foto.jpg"  className="img-ttgkm" src={require("../../img/peta-sp-sk.jpg")} id="peta-sp-sk" />
                         
                         <div className="button-sosbud-map"><a className="btn btn-md btn-info display-4" href="#peta-sp-sk" onClick={(e) => setOnClick(e, "peta-sp-sk")} data-toggle="modal" data-target="#modal-sp-sk">Peta Sarana Lingkungan</a></div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <h4 style={{textAlign:" left"}}>Keterangan</h4>
                         <hr/>
                         <div className="row">
@@ -734,7 +734,7 @@ export default function Sapras() {
                                 <ul className="fa-ul">
                                     <li>
 
-                                        <a href="#peta-sp-sk" className="linkpeta" onClick=   {(e) => setOnClick(e, "peta-sp-sk")}>
+                                        <a href="#peta-sp-sk" className="linkpeta" onClick={(e) => setOnClick(e, "peta-sp-sk")}>
                                             <span className="fa-li">
                                                 <p style={{width:" 1.8rem",height:" 1rem", background:" rgb(111, 255, 99)"}}></p>
                                             </span>Peribadatan
@@ -823,9 +823,9 @@ export default function Sapras() {
                     <div className="col-lg-6 col-md-12 col-sm-12">
                         <h4>Keterangan</h4>
                         <hr />
-                        <div className="text-white" style={{background :" #196176 ", height:" 260px"}}>
+                        <div className="text-white" style={{background :" #196176 ", height:"76%"}}>
                             <div className="card-body">
-                                <span style={{listStyleType:"none",textAlign:" justify"}}>
+                                <span style={{ listStyleType:"none", textAlign:"justify", fontSize: "14px" }}>
                                     <br />
                                     Terdapat 2 sarana pendikan formal, 4 sarana perdaga -ngan berupa toko, 3 sarana pelayanan umum berupa balai RW dan kantor, dan 5 sarana peribadatan masjid dan musholla.
                                 </span>

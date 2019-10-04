@@ -4,7 +4,6 @@ import { getPosts, deleteImage, deletePost } from "../../actions/postActions"
 import { PropTypes } from "prop-types"
 import Spinner from "../commons/Spinner"
 import ReactHtmlParser from "react-html-parser"
-import isEmpty from "../../validations/is-empty"
 
 const mapStateToProps = state => ({
   auth: state.auth,
@@ -81,11 +80,11 @@ function Post(props) {
         <div className="row">
           <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <a href={`/post/${post._id}`} className="btn" role="button">
-              <h3 style={{ textAlign: "justify" }}>
+              <h5 style={{ textAlign: "justify" }}>
                 {post.judul.length > 50
                   ? post.judul.substring(0, 50) + " ... "
                   : post.judul}
-              </h3>
+              </h5>
             </a>
             <hr />
           </div>
@@ -168,7 +167,7 @@ function Posts(props) {
           <section className="home" id="header1-1">
             <div className="layer">
               <div className="container text-content" id="text-caption">
-                <h1 className="display-3 text-center">Berita</h1>
+                <h1 className="text-center">Berita</h1>
               </div>
             </div>
           </section>

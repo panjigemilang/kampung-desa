@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="footerttgkm">
               <ul className="fa-ul">
                 <li>
-                  <a href="#utama" className="linkfooter">
+                  <a href="/tentang-kami" className="linkfooter">
                     <span className="fa-li">
                       <i className="fas fa-book" />
                     </span>
